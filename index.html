@@ -2,12 +2,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script  src = "scripts/jquery-3.6.0.min.js" type="text/javascript">
-    </script>
+    <link rel="stylesheet" href="styles/index.css">
+    <script  src = "scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <p> repl testeeeee</p>
+    <header class = "back"></header>
+    <p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat fermentum elit, sit amet volutpat dui egestas ac. Ut sed lacus et felis vestibulum convallis quis sit amet tortor. Proin ipsum mauris, gravida quis aliquam ac, pulvinar vitae elit. Maecenas vel semper justo. Cras sodales eget lectus sed sagittis. Ut volutpat, enim vel fermentum fermentum, enim ipsum convallis justo, ac convallis neque justo laoreet massa. Morbi commodo augue quis orci feugiat imperdiet. Phasellus a massa ut massa lacinia rhoncus. Donec molestie elit non posuere dignissim. Duis ac nulla dolor. Nam fermentum magna sed nunc mollis, eget malesuada libero molestie. Proin lobortis ut elit a iaculis. Phasellus eu iaculis ligula. Nunc sit amet egestas leo. Nullam venenatis lacus eu eleifend maximus.
+
+Donec magna arcu, tempor id nunc sed, euismod ullamcorper nisi. Nunc at tellus sed elit rhoncus ornare id mollis arcu. Nulla eget erat risus. Morbi id tempus eros, ac ullamcorper leo. Sed sed elit fermentum augue condimentum pulvinar eu ut velit. Vestibulum egestas risus eu porta vehicula. Cras pulvinar luctus velit, vel molestie massa hendrerit id. Mauris nisl diam, finibus et eleifend vitae, consectetur id libero. Duis dictum nisi eget tellus vestibulum, sit amet malesuada justo pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam facilisis diam a molestie rutrum. Sed erat nunc, vestibulum non aliquam id, vulputate sed sapien. Praesent quam tortor, luctus sit amet aliquam eu, condimentum quis eros.
+
+Quisque sit amet odio quis erat congue cursus quis quis augue. In odio tortor, bibendum nec molestie at, mollis eget sapien. Curabitur eu bibendum tortor. Aenean eget rhoncus nisl, quis lacinia lacus. Aenean quis malesuada orci, a convallis lorem. Ut at molestie mauris. Sed vel nisi orci. In hac habitasse platea dictumst. Nullam pellentesque placerat turpis ut pellentesque. Etiam a vestibulum nisi.
+
+Donec porta tortor vel mi condimentum, quis tempus mauris blandit. Donec in interdum tortor, a varius erat. Nullam non congue nunc, eu vehicula risus. Mauris tristique turpis a condimentum ornare. Praesent ac risus cursus, interdum massa sed, maximus nulla. Morbi non varius nibh. Donec pellentesque augue metus, vel rutrum nulla posuere quis.
+
+Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lobortis in risus. Fusce semper porttitor magna at porta. In vestibulum aliquam felis sed commodo. Vivamus accumsan, erat vel finibus porta, ante ligula sagittis tellus, sed tincidunt enim ipsum a purus. Nulla nec mauris nibh. Etiam vestibulum mi a nisi vulputate, pharetra pellentesque dolor sodales. </p>
+    <script>
+      $(window).scroll(function(){
+        var scroll=$(window).scrollTop();
+        $(".back").css({
+          width:(100 - scroll/5) + "%"
+        })
+      });
+    </script>
   </body>
 </html>
