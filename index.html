@@ -8,11 +8,6 @@
     <title></title>
   </head>
   <body>
-  <div id = "earth-container" class = "earth-container">
-    <div id = "zoom-out" class="zoomBOut">
-      <div id = "zoom-in" class="zoomBIn"></div>
-    </div>
-   </div>
     <p>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat fermentum elit, sit amet volutpat dui egestas ac. Ut sed lacus et felis vestibulum convallis quis sit amet tortor. Proin ipsum mauris, gravida quis aliquam ac, pulvinar vitae elit. Maecenas vel semper justo. Cras sodales eget lectus sed sagittis. Ut volutpat, enim vel fermentum fermentum, enim ipsum convallis justo, ac convallis neque justo laoreet massa. Morbi commodo augue quis orci feugiat imperdiet. Phasellus a massa ut massa lacinia rhoncus. Donec molestie elit non posuere dignissim. Duis ac nulla dolor. Nam fermentum magna sed nunc mollis, eget malesuada libero molestie. Proin lobortis ut elit a iaculis. Phasellus eu iaculis ligula. Nunc sit amet egestas leo. Nullam venenatis lacus eu eleifend maximus.
@@ -24,23 +19,6 @@ Quisque sit amet odio quis erat congue cursus quis quis augue. In odio tortor, b
 Donec porta tortor vel mi condimentum, quis tempus mauris blandit. Donec in interdum tortor, a varius erat. Nullam non congue nunc, eu vehicula risus. Mauris tristique turpis a condimentum ornare. Praesent ac risus cursus, interdum massa sed, maximus nulla. Morbi non varius nibh. Donec pellentesque augue metus, vel rutrum nulla posuere quis.
 
 Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lobortis in risus. Fusce semper porttitor magna at porta. In vestibulum aliquam felis sed commodo. Vivamus accumsan, erat vel finibus porta, ante ligula sagittis tellus, sed tincidunt enim ipsum a purus. Nulla nec mauris nibh. Etiam vestibulum mi a nisi vulputate, pharetra pellentesque dolor sodales. </p>
-    <script>
-      $(window).scroll
-    (
-        function()
-      {
-        var scroll=$(window).scrollTop();
-        if(1+scroll/200 < 2.162)
-      {
-        $(".zoomBIn").css
-        (
-          {
-           transform : 'scale(' + (1 + scroll/200) + ')'
-          }
-        )
-      }
-      }
-    );
-    </script>
+
   </body>
 </html>
