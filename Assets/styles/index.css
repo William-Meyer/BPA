@@ -8,3 +8,43 @@
 p{
   font-size: 50px;
 }
+nav{
+	height: 100px;
+	text-align: center;
+  margin-bottom: -15px;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+}
+
+footer a{
+	color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar{
+	overflow: hidden;
+	background: black;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  margin:0;
+}
+
+.navbar a{
+	float: right;
+	display:block;
+	text-align:center;
+	padding: 35px 30px;
+  font-size: 20px;
+}
+ a:hover{
+	color: orange;
+}
+.navbar a:hover{
+	background:#ddd;
+	color: orange;
+}
