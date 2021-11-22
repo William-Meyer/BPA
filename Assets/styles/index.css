@@ -3,11 +3,16 @@
   margin:0;
   padding: 0;
 }
-
-
-p{
-  font-size: 50px;
+#container p{
+  font-size:40px;
 }
+
+footer{
+font-size:25px;
+background-color: black;
+color:white;
+}
+
 nav{
 	height: 100px;
 	text-align: center;
@@ -20,13 +25,13 @@ nav a{
 }
 
 footer a{
-	color: black;
+	color: white;
 	margin-left: 10px;
 	margin-right: 10px;
+  text-decoration: none;
 }
 
 .navbar{
-	overflow: hidden;
 	background: black;
 	position: fixed;
 	top: 0;
@@ -47,4 +52,34 @@ footer a{
 .navbar a:hover{
 	background:#ddd;
 	color: orange;
+}
+
+.dropdown:hover{
+  color:orange;
+}
+
+.dropdown:hover .dropdown-content{
+  display:block;
+}
+
+.dropdown-content {
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown{
+  position: relative;
+  float:right;
+  display: inline-block;
+}
+
+.dropdown{
+  border:none;
+  outline: none;
+  color: black;
+  padding 14px 16px;
+  background color: inherit;
+  margin;0;
 }
