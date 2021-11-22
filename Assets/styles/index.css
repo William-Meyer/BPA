@@ -17,6 +17,7 @@ nav{
 	height: 100px;
 	text-align: center;
   margin-bottom: -15px;
+  background-color:black;
 }
 
 /* Links inside the navbar */
@@ -80,34 +81,4 @@ nav{
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover{
-  color:orange;
-}
-
-.dropdown:hover .dropdown-content{
-  display:block;
-}
-
-.dropdown-content {
-  display: none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  text-align: center;
-}
-
-.dropdown{
-  position: relative;
-  float:right;
-  display: inline-block;
-}
-
-.dropdown{
-  border:none;
-  outline: none;
-  color: black;
-  padding 14px 16px;
-  background color: inherit;
-  margin;0;
 }
