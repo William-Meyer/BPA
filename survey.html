@@ -3,42 +3,69 @@
   <head>
     <meta charset="utf-8">
     <link rel="text/javascript" src="Assets/scripts/quiz.js">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-    function check()
-    {
-      alert("test")
-      var c = 0;
-      var q1 = document.quiz.question1.value;
-      if (q1 == "Javascript")
-      {
-        c++ //funny
-        alert("you got " + c + " questions correct")
-      }
-    }
+
+    var c1 = 0;
+    var c2 = 0;
+    var c3 = 0;
+
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
     function checkSlider()
     {
-      var c = 0;
-      var slider = document.getElementById("myRange");
-      v = slider.value
-      alert(v);
+
+      var slider1 = document.getElementById("myRange1");
+      var slider2 = document.getElementById("myRange2");
+      var slider3 = document.getElementById("myRange3");
+
+      c1 += slider1.value;
+      c2 += slider2.value;
+      c3 += slider3.value;
+      alert("test")
+      drawChart();
     }
+
+
+
+function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Test', 'Hours per Day'],
+          ['Value 1',     c1],
+          ['value 2',     c2],
+          ['value 3',     c3]
+        ]);
+
+  var options = {
+    title: 'My Daily Activities'
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+  chart.draw(data, options);
+}
+
+
     </script>
     <title></title>
   </head>
   <body>
-      <!--
-      <form name = "quiz" id = "quiz">
-        <div>
-          <p>1. What is the best programming language to learn in 2020?</p>
-          <p><input type = "radio" name = "question1" value = "HTML">A. HTML</P>
-          <p><input type = "radio" name = "question1" value = "Python">B. Python</P>
-          <p><input type = "radio" name = "question1" value = "Javascript">C. Javascript</P>
-          <p><input type = "radio" name = "question1" value = "Swift">D. Swift</P>
-        </div>
-      -->
+    <div id = "containter">
+
+
       <div class="slidecontainer">
-        <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange">
+        <p>value 1</p>
+        <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange1">
+        <p>value 2</p>
+        <input type="range" min="0" max="5"  name = "q2" value="2.5" class="slider" id="myRange2">
+        <p>value 3</p>
+        <input type="range" min="0" max="5"  name = "q3" value="2.5" class="slider" id="myRange3">
       </div>
         <input type="button" name="" value="Done" onClick = checkSlider()>
+
+         <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </div>
   </body>
 </html>
