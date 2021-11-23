@@ -15,12 +15,18 @@
         alert("you got " + c + " questions correct")
       }
     }
-    </script>
-
+    function checkSlider()
+    {
+      var c = 0;
+      var slider = document.getElementById("myRange");
+      v = slider.value
+      alert(v);
+    }
     </script>
     <title></title>
   </head>
   <body>
+      <!--
       <form name = "quiz" id = "quiz">
         <div>
           <p>1. What is the best programming language to learn in 2020?</p>
@@ -29,6 +35,10 @@
           <p><input type = "radio" name = "question1" value = "Javascript">C. Javascript</P>
           <p><input type = "radio" name = "question1" value = "Swift">D. Swift</P>
         </div>
-        <input type="button" name="" value="Done" onClick = check()>
+      -->
+      <div class="slidecontainer">
+        <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange">
+      </div>
+        <input type="button" name="" value="Done" onClick = checkSlider()>
   </body>
 </html>
