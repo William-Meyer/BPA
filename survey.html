@@ -3,15 +3,22 @@
   <head>
     <meta charset="utf-8">
     <link rel="text/javascript" src="Assets/scripts/quiz.js">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel ="stylesheet" href = "dist/apexcharts.css"/>
+    <style>
+      #chart{
+        width: 500px;
+        height: 500px;
+        border:1px solid black;
+      }
+    </style>
+    <script src = "dist/apexchart.js"></script>
     <script type="text/javascript">
-
+    require('apexcharts')
     var c1 = 0;
     var c2 = 0;
     var c3 = 0;
 
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
+
 
     function checkSlider()
     {
@@ -24,35 +31,34 @@
       c2 += slider2.value;
       c3 += slider3.value;
       alert("test")
-      drawChart();
+      drawChart()
     }
-
-
-
-function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Test', 'Hours per Day'],
-          ['Value 1',     c1],
-          ['value 2',     c2],
-          ['value 3',     c3]
-        ]);
-
-  var options = {
-    title: 'My Daily Activities'
-  };
-
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-  chart.draw(data, options);
+    function drawChart()
+    {
+      var options = {
+  chart: {
+    type: 'line'
+  },
+  series: [{
+    name: 'sales',
+    data: [30,40,35,50,49,60,70,91,125]
+  }],
+  xaxis: {
+    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+  }
 }
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
+    }
 
 
     </script>
     <title></title>
   </head>
   <body>
-    <div id = "containter">
+    <div id = "Containter">
 
 
       <div class="slidecontainer">
@@ -64,8 +70,8 @@ function drawChart() {
         <input type="range" min="0" max="5"  name = "q3" value="2.5" class="slider" id="myRange3">
       </div>
         <input type="button" name="" value="Done" onClick = checkSlider()>
-
-         <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+        <div id = "chart"></div>
     </div>
+
   </body>
 </html>
