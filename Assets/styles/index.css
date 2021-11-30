@@ -9,7 +9,8 @@
 }
 
 #home-background img{
-  max-width: 100%;
+  width: 50%
+  max-width: 50%;
   height:auto;
 }
 
@@ -48,6 +49,11 @@ nav{
 .dropdown {
   overflow: hidden;
   float:right;
+}
+
+.reactiveImage
+{
+
 }
 
 /* Dropdown button */
