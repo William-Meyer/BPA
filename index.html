@@ -10,17 +10,23 @@
   <body>
   <nav>
     <div class="navbar">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="survey.html">Survey</a>
+      <input class="menu-btn"
+      type="checkbox" id= "menu-btn"/>
+      <label class="menu-icon" for="menu-btn">
+      <span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="survey.html">Survey</a></li>
       <div class="dropdown">
-        <button class="dropbtn">Resources
+      <li>  <button class="dropbtn">Resources
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="#">Link 3</a></li>
+          </ul>
         </div>
       </div>
     </nav>
