@@ -4,7 +4,13 @@
   padding: 0;
 }
 #container p{
+  max-width: 100%;
   font-size:40px;
+}
+
+#home-background img{
+  max-width: 100%;
+  height:auto;
 }
 
 footer{
