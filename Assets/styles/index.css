@@ -51,9 +51,9 @@ nav{
   float:right;
 }
 
-.reactiveImage
-{
-
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
 /* Dropdown button */
