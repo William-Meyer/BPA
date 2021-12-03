@@ -3,11 +3,16 @@
   margin:0;
   padding: 0;
 }
-#container p{
+
+#bodyText p{
   max-width: 100%;
   font-size:40px;
 }
-
+#bodyText{
+  margin-top: 60%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 #home-background img{
   width: 50%
   max-width: 50%;
@@ -23,13 +28,14 @@ color:white;
 nav{
 	height: 50px;
 	text-align: center;
-  margin-bottom: -15px;
+  margin-bottom: -50px;
 }
 
 /*sticky navbar*/
 .navbar{
   z-index: 99999;
-  background-color:rgba(0,0,0,0.5);
+  background-color:rgba(0,0,0,0);
+  color: white;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -88,7 +94,8 @@ nav{
 
 
 #container{
-  margin-top: 50%;
+  margin:0;
+  padding: 0;
 }
 /* Links inside the dropdown */
 .dropdown-content a {

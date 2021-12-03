@@ -8,6 +8,7 @@
     <title></title>
   </head>
   <body>
+  <div id = "container">
   <nav>
     <div class="navbar">
       <a href="#home">Home</a>
@@ -23,10 +24,14 @@
         </div>
       </div>
     </nav>
-</div>
-<img src="Assets/imgs/home.jpg" alt="Nature" class="responsive" width="600" height="400">
-<img src="Assets/imgs/home_overlay.png" alt="Nature" id= "overlay" class="responsive" width="600" height="400">
-<div id = "container">
+    </div>
+    <div id = "homeImages">
+      <img src="Assets/imgs/home.jpg" alt="Nature" class="responsive" width="600" height="400">
+      <img src="Assets/imgs/home_overlay.png" alt="Nature" id= "overlay" class="responsive" width="600" height="400">
+    </div>
+    <div id = "bodyText">
+
+
     <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat fermentum elit, sit amet volutpat dui egestas ac. Ut sed lacus et felis vestibulum convallis quis sit amet tortor. Proin ipsum mauris, gravida quis aliquam ac, pulvinar vitae elit. Maecenas vel semper justo. Cras sodales eget lectus sed sagittis. Ut volutpat, enim vel fermentum fermentum, enim ipsum convallis justo, ac convallis neque justo laoreet massa. Morbi commodo augue quis orci feugiat imperdiet. Phasellus a massa ut massa lacinia rhoncus. Donec molestie elit non posuere dignissim. Duis ac nulla dolor. Nam fermentum magna sed nunc mollis, eget malesuada libero molestie. Proin lobortis ut elit a iaculis. Phasellus eu iaculis ligula. Nunc sit amet egestas leo. Nullam venenatis lacus eu eleifend maximus.
 
@@ -37,6 +42,7 @@ Quisque sit amet odio quis erat congue cursus quis quis augue. In odio tortor, b
 Donec porta tortor vel mi condimentum, quis tempus mauris blandit. Donec in interdum tortor, a varius erat. Nullam non congue nunc, eu vehicula risus. Mauris tristique turpis a condimentum ornare. Praesent ac risus cursus, interdum massa sed, maximus nulla. Morbi non varius nibh. Donec pellentesque augue metus, vel rutrum nulla posuere quis.
 
 Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lobortis in risus. Fusce semper porttitor magna at porta. In vestibulum aliquam felis sed commodo. Vivamus accumsan, erat vel finibus porta, ante ligula sagittis tellus, sed tincidunt enim ipsum a purus. Nulla nec mauris nibh. Etiam vestibulum mi a nisi vulputate, pharetra pellentesque dolor sodales. </p>
+    </div>
 </div>
 </div>
 
@@ -45,21 +51,7 @@ Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lob
 </footer>
 
   </body>
-  <!--
   <script>
-  $(window).resize(function() {
-
-    var viewportWidth = $(window).width();
-    var viewportHeight = $(window).height();
-    var s = 1920/viewportWidth;
-    $(".reactiveImage").css
-    (
-      {
-        transform : "scale(" +s+ ")"
-
-      }
-    )
-  });
   $(window).scroll
 (
     function()
@@ -78,5 +70,4 @@ Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lob
   }
 );
 </script>
--->
 </html>
