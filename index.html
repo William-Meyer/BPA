@@ -65,6 +65,7 @@ Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lob
   {
 
     var scroll=$(window).scrollTop();
+    $('.zoom2').css("opacity", 1- scroll/900)
     if(1+scroll/200 < 4)
   {
     $(".zoom1").css
@@ -79,10 +80,7 @@ Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lob
        transform : 'scale(' + (1 + scroll/400) + ')'
       }
     )
-    $('.zoom2').css("opacity", 1- scroll/1500)
-  }
-  else{
-    $('.zoom2').css("opacity", 0)
+
   }
   }
 );
