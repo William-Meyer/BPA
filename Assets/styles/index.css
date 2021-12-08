@@ -15,8 +15,8 @@ body{
   margin-right: 5%;
 }
 #bodyText{
-  margin-top: 100%;
-  background-image: linear-gradient(#3a5841, blue);
+  margin-top: 60%;
+  background-color: #3a5841
 
 }
 #home-background img{
@@ -34,7 +34,7 @@ color:white;
 nav{
 	height: 50px;
 	text-align: center;
-  margin-bottom: -50px;
+  margin-bottom: -200px;
 }
 
 /*sticky navbar*/
@@ -234,4 +234,18 @@ nav{
   .navbar .menu-icon {
     display: none;
   }
+}
+@media (min-width: 1000px)
+{
+  nav{
+    margin-bottom: -50px;
+  }
+
+}
+@media (min-width: 2100px)
+{
+  nav{
+    margin-bottom: -400px;
+  }
+
 }
