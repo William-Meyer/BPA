@@ -59,6 +59,7 @@ Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lob
 
   </body>
   <script>
+
   $(window).scroll
 (
     function()
@@ -66,7 +67,7 @@ Sed quis ultrices urna. Nulla elit libero, consectetur eget fringilla vitae, lob
 
     var scroll=$(window).scrollTop();
     $('.zoom2').css("opacity", 1- scroll/900)
-    if(1+scroll/200 < 4)
+    if((1+scroll/200 < 4) && ($(window).width() > 1000))
   {
     $(".zoom1").css
     (

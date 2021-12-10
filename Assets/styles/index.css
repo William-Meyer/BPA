@@ -75,12 +75,17 @@ nav{
   overflow: hidden;
   float:right;
 }
-
+#homeImages
+{
+  width: 100%;
+  height: auto;
+}
 
 .responsive {
   position: absolute;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 /* Dropdown button */
@@ -235,23 +240,17 @@ nav{
     display: none;
   }
 }
+
 @media (min-width: 1000px)
 {
   nav{
     margin-bottom: -50px;
   }
-
 }
 @media (min-width: 2100px)
 {
   nav{
-    margin-bottom: -400px;
+    margin-bottom: -300px;
   }
 
-}
-@media (min-width: 48em)
-{
-  nav{
-    margin-bottom: -50px;
-  }
 }

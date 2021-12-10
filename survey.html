@@ -2,18 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="text/javascript" src="Assets/scripts/quiz.js">
-    <link rel ="stylesheet" href = "dist/apexcharts.css"/>
-    <style>
-      #chart{
-        width: 500px;
-        height: 500px;
-        border:1px solid black;
-      }
-    </style>
-    <script src = "dist/apexchart.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script type="text/javascript">
-    require('apexcharts')
     var c1 = 0;
     var c2 = 0;
     var c3 = 0;
@@ -30,8 +20,27 @@
       c1 += slider1.value;
       c2 += slider2.value;
       c3 += slider3.value;
-      alert("test")
       drawChart()
+    }
+
+    function drawChart()
+    {
+      var chart = new CanvasJS.Chart("chartContainer", {
+    		title:{
+    			text: "Your Carbon Foot Print"
+    		},
+    		data: [
+    		{
+    			// Change type to "doughnut", "line", "splineArea", etc.
+    			type: "pie",
+    			dataPoints: [
+    				{ label: "c1",  y: c1  },
+    				{ label: "c2", y: c2  },
+    				{ label: "c3", y: c3  }
+    			]
+    		}
+    		]
+    	});
     }
     </script>
     <title></title>
@@ -51,6 +60,6 @@
         <input type="button" name="" value="Done" onClick = checkSlider()>
         <div id = "chart"></div>
     </div>
-
+    <div id="chartContainer" style="height: 300px; width: 50%;"></div>
   </body>
 </html>
