@@ -99,7 +99,7 @@ nav{
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn
+.menu a:hover, .dropdown:hover .dropbtn
 .menu-btn:hover {
   background-color: red;
 }
@@ -146,11 +146,15 @@ nav{
 
 .navbar .logo{
   float: left;
-  font-size: 8em;
-  padding: 10px 20px;
+  margin-left: -170px;
   text-decoration: none;
+  overflow: hidden;
 }
 
+#netzero{
+    width:20%;
+    height:auto;
+}
 
 /* menu */
 .navbar .menu{
@@ -176,14 +180,13 @@ nav{
   border-right: 1px;
 }
 
-
 .navbar .menu-icon .navicon{
   background: #333;
   display: block;
   height: 3px;
   position:relative;
   transition: background 0.2s ease-out;
-  width: 19px;
+  width: 25px;
 }
 
 .navbar .menu-icon .navicon:before,
@@ -206,6 +209,7 @@ nav{
 }
 
 /* hamburger */
+
  .menu-btn{
   display:none;
 }
@@ -231,14 +235,15 @@ nav{
   top: 0;
 }
 
- .logo{
-  float:left;
-  font-size: 25px;
-  text-decoration:none;
-  padding-left: 20px;
-  padding-top: 16px;
-  display: block;
+
+.zoom1{
+
 }
+
+.zoom2{
+
+}
+
 
 /* 48em = 768px */
 
