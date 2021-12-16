@@ -250,13 +250,19 @@ nav{
 
 }
 
+.navbar img{
+  padding: 0;
+}
 
+<<<<<<< HEAD
 
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
+=======
+>>>>>>> 38374b30e63c9daa8086ee7b81bc68de44b9c472
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 810px) {
   .navbar li {
     float: right;
   }
@@ -270,6 +276,11 @@ nav{
   }
   .navbar .menu-icon {
     display: none;
+  }
+  .logo{
+    width:53%;
+    height:auto;
+    margin-left: -170px;
   }
 }
 
@@ -296,6 +307,10 @@ nav{
 {
   nav{
     margin-bottom: -300px;
+  }
+  nav img{
+    margin-left:-550px;
+  }
   }
 
 }
