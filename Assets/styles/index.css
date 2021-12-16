@@ -254,12 +254,9 @@ nav{
   padding: 0;
 }
 
-<<<<<<< HEAD
 
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
-=======
->>>>>>> 38374b30e63c9daa8086ee7b81bc68de44b9c472
 /* 48em = 768px */
 
 @media (min-width: 810px) {
