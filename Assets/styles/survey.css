@@ -1,10 +1,29 @@
 * {box-sizing:border-box}
+*
+{
+  margin:0;
+  padding: 0;
 
+}
+#slide1 h1{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#slide1 h2
+{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width:100%;
+  height: auto;
   position: relative;
-  margin: auto;
 }
 
 /* Hide the images by default */

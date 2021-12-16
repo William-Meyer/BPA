@@ -251,11 +251,9 @@ nav{
 }
 
 
-<<<<<<< HEAD
-=======
+
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
->>>>>>> cacd6f642845ee14744b77c3101ea06f46f601c6
 /* 48em = 768px */
 
 @media (min-width: 48em) {

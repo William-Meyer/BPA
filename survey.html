@@ -110,7 +110,7 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = slides.length}
-  if (n < 1) {slideIndex = slides.length}
+  if (n < 1) {slideIndex = 1}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
@@ -137,6 +137,15 @@ window.onload = function exampleFunction() {
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 6</div>
+    <div id = "slide1">
+      <h1>
+        Find Your Footprint
+      </h1>
+      <h2>
+          Click the Arrow to Start
+      </h2>
+    </div>
+
     <img src="Assets/imgs/quiz_home.JPG" style="width:100%">
   </div>
 
