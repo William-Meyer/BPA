@@ -20,7 +20,7 @@ body{
 
 }
 #home-background img{
-  width: 50%
+  width: 50%;
   max-width: 50%;
   height:auto;
 }
@@ -55,7 +55,9 @@ nav{
   overflow: hidden;
 }
 
-
+#viewport{
+  scale: absolu
+}
 
 /* Links inside the navbar */
 .navbar a {
@@ -75,8 +77,10 @@ nav{
 }
 #homeImages
 {
-  width: 100%;
+  width: 1000px;
   height: auto;
+  overflow: hidden;
+  background-color: red;
 }
 
 .responsive {
@@ -118,6 +122,8 @@ nav{
 #container{
   margin:0;
   padding: 0;
+  overflow: hidden;
+  width: 1000px;
 
 }
 /* Links inside the dropdown */
@@ -245,6 +251,11 @@ nav{
 }
 
 
+<<<<<<< HEAD
+=======
+.zoom1{max-width: 100%; overflow: hidden;}
+.zoom2{max-width: 100%; overflow: hidden;}
+>>>>>>> cacd6f642845ee14744b77c3101ea06f46f601c6
 /* 48em = 768px */
 
 @media (min-width: 48em) {
@@ -268,6 +279,19 @@ nav{
 {
   nav{
     margin-bottom: -50px;
+  }
+}
+@media(max-width: 1320px)
+{
+  .zoom1
+  {
+    visibility: hidden;
+    object-fit: cover;
+  }
+  .zoom2
+  {
+    visibility: hidden;
+    object-fit: cover;
   }
 }
 @media (min-width: 2100px)
