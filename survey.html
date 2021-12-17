@@ -136,7 +136,6 @@ window.onload = function exampleFunction() {
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 6</div>
     <div id = "slide1">
       <h1>
         Find Your Footprint
@@ -150,60 +149,37 @@ window.onload = function exampleFunction() {
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 6</div>
     <img src="Assets/imgs/quiz1.JPG" style="width:100%">
       <h1 class = "questionText">On average, how many miles do you drive per week?</h1>
-    <div class="text"><p>value 1</p>
-      <div id="form-wrapper">
-  	<form action="/p/quote.php" method="GET">
-  		<h1 id="form-title">Select Debt Amount</h1>
-  		<div id="debt-amount-slider">
-  			<input type="radio" name="debt-amount" id="1" value="1" required>
-  			<label for="1" data-debt-amount="< $10k"></label>
-  			<input type="radio" name="debt-amount" id="2" value="2" required>
-  			<label for="2" data-debt-amount="$10k-25k"></label>
-  			<input type="radio" name="debt-amount" id="3" value="3" required>
-  			<label for="3" data-debt-amount="$25k-50k"></label>
-  			<input type="radio" name="debt-amount" id="4" value="4" required>
-  			<label for="4" data-debt-amount="$50k-100k"></label>
-  			<input type="radio" name="debt-amount" id="5" value="5" required>
-  			<label for="5" data-debt-amount="$100k+"></label>
-  			<div id="debt-amount-pos"></div>
-  		</div>
-  	</form>
-  	<button type="submit">Get Debt Free!</button>
-  </div>
+    <div class="text">
+      <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange1"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 6</div>
     <h1 class="questionText">Compared to your neighbors, how much trash do you produce in a week?</h1>
     <img src="Assets/imgs/quiz2.JPG" style="width:100%">
-    <div class="text"><p>value 2</p>
+    <div class="text">
     <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange2"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">4 / 6</div>
     <h1 class="questionText">How often do you consume animal products?</h1>
     <img src="Assets/imgs/quiz3.JPG" style="width:100%">
-    <div class="text"><p>value 3</p>
+    <div class="text">
     <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange3"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">5 / 6</div>
     <h1 class = "questionText">How often do you fly in a year?</h1>
     <img src="Assets/imgs/quiz4.JPG" style="width:100%">
-    <div class="text"><p>value 4</p>
+    <div class="text">
     <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange4"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">6 / 6</div>
     <h1 class="questionText">How much is your household energy bill each month, on average?</h1>
     <img src="Assets/imgs/quiz5.JPG" style="width:100%">
-    <div class="text"><p>value 5</p>
+    <div class="text">
     <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange5"></div>
   </div>
 
@@ -228,5 +204,7 @@ window.onload = function exampleFunction() {
         <div id = "chart"></div>
     </div>
     <div id="chartdiv" style="height: 300px; width: 50%;"></div>
+
+
   </body>
 </html>
