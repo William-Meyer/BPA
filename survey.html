@@ -152,14 +152,54 @@ window.onload = function exampleFunction() {
     <img src="Assets/imgs/quiz1.JPG" style="width:100%">
       <h1 class = "questionText">On average, how many miles do you drive per week?</h1>
     <div class="text">
-      <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange1"></div>
+      <div class="outer">
+
+      <div id="form-wrapper">
+  <form action="/p/quote.php" method="GET">
+    <div id="debt-amount-slider">
+      <input type="radio" name="debt-amount" id="1" value="2" required>
+      <label for="1" data-debt-amount="0-50"></label>
+      <input type="radio" name="debt-amount" id="2" value="4" required>
+      <label for="2" data-debt-amount="51-100"></label>
+      <input type="radio" name="debt-amount" id="3" value="6" required>
+      <label for="3" data-debt-amount="101-200"></label>
+      <input type="radio" name="debt-amount" id="4" value="8" required>
+      <label for="4" data-debt-amount="201-300"></label>
+      <input type="radio" name="debt-amount" id="5" value="10" required>
+      <label for="5" data-debt-amount="300+"></label>
+      <div id="debt-amount-pos"></div>
+    </div>
+  </form>
+  </div>
+    </div>
+      </div>
   </div>
 
   <div class="mySlides fade">
-    <h1 class="questionText">Compared to your neighbors, how much trash do you produce in a week?</h1>
+    <h1 class="questionText">How many bags of garbage do you throw away weekly?</h1>
     <img src="Assets/imgs/quiz2.JPG" style="width:100%">
     <div class="text">
-    <input type="range" min="0" max="5"  name = "q1" value="2.5" class="slider" id="myRange2"></div>
+      <div class="outer">
+
+      <div id="form-wrapper">
+  <form action="/p/quote.php" method="GET">
+    <div id="debt-amount-slider">
+      <input type="radio" name="debt-amount" id="1" value="2" required>
+      <label for="1" data-debt-amount="0-2"></label>
+      <input type="radio" name="debt-amount" id="2" value="4" required>
+      <label for="2" data-debt-amount="3"></label>
+      <input type="radio" name="debt-amount" id="3" value="6" required>
+      <label for="3" data-debt-amount="4"></label>
+      <input type="radio" name="debt-amount" id="4" value="8" required>
+      <label for="4" data-debt-amount="5"></label>
+      <input type="radio" name="debt-amount" id="5" value="10" required>
+      <label for="5" data-debt-amount="6+"></label>
+      <div id="debt-amount-pos"></div>
+    </div>
+  </form>
+  </div>
+    </div>
+  </div>
   </div>
 
   <div class="mySlides fade">
