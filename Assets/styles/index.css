@@ -7,18 +7,15 @@
 body{
 
 }
-#bodyText p{
-  padding-top: 50%;
-  max-width: 100%;
-  font-size:40px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-#bodyText{
+main{
   margin-top: 60%;
-  background-color: #3a5841
-
+  background-color: #3a5841;
+  padding-top:50%;
+  max-width: 100%;
+  padding-left: 17%;
+  padding-right: 17%;
 }
+
 #home-background img{
   width: 50%;
   max-width: 50%;
@@ -27,7 +24,35 @@ body{
 
 footer{
 font-size:25px;
-background-color: black;
+color:green;
+background-color: #3a5841;
+position: relative;
+}
+
+footer p{
+  position:absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+main p{
+font-family: 'Work Sans',sans-serif;
+font-weight: 300;
+font-style: normal;
+
+}
+
+#headerstart{
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#headerend{
+font-family: 'Work Sans',sans-serif;
+font-weight: 600;
+font-style: normal;
 color:white;
 }
 
@@ -55,9 +80,6 @@ nav{
   overflow: hidden;
 }
 
-#viewport{
-  scale: absolu
-}
 
 /* Links inside the navbar */
 .navbar a {
@@ -77,12 +99,14 @@ nav{
 }
 #homeImages
 {
-  width: 1000px;
+  width: 50%;
   height: auto;
   overflow: hidden;
-  background-color: red;
 }
-
+#footer_tree{
+  width:100%;
+  height:auto;
+}
 .responsive {
   position: absolute;
   width: 100%;
@@ -185,9 +209,8 @@ nav{
   display:block;
   border-right: 1px;
 }
-
-.navbar .menu-icon .navicon{
-  background: #333;
+.navbar  .navicon{
+  background: #FFF;
   display: block;
   height: 3px;
   position:relative;
@@ -197,7 +220,7 @@ nav{
 
 .navbar .menu-icon .navicon:before,
 .navbar .menu-icon .navicon:after{
-  background:#333;
+  background:#FFF;
   content:'';
   display: block;
   height: 100%;
@@ -254,12 +277,9 @@ nav{
   padding: 0;
 }
 
-<<<<<<< HEAD
 
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
-=======
->>>>>>> 38374b30e63c9daa8086ee7b81bc68de44b9c472
 /* 48em = 768px */
 
 @media (min-width: 810px) {
@@ -280,7 +300,6 @@ nav{
   .logo{
     width:53%;
     height:auto;
-    margin-left: -170px;
   }
 }
 
@@ -307,9 +326,6 @@ nav{
 {
   nav{
     margin-bottom: -300px;
-  }
-  nav img{
-    margin-left:-550px;
   }
   }
 
