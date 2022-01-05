@@ -37,32 +37,27 @@
     </nav>
     </div>
     <div id = "homeImages">
-<<<<<<< HEAD
-      <img src="Assets/imgs/home2.jpg" alt="Nature" class="responsive" width="600" height="400">
-      <img src="Assets/imgs/home2.jpg" alt="Nature" class="responsive zoom1" width="600" height="400">
-      <img src="Assets/imgs/home_overlay.png" alt="Nature" id= "overlay" class="responsive zoom2" width="600" height="400">
-=======
       <img src="Assets/imgs/home.jpg" alt="Nature" class="responsive" width = "100%" height ="auto">
       <img src="Assets/imgs/home.jpg" alt="Nature" class="responsive zoom1" width = "100%" height = "auto">
 
       <img src="Assets/imgs/home_overlay.png" alt="Nature" id= "overlay" class="responsive zoom2" >
->>>>>>> 419daebad84843d82338d1918fb2118313985e00
     </div>
     </div>
     <main>
       <h1><div id="headerstart">What is a</div> <div id="headerend">Carbon Footprint?</div></h1><p>A carbon footprint is the total amount of
 greenhouse gases emitted from an individual or group. Greenhouse gases include methane, nitrous oxide, water vapor, and most prominently,
 carbon dioxide. Greenhouse gases cause the sun’s heat to get trapped inside the earth’s
-atmosphere, causing the global temperature to rise.</p>
-    <h1><div id="headerstart">Our</div> <div id="headerend">Goal</div></h1><p>Our goal is to educate the community about greenhouse gas emissions and provide resources for individuals
-reduce their own carbon footprint. Minimizing carbon footprint is a global effort but it starts with one step.</p>
+atmosphere, causing the global temperature to rise.<img src="assets/imgs/carbon.jpg" alt="picture of factories" id="factory"/></p>
+    <br></br><h1><div id="headerstart">Our</div> <div id="headerend">Goal</div></h1><p>Our goal is to educate the community about greenhouse gas emissions and provide resources for individuals
+reduce their own carbon footprint. The damage done to the earth is nearing irreversible but with everyones’ help and a little bit of collective effort, change can be made. Reducing carbon footprint is a global effort but it starts with just one step.
+</p>
 
-  <h1><div id="headerstart">Want To Learn</div> <div id="headerend">How You Can Help</div></h1><p>Want to see your carbon footprint?
-Take our free survey to calculate your carbon emissions.</p>
+  <br></br><br></br><h1><div id="headerstart">Want To Learn</div> <div id="headerend">How You Can Help?</div></h1><p>Want to see your carbon footprint?
+Take our free survey to calculate your carbon emissions.</p><br></br>
 </main>
 <footer>
   <img src="assets/imgs/footer_tree.png" alt="picture of woods" id="footer_tree"/>
-    <p>&copy; 2021 BPA Site. All rights reserved. Site design by <br></p>
+    <p>&copy; 2021 BPA Site. All rights reserved. Site design by Dreadhead Filmz<br></p>
 </footer>
 
   </body>
@@ -96,5 +91,14 @@ Take our free survey to calculate your carbon emissions.</p>
   }
   }
 );
+
+$(window).scroll(function(){
+  if($(window).scrollTop()){
+    $("nav").addClass("black");
+  }
+  else{
+    $("nav").removeClass("black");
+  }
+})
 </script>
 </html>

@@ -8,7 +8,7 @@ body{
 
 }
 main{
-  margin-top: 60%;
+  margin-top: 40%;
   background-color: #3a5841;
   padding-top:50%;
   max-width: 100%;
@@ -23,10 +23,11 @@ main{
 }
 
 footer{
-font-size:25px;
-color:green;
+font-size:150%;
+color:white;
 background-color: #3a5841;
 position: relative;
+display: flex;
 }
 
 footer p{
@@ -35,11 +36,17 @@ footer p{
   left: 16px;
 }
 
-main p{
+main p, main img{
 font-family: 'Work Sans',sans-serif;
-font-weight: 300;
+font-weight: 600;
+color:yellow;
 font-style: normal;
-
+background-color: #91a28c;
+text-align: center;
+font-size: 165%;
+-webkit-border-radius: 10px;
+-moz-border-radius:10px;
+border-radius: 10px;
 }
 
 #headerstart{
@@ -47,6 +54,7 @@ font-style: normal;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-style: normal;
+
 }
 
 #headerend{
@@ -54,6 +62,14 @@ font-family: 'Work Sans',sans-serif;
 font-weight: 600;
 font-style: normal;
 color:white;
+font-size: 135%;
+}
+/*text wrapping images*/
+#factory{
+  float:right;
+  clear: right;
+  height:50%;
+  width:50%;
 }
 
 nav{
@@ -204,10 +220,15 @@ nav{
   user-select:none;
 }
 
+.menu .black ul{
+  background:#000;
+}
+
 .menu{
   float:left;
   display:block;
   border-right: 1px;
+  transition: 1s;
 }
 .navbar  .navicon{
   background: #FFF;
