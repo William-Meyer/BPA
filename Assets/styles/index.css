@@ -36,17 +36,25 @@ footer p{
   left: 16px;
 }
 
-main p, main img{
+main p{
 font-family: 'Work Sans',sans-serif;
 font-weight: 600;
-color:yellow;
+color:white;
 font-style: normal;
 background-color: #91a28c;
-text-align: center;
-font-size: 165%;
--webkit-border-radius: 10px;
--moz-border-radius:10px;
-border-radius: 10px;
+text-align: justify;
+font-size: 205;
+-webkit-border-radius: 8px;
+-moz-border-radius:8px;
+border-radius: 8px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+#p2{
+  margin-top:50px;
 }
 
 #headerstart{
@@ -66,10 +74,13 @@ font-size: 135%;
 }
 /*text wrapping images*/
 #factory{
-  float:right;
+  float: right;
   clear: right;
   height:50%;
   width:50%;
+  border-radius:8px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 nav{
@@ -328,6 +339,16 @@ nav{
 {
   nav{
     margin-bottom: -50px;
+  }
+  #p2{
+    margin-top:120px;
+  }
+  #factory{
+    width:35%;
+    height:35%;
+  }
+  main p{
+    font-size:
   }
 }
 @media(max-width: 1320px)
