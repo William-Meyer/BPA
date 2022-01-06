@@ -83,6 +83,7 @@
   bottom: 40%;
   width: 100%;
   text-align: center;
+  transform: translate(40%, 0%);
 }
 /* Number text (1/3 etc) */
 .numbertext {
@@ -127,433 +128,156 @@
   to {opacity: 1}
 }
 
-
-
-
-/*radio buttons */
-
-.outer{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Nunito", sans-serif;
-  color: #FFFFFF;
-  user-select: none;
+:root {
+	--bg: #e3e4e8;
+	--bgT: #e3e4e800;
+	--fg: #17181c;
+	--inputBg: #fff;
+	--handleBg: #255ff4;
+	--handleDownBg: #0b46da;
+	--handleTrackBg: #5583f6;
+	font-size: calc(16px + (32 - 16)*(100vw - 320px)/(2560 - 320));
+}
+#sliderContainer, input {
+	color: var(--fg);
+	font: 1em/1.5 "Hind", sans-serif;
+}
+#slideContainer, .range, .range__counter {
+	display: flex;
+}
+#sliderContainer {
+	background-color: var(--bg);
 }
 
-#form-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+#slideContainer {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-form {
-  width: 90%;
-  max-width: 500px;
-}
-form #form-title {
-  font-weight: 400;
-  text-align: center;
-}
-form #debt-amount-slider {
-  display: flex;
-  flex-direction: row;
-  align-content: stretch;
-  position: relative;
-  width: 100%;
-  height: 50px;
-  user-select: none;
-}
-form #debt-amount-slider:before {
-  content: " ";
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #000;
-}
-form #debt-amount-slider input, form #debt-amount-slider label {
-  box-sizing: border-box;
-  flex: 1;
-  user-select: none;
-  cursor: pointer;
-}
-form #debt-amount-slider label {
-  position: absolute;
-  width: 20%;
-  height: 100%;
-  user-select: none;
-}
-form #debt-amount-slider label:nth-child(2) {
-  left: 0%;
-}
-form #debt-amount-slider label:nth-child(4) {
-  left: 20%;
-}
-form #debt-amount-slider label:nth-child(6) {
-  left: 40%;
-}
-form #debt-amount-slider label:nth-child(8) {
-  left: 60%;
-}
-form #debt-amount-slider label:nth-child(10) {
-  left: 80%;
-}
-form #debt-amount-slider label:before {
-  content: attr(data-debt-amount);
-  position: absolute;
-  left: 50%;
-  padding-top: 10px;
-  transform: translate(-50%, 45px);
-  font-size: 14px;
-  letter-spacing: 0.4px;
-  font-weight: 400;
-  white-space: nowrap;
-  opacity: 0.85;
-  transition: all 0.15s ease-in-out;
-}
-form #debt-amount-slider label:after {
-  content: " ";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border: 2px solid #000;
-  background: #fff;
-  border-radius: 50%;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-  cursor: pointer;
-  transition: all 0.15s ease-in-out;
-}
-form #debt-amount-slider label:hover:after {
-  transform: translate(-50%, -50%) scale(1.25);
-}
-form #debt-amount-slider input {
-  opacity: 0;
-  pointer-events: none;
-}
-form #debt-amount-slider input:checked + label:before {
-  font-weight: 800;
-  opacity: 1;
-}
-form #debt-amount-slider input:checked + label:after {
-  border-width: 4px;
-  transform: translate(-50%, -50%) scale(0.75);
-}
-form #debt-amount-slider input:checked ~ #debt-amount-pos {
-  opacity: 1;
-}
-form #debt-amount-slider input:checked:nth-child(1) ~ #debt-amount-pos {
-  left: 10%;
-}
-form #debt-amount-slider input:checked:nth-child(3) ~ #debt-amount-pos {
-  left: 30%;
-}
-form #debt-amount-slider input:checked:nth-child(5) ~ #debt-amount-pos {
-  left: 50%;
-}
-form #debt-amount-slider input:checked:nth-child(7) ~ #debt-amount-pos {
-  left: 70%;
-}
-form #debt-amount-slider input:checked:nth-child(9) ~ #debt-amount-pos {
-  left: 90%;
-}
-form #debt-amount-slider #debt-amount-pos {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border-radius: 50%;
-  transition: all 0.15s ease-in-out;
-  transform: translate(-50%, -50%);
-  border: 2px solid #fff;
-  opacity: 0;
-  z-index: 2;
-}
-form:valid #debt-amount-slider input + label:before {
-  transform: translate(-50%, 45px) scale(0.9);
-  transition: all 0.15s linear;
-}
-form:valid #debt-amount-slider input:checked + label:before {
-  transform: translate(-50%, 45px) scale(1.1);
-  transition: all 0.15s linear;
-}
-form + button {
-  display: block;
-  position: relative;
-  margin: 56px auto 0;
-  padding: 10px 20px;
-  appearance: none;
-  transition: all 0.15s ease-in-out;
-  font-family: inherit;
-  font-size: 24px;
-  font-weight: 600;
-  background: #fff;
-  border: 2px solid #000;
-  border-radius: 8px;
-  outline: 0;
-  user-select: none;
-  cursor: pointer;
-}
-form + button:hover {
-  background: #000;
-  color: #fff;
-}
-form + button:hover:active {
-  transform: scale(0.9);
-}
-form + button:focus {
-  background: #4caf50;
-  border-color: #4caf50;
-  color: #fff;
-  pointer-events: none;
-}
-form + button:focus:before {
-  animation: spin 1s linear infinite;
-}
-form + button:before {
-  display: inline-block;
-  width: 0;
-  opacity: 0;
-  content: "\f3f4";
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 900;
-  margin-right: 0;
-  transform: rotate(0deg);
-}
-form:invalid + button {
-  pointer-events: none;
-  opacity: 0.25;
-}
+#sliderContainer {
+    width: 100%;
+    max-width: 440px;
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-    width: 24px;
-    opacity: 1;
-    margin-right: 12px;
-  }
-  to {
-    transform: rotate(360deg);
-    width: 24px;
-    opacity: 1;
-    margin-right: 12px;
-  }
-}
+    padding: 56px 40px;
 
-/*# sourceMappingURL=demo.css.map */
-#form-wrapper2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    border-radius: 40px;
+
+    box-shadow: 0px 16px 50px rgba(200, 200, 200, 0.30);
+}
+form, input, .range__input, .range__counter-sr {
+	width: 100%;
 }
 form {
-  width: 90%;
-  max-width: 500px;
+	margin: auto;
+	padding: 0 0.75em;
+	max-width: 17em;
 }
-form #form-title2 {
-  font-weight: 400;
-  text-align: center;
+label {
+	font-weight: bold;
 }
-form #debt-amount-slider2 {
-  display: flex;
-  flex-direction: row;
-  align-content: stretch;
-  position: relative;
-  width: 100%;
-  height: 50px;
-  user-select: none;
+.range:not(:last-child) {
+	margin-bottom: 1.5em;
 }
-form #debt-amount-slider2:before {
-  content: " ";
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #000;
+.range input[type=range],
+.range input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
 }
-form #debt-amount-slider2 input, form #debt-amount-slider2 label {
-  box-sizing: border-box;
-  flex: 1;
-  user-select: none;
-  cursor: pointer;
+.range input[type=range], .range__input-fill {
+	border-radius: 0.25em;
+	height: 0.5em;
 }
-form #debt-amount-slider2 label {
-  position: absolute;
-  width: 20%;
-  height: 100%;
-  user-select: none;
+.range input[type=range] {
+	background-color: var(--inputBg);
+	display: block;
+	margin: 0.5em 0;
+	padding: 0;
 }
-form #debt-amount-slider2 label:nth-child(2) {
-  left: 0%;
+.range input[type=range]:focus {
+	outline: transparent;
 }
-form #debt-amount-slider2 label:nth-child(4) {
-  left: 20%;
+.range input[type=range]::-webkit-slider-thumb {
+	background-color: var(--handleBg);
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	transition: background 0.1s linear;
+	width: 1.5em;
+	height: 1.5em;
+	z-index: 1;
 }
-form #debt-amount-slider2 label:nth-child(6) {
-  left: 40%;
+.range input[type=range]::-moz-range-thumb {
+	background-color: var(--handleBg);
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	transform: translateZ(1px);
+	transition: background-color 0.1s linear;
+	width: 1.5em;
+	height: 1.5em;
+	z-index: 1;
 }
-form #debt-amount-slider2 label:nth-child(8) {
-  left: 60%;
+.range input[type=range]::-moz-focus-outer {
+	border: 0;
 }
-form #debt-amount-slider2 label:nth-child(10) {
-  left: 80%;
+.range__input, .range__input-fill, .range__counter-column, .range__counter-digit {
+	display: block;
 }
-form #debt-amount-slider2 label:before {
-  content: attr(data-debt-amount);
-  position: absolute;
-  left: 50%;
-  padding-top: 10px;
-  transform: translate(-50%, 45px);
-  font-size: 14px;
-  letter-spacing: 0.4px;
-  font-weight: 400;
-  white-space: nowrap;
-  opacity: 0.85;
-  transition: all 0.15s ease-in-out;
+.range__input, .range__counter {
+	position: relative;
 }
-form #debt-amount-slider2 label:after {
-  content: " ";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border: 2px solid #000;
-  background: #fff;
-  border-radius: 50%;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-  cursor: pointer;
-  transition: all 0.15s ease-in-out;
+.range__input {
+	margin-right: 0.375em;
 }
-form #debt-amount-slider2 label:hover:after {
-  transform: translate(-50%, -50%) scale(1.25);
+.range__input:active input[type=range]::-webkit-slider-thumb,
+.range input[type=range]:focus::-webkit-slider-thumb,
+.range input[type=range]::-webkit-slider-thumb:hover {
+	background-color: var(--handleDownBg);
 }
-form #debt-amount-slider2 input {
-  opacity: 0;
-  pointer-events: none;
+.range__input:active input[type=range]::-moz-range-thumb,
+.range input[type=range]:focus::-moz-range-thumb,
+.range input[type=range]::-moz-range-thumb:hover {
+	background-color: var(--handleDownBg);
 }
-form #debt-amount-slider2 input:checked + label:before {
-  font-weight: 800;
-  opacity: 1;
+.range__input-fill, .range__counter-sr {
+	position: absolute;
+	left: 0;
 }
-form #debt-amount-slider2 input:checked + label:after {
-  border-width: 4px;
-  transform: translate(-50%, -50%) scale(0.75);
+.range__input-fill {
+	background-color: var(--handleTrackBg);
+	pointer-events: none;
+	top: calc(50% - 0.25em);
 }
-form #debt-amount-slider2 input:checked ~ #debt-amount-pos2 {
-  opacity: 1;
+.range__counter, .range__counter-digit {
+	height: 1.5em;
 }
-form #debt-amount-slider2 input:checked:nth-child(1) ~ #debt-amount-pos2 {
-  left: 10%;
+.range__counter {
+	margin: auto 0;
+	overflow: hidden;
+	text-align: center;
 }
-form #debt-amount-slider2 input:checked:nth-child(3) ~ #debt-amount-pos2 {
-  left: 30%;
+.range__counter-sr {
+	background-image: linear-gradient(var(--bg),var(--bgT) 0.3em 1.2em,var(--bg));
+	color: transparent;
+	letter-spacing: 0.06em;
+	top: 0;
+	text-align: right;
+	z-index: 1;
 }
-form #debt-amount-slider2 input:checked:nth-child(5) ~ #debt-amount-pos2 {
-  left: 50%;
+.range__counter-column {
+	transition: transform 0.25s ease-in-out;
+	width: 0.66em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
-form #debt-amount-slider2 input:checked:nth-child(7) ~ #debt-amount-pos2 {
-  left: 70%;
-}
-form #debt-amount-slider2 input:checked:nth-child(9) ~ #debt-amount-pos2 {
-  left: 90%;
-}
-form #debt-amount-slider2 #debt-amount-pos2 {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border-radius: 50%;
-  transition: all 0.15s ease-in-out;
-  transform: translate(-50%, -50%);
-  border: 2px solid #fff;
-  opacity: 0;
-  z-index: 2;
-}
-form:valid #debt-amount-slider2 input + label:before {
-  transform: translate(-50%, 45px) scale(0.9);
-  transition: all 0.15s linear;
-}
-form:valid #debt-amount-slider2 input:checked + label:before {
-  transform: translate(-50%, 45px) scale(1.1);
-  transition: all 0.15s linear;
-}
-form + button {
-  display: block;
-  position: relative;
-  margin: 56px auto 0;
-  padding: 10px 20px;
-  appearance: none;
-  transition: all 0.15s ease-in-out;
-  font-family: inherit;
-  font-size: 24px;
-  font-weight: 600;
-  background: #fff;
-  border: 2px solid #000;
-  border-radius: 8px;
-  outline: 0;
-  user-select: none;
-  cursor: pointer;
-}
-form + button:hover {
-  background: #000;
-  color: #fff;
-}
-form + button:hover:active {
-  transform: scale(0.9);
-}
-form + button:focus {
-  background: #4caf50;
-  border-color: #4caf50;
-  color: #fff;
-  pointer-events: none;
-}
-form + button:focus:before {
-  animation: spin 1s linear infinite;
-}
-form + button:before {
-  display: inline-block;
-  width: 0;
-  opacity: 0;
-  content: "\f3f4";
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 900;
-  margin-right: 0;
-  transform: rotate(0deg);
-}
-form:invalid + button {
-  pointer-events: none;
-  opacity: 0.25;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-    width: 24px;
-    opacity: 1;
-    margin-right: 12px;
-  }
-  to {
-    transform: rotate(360deg);
-    width: 24px;
-    opacity: 1;
-    margin-right: 12px;
-  }
+.range__counter-column--pause {
+	transition: none;
 }
