@@ -8,6 +8,184 @@
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded",() => {
+	let range1 = new RollCounterRange("#range1"),
+		range2 = new RollCounterRange("#range2");
+});
+
+class RollCounterRange {
+	constructor(id) {
+		this.el = document.querySelector(id);
+		this.srValue = null;
+		this.fill = null;
+		this.digitCols = null;
+		this.lastDigits = "";
+		this.rollDuration = 0; // the transition duration from CSS will override this
+		this.trans09 = false;
+
+		if (this.el) {
+			this.buildSlider();
+			this.el.addEventListener("input",this.changeValue.bind(this));
+		}
+	}
+	buildSlider() {
+		// create a div to contain the <input>
+		let rangeWrap = document.createElement("div");
+		rangeWrap.className = "range";
+		this.el.parentElement.insertBefore(rangeWrap,this.el);
+
+		// create another div to contain the <input> and fill
+		let rangeInput = document.createElement("span");
+		rangeInput.className = "range__input";
+		rangeWrap.appendChild(rangeInput);
+
+		// range fill, place the <input> and fill inside container <span>
+		let rangeFill = document.createElement("span");
+		rangeFill.className = "range__input-fill";
+		rangeInput.appendChild(this.el);
+		rangeInput.appendChild(rangeFill);
+
+		// create the counter
+		let counter = document.createElement("span");
+		counter.className = "range__counter";
+		rangeWrap.appendChild(counter);
+
+		// screen reader value
+		let srValue = document.createElement("span");
+		srValue.className = "range__counter-sr";
+		srValue.textContent = "0";
+		counter.appendChild(srValue);
+
+		// column for each digit
+		for (let D of this.el.max.split("")) {
+			let digitCol = document.createElement("span");
+			digitCol.className = "range__counter-column";
+			digitCol.setAttribute("aria-hidden","true");
+			counter.appendChild(digitCol);
+
+			// digits (blank, 0–9, fake 0)
+			for (let d = 0; d <= 11; ++d) {
+				let digit = document.createElement("span");
+				digit.className = "range__counter-digit";
+
+				if (d > 0)
+					digit.textContent = d == 11 ? 0 : `${d - 1}`;
+
+				digitCol.appendChild(digit);
+			}
+		}
+
+		this.srValue = srValue;
+		this.fill = rangeFill;
+		this.digitCols = counter.querySelectorAll(".range__counter-column");
+		this.lastDigits = this.el.value;
+
+		while (this.lastDigits.length < this.digitCols.length)
+			this.lastDigits = " " + this.lastDigits;
+
+		this.changeValue();
+
+		// use the transition duration from CSS
+		let colCS = window.getComputedStyle(this.digitCols[0]),
+			transDur = colCS.getPropertyValue("transition-duration"),
+			msLabelPos = transDur.indexOf("ms"),
+			sLabelPos = transDur.indexOf("s");
+
+		if (msLabelPos > -1)
+			this.rollDuration = transDur.substr(0,msLabelPos);
+		else if (sLabelPos > -1)
+			this.rollDuration = transDur.substr(0,sLabelPos) * 1e3;
+	}
+	changeValue() {
+		// keep the value within range
+		if (+this.el.value > this.el.max)
+			this.el.value = this.el.max;
+
+		else if (+this.el.value < this.el.min)
+			this.el.value = this.el.min;
+
+		// update the screen reader value
+		if (this.srValue)
+			this.srValue.textContent = this.el.value;
+
+		// width of fill
+		if (this.fill) {
+			let pct = this.el.value / this.el.max,
+				fillWidth = pct * 100,
+				thumbEm = 1 - pct;
+
+			this.fill.style.width = `calc(${fillWidth}% + ${thumbEm}em)`;
+		}
+
+		if (this.digitCols) {
+			let rangeVal = this.el.value;
+
+			// add blanks at the start if needed
+			while (rangeVal.length < this.digitCols.length)
+				rangeVal = " " + rangeVal;
+
+			// get the differences between current and last digits
+			let diffsFromLast = [];
+			if (this.lastDigits) {
+				rangeVal.split("").forEach((r,i) => {
+					let diff = +r - this.lastDigits[i];
+					diffsFromLast.push(diff);
+				});
+			}
+
+			// roll the digits
+			this.trans09 = false;
+			rangeVal.split("").forEach((e,i) => {
+				let digitH = 1.5,
+					over9 = false,
+					under0 = false,
+					transY = e === " " ? 0 : (-digitH * (+e + 1)),
+					col = this.digitCols[i];
+
+				// start handling the 9-to-0 or 0-to-9 transition
+				if (e == 0 && diffsFromLast[i] == -9) {
+					transY = -digitH * 11;
+					over9 = true;
+
+				} else if (e == 9 && diffsFromLast[i] == 9) {
+					transY = 0;
+					under0 = true;
+				}
+
+				col.style.transform = `translateY(${transY}em)`;
+				col.firstChild.textContent = "";
+
+				// finish the transition
+				if (over9 || under0) {
+					this.trans09 = true;
+					// add a temporary 9
+					if (under0)
+						col.firstChild.textContent = e;
+
+					setTimeout(() => {
+						if (this.trans09) {
+							let pauseClass = "range__counter-column--pause",
+								transYAgain = -digitH * (over9 ? 1 : 10);
+
+							col.classList.add(pauseClass);
+							col.style.transform = `translateY(${transYAgain}em)`;
+							void col.offsetHeight;
+							col.classList.remove(pauseClass);
+
+							// remove the 9
+							if (under0)
+								col.firstChild.textContent = "";
+						}
+
+					},this.rollDuration);
+				}
+			});
+			this.lastDigits = rangeVal;
+		}
+	}
+}
+
+
     var c1 = 0;
     var c2 = 0;
     var c3 = 0;
@@ -131,111 +309,8 @@ window.onload = function exampleFunction() {
 
 
 
-        function init() {
-    const sliders = document.getElementsByClassName("tick-slider-input");
 
-    for (let slider of sliders) {
-        slider.oninput = onSliderInput;
 
-        updateValue(slider);
-        updateValuePosition(slider);
-        updateLabels(slider);
-        updateProgress(slider);
-
-        setTicks(slider);
-    }
-}
-
-function onSliderInput(event) {
-    updateValue(event.target);
-    updateValuePosition(event.target);
-    updateLabels(event.target);
-    updateProgress(event.target);
-}
-
-function updateValue(slider) {
-    let value = document.getElementById(slider.dataset.valueId);
-
-    value.innerHTML = "<div>" + slider.value + "</div>";
-}
-
-function updateValuePosition(slider) {
-    let value = document.getElementById(slider.dataset.valueId);
-
-    const percent = getSliderPercent(slider);
-
-    const sliderWidth = slider.getBoundingClientRect().width;
-    const valueWidth = value.getBoundingClientRect().width;
-    const handleSize = slider.dataset.handleSize;
-
-    let left = percent * (sliderWidth - handleSize) + handleSize / 2 - valueWidth / 2;
-
-    left = Math.min(left, sliderWidth - valueWidth);
-    left = slider.value === slider.min ? 0 : left;
-
-    value.style.left = left + "px";
-}
-
-function updateLabels(slider) {
-    const value = document.getElementById(slider.dataset.valueId);
-    const minLabel = document.getElementById(slider.dataset.minLabelId);
-    const maxLabel = document.getElementById(slider.dataset.maxLabelId);
-
-    const valueRect = value.getBoundingClientRect();
-    const minLabelRect = minLabel.getBoundingClientRect();
-    const maxLabelRect = maxLabel.getBoundingClientRect();
-
-    const minLabelDelta = valueRect.left - (minLabelRect.left);
-    const maxLabelDelta = maxLabelRect.left - valueRect.left;
-
-    const deltaThreshold = 32;
-
-    if (minLabelDelta < deltaThreshold) minLabel.classList.add("hidden");
-    else minLabel.classList.remove("hidden");
-
-    if (maxLabelDelta < deltaThreshold) maxLabel.classList.add("hidden");
-    else maxLabel.classList.remove("hidden");
-}
-
-function updateProgress(slider) {
-    let progress = document.getElementById(slider.dataset.progressId);
-    const percent = getSliderPercent(slider);
-
-    progress.style.width = percent * 100 + "%";
-}
-
-function getSliderPercent(slider) {
-    const range = slider.max - slider.min;
-    const absValue = slider.value - slider.min;
-
-    return absValue / range;
-}
-
-function setTicks(slider) {
-    let container = document.getElementById(slider.dataset.tickId);
-    const spacing = parseFloat(slider.dataset.tickStep);
-    const sliderRange = slider.max - slider.min;
-    const tickCount = sliderRange / spacing + 1; // +1 to account for 0
-
-    for (let ii = 0; ii < tickCount; ii++) {
-        let tick = document.createElement("span");
-
-        tick.className = "tick-slider-tick";
-
-        container.appendChild(tick);
-    }
-}
-
-function onResize() {
-    const sliders = document.getElementsByClassName("tick-slider-input");
-
-    for (let slider of sliders) {
-        updateValuePosition(slider);
-    }
-}
-
-window.onload = init;
-window.addEventListener("resize", onResize);
     </script>
     <title></title>
   </head>
@@ -260,41 +335,16 @@ window.addEventListener("resize", onResize);
     <img src="Assets/imgs/quiz1.JPG" style="width:100%" id = "img2">
       <h1 class = "questionText">On average, how many miles do you drive per week?</h1>
     <div class="text">
-
-      </div>
       <div id="wrapper">
           <div id="sliderContainer">
-              <div class="tick-slider">
-                  <div class="tick-slider-header">
-                      <h5><label for="weightSlider">How Many Miles Do You Drive?</label></h5>
-                  </div>
-                  <div class="tick-slider-value-container">
-                      <div id="weightLabelMin" class="tick-slider-label">0</div>
-                      <div id="weightLabelMax" class="tick-slider-label">5</div>
-                      <div id="weightValue" class="tick-slider-value"></div>
-                  </div>
-                  <div class="tick-slider-background"></div>
-                  <div id="weightProgress" class="tick-slider-progress"></div>
-                  <div id="weightTicks" class="tick-slider-tick-container"></div>
-                  <input
-                      id="weightSlider"
-                      class="tick-slider-input"
-                      type="range"
-                      min="0"
-                      max="5"
-                      step="1"
-                      value="3"
-                      data-tick-step="1"
-                      data-tick-id="weightTicks"
-                      data-value-id="weightValue"
-                      data-progress-id="weightProgress"
-                      data-handle-size="18"
-                      data-min-label-id="weightLabelMin"
-                      data-max-label-id="weightLabelMax"
-                  />
-              </div>
+            <form>
+              <label for="range2">More Digits</label>
+              <input id="range2" name="range2" type="range" min="0" max="300" value="150" step = "5">
+      </form>
           </div>
       </div>
+    </div>
+
   </div>
 
   <div class="mySlides fade">
@@ -361,76 +411,14 @@ window.addEventListener("resize", onResize);
   <span class="dot" onclick="currentSlide(6)"></span>
 </div>
 
-    <div id = "Containter">
-        <input type="button" name="" value="Done" onClick = checkSlider()>
-        <div id = "chart"></div>
+<div id="wrapper">
+    <div id="sliderContainer">
+      <form>
+        <label for="range2">More Digits</label>
+        <input id="range2" name="range2" type="range" min="0" max="300" value="150" step = "5">
+</form>
     </div>
-    <div id="chartdiv" style="height: 300px; width: 50%;"></div>
-
-    <div id="wrapper">
-        <div id="sliderContainer">
-            <div class="tick-slider">
-                <div class="tick-slider-header">
-                    <h5><label for="weightSlider">Total weight</label></h5>
-                    <h5>kg</h5>
-                </div>
-                <div class="tick-slider-value-container">
-                    <div id="weightLabelMin" class="tick-slider-label">0</div>
-                    <div id="weightLabelMax" class="tick-slider-label">40</div>
-                    <div id="weightValue" class="tick-slider-value"></div>
-                </div>
-                <div class="tick-slider-background"></div>
-                <div id="weightProgress" class="tick-slider-progress"></div>
-                <div id="weightTicks" class="tick-slider-tick-container"></div>
-                <input
-                    id="weightSlider"
-                    class="tick-slider-input"
-                    type="range"
-                    min="0"
-                    max="40"
-                    step="5"
-                    value="9"
-                    data-tick-step="5"
-                    data-tick-id="weightTicks"
-                    data-value-id="weightValue"
-                    data-progress-id="weightProgress"
-                    data-handle-size="18"
-                    data-min-label-id="weightLabelMin"
-                    data-max-label-id="weightLabelMax"
-                />
-            </div>
-            <div class="tick-slider">
-                <div class="tick-slider-header">
-                    <h5><label for="sizeSlider">Total size</label></h5>
-                    <h5>cm</h5>
-                </div>
-                <div class="tick-slider-value-container">
-                    <div id="sizeLabelMin" class="tick-slider-label">0</div>
-                    <div id="sizeLabelMax" class="tick-slider-label">300</div>
-                    <div id="sizeValue" class="tick-slider-value"></div>
-                </div>
-                <div class="tick-slider-background"></div>
-                <div id="sizeProgress" class="tick-slider-progress"></div>
-                <div id="sizeTicks" class="tick-slider-tick-container"></div>
-                <input
-                    id="sizeSlider"
-                    class="tick-slider-input"
-                    type="range"
-                    min="0"
-                    max="300"
-                    step="25"
-                    value="150"
-                    data-tick-step="25"
-                    data-tick-id="sizeTicks"
-                    data-value-id="sizeValue"
-                    data-progress-id="sizeProgress"
-                    data-handle-size="18"
-                    data-min-label-id="sizeLabelMin"
-                    data-max-label-id="sizeLabelMax"
-                />
-            </div>
-        </div>
-    </div>
+</div>
 
   </body>
 </html>
