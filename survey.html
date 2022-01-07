@@ -206,8 +206,11 @@ class RollCounterRange {
       c1 += slider1.value;
       c2 += slider2.value;
       c3 += slider3.value;
-      c4 += slider4.value;
-      //c4 += slider4.value;
+      c4 += Number(slider4.value);
+      c4 += Number(slider4.value);
+      var temp = c4;
+      c4 = temp/2;
+      c4 = String(c4)
       //c4 /= 2;
       drawChart()
     }
