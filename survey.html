@@ -314,6 +314,17 @@ class RollCounterRange {
     ]);
 
       series.appear(1000, 100);
+series.labels.template.set("visible", false);
+series.ticks.template.set("visible", false);
+      var legend = chart.children.push(
+  am5.Legend.new(root, {
+    centerY: am5.percent(50),
+    y: am5.percent(150),
+    layout: root.horizontalLayout
+  })
+);
+
+legend.data.setAll(series.dataItems)
 
       }; // end am5.ready()
 
@@ -453,9 +464,9 @@ window.onload = function exampleFunction() {
 </div>
 <div class="mySlides fade">
   <img src="Assets/imgs/results.JPG" style="width:100%" id = "img7">
-  <div class="text">
-<div id = "chart" style = "height: 100%; width: 100%; "  ></div>
-    <div id="chartdiv" style="height: 500px; width: 100%; "></div>
+  <div class="graphWrapper">
+<div id = "chart" style = "height: 50%; width: 50%; "  ></div>
+    <div id="chartdiv" style="height: 60%; width: 10%%; "></div>
   </div>
 
 </div>
