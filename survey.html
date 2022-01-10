@@ -188,7 +188,7 @@ class RollCounterRange {
 	}
 }
 
-
+/*quiz js */
     var c1 = 0;
     var c2 = 0;
     var c3 = 0;
@@ -198,7 +198,7 @@ class RollCounterRange {
     var v3 = 0;
     var v4 = 0;
     var v5 = 0;
-
+    var total = 0;
     function checkSlider()
     {
 
@@ -216,6 +216,7 @@ class RollCounterRange {
       //c4 += slider4.value;
       //c4 /= 2;
       calcCounters()
+      changeResultText()
       drawChart()
     }
 
@@ -251,10 +252,14 @@ class RollCounterRange {
       else if(v5 < 151){c4+=3;}
       else if(v5 < 201){c4+=4;}
       else{c4+=5;}
-
+      total = c1 + c2 + c3 + c4;
       c1 = c1/2;
     }
 
+    function changeResultText()
+    {
+      document.getElementById("grade").innerHTML = "New text!"
+    }
 
     function drawChart()
     {
