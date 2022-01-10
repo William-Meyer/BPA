@@ -28,14 +28,25 @@
 }
 
 #grade h1{
-  text-align: left;
+  text-align: center;
+  width: 100%;
   color:white;
   position: absolute;
-  top: 7%;
-  left: 2%;
-  width:100;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size:8vw;
+}
 
+#sentance h2{
+  text-align: center;
+  width: 100%;
+  color:white;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:6vw;
 }
 
 .questionText{
@@ -100,7 +111,6 @@
 {
   width:100%;
   padding: 10%;
-  padding-right: -100%;
   position: absolute;
   width: 100%;
   height: 100%;
