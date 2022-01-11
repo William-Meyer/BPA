@@ -64,7 +64,12 @@
   height: auto;
   position: relative;
 }
-
+#container{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
 /* Hide the images by default */
 .mySlides {
   display: none;
@@ -311,4 +316,10 @@ label {
 }
 .range__counter-column--pause {
 	transition: none;
+}
+.slideImg{
+  height:120vh;
+  width: auto;
+  position: relative;
+  overflow:hidden;
 }
