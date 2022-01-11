@@ -216,7 +216,6 @@ class RollCounterRange {
       //c4 += slider4.value;
       //c4 /= 2;
       calcCounters()
-      changeResultText()
       drawChart()
     }
 
@@ -254,11 +253,6 @@ class RollCounterRange {
       else{c4+=5;}
       total = c1 + c2 + c3 + c4;
       c1 = c1/2;
-    }
-
-    function changeResultText()
-    {
-      document.getElementById("grade").innerHTML = "New text!"
     }
 
     function drawChart()
@@ -469,7 +463,7 @@ window.onload = function exampleFunction() {
 </div>
 <div class="mySlides fade">
   <img src="Assets/imgs/results.JPG" style="width:100%" id = "img7">
-  <div id = "grade"><h1>Grade: A</h1></div>
+  <div class = "grade"><h1>Grade: A</h1></div>
   <div id="sentance"><h2>You’re doing fantastic!</h2></div>
   <div class="graphWrapper">
 <div id = "chart" style = "height: 50%; width: 50%; "  ></div>
