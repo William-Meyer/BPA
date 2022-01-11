@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/styles/survey.css">
+      <link rel="stylesheet" href="assets/styles/survey.css">
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
@@ -188,13 +188,17 @@ class RollCounterRange {
 	}
 }
 
-
+/*quizjs */
     var c1 = 0;
     var c2 = 0;
     var c3 = 0;
     var c4 = 0;
-
-
+    var v1 = 0;
+    var v2 = 0;
+    var v3 = 0;
+    var v4 = 0;
+    var v5 = 0;
+    var total = 0;
     function checkSlider()
     {
 
@@ -203,13 +207,87 @@ class RollCounterRange {
       var slider3 = document.getElementById("range3");
       var slider4 = document.getElementById("range4");
       var slider5 = document.getElementById("range5");
-      c1 += slider1.value;
-      c2 += slider2.value;
-      c3 += slider3.value;
-      c4 += slider4.value;
+      v1 += slider1.value;
+      v2 += slider2.value;
+      v3 += slider3.value;
+      v4 += slider4.value;
+      v5 += slider5.value;
+
       //c4 += slider4.value;
       //c4 /= 2;
+      calcCounters()
+      changeResultText()
       drawChart()
+    }
+
+
+    function calcCounters()
+    {
+      if(v1 < 51){c1 += 1;}
+      else if (v1 < 101){c1 += 2;}
+      else if (v1 < 201){c1 += 3;}
+      else if (v1 < 301){c1 += 4;}
+      else{c1 += 5;}
+
+      if(v2 < 4){c2 += 1;}
+      else if(v2 < 8){c2+=2;}
+      else if(v2 < 12){c2+=3;}
+      else if(v2 < 16){c2+=4;}
+      else{c2+=5;}
+
+      if(v3 < 1){c3 += 1;}
+      else if(v3 < 4){c3+=2;}
+      else if(v3 < 8){c3+=3;}
+      else if(v3 < 12){c3+=4;}
+      else{c3+=5;}
+
+      if(v4 < 1){c1 += 1;}
+      else if(v4 < 2){c1+=2;}
+      else if(v4 < 3){c1+=3;}
+      else if(v4 < 5){c1+=4;}
+      else{c1+=5;}
+
+      if(v5 < 50){c4 += 1;}
+      else if(v5 < 100){c4+=2;}
+      else if(v5 < 151){c4+=3;}
+      else if(v5 < 201){c4+=4;}
+      else{c4+=5;}
+      total = c1 + c2 + c3 + c4;
+      c1 = c1/2;
+    }
+
+    function changeResultText()
+    {
+      if(total <= 5)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: A+";
+        document.getElementById("sentanceHeader").innerHTML = "You're doing fantastic!";
+      }
+      else if( total <= 10)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: A";
+        document.getElementById("sentanceHeader").innerHTML = "Looking good!";
+      }
+      else if(total <= 15)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: B";
+        document.getElementById("sentanceHeader").innerHTML = "On the right track...but there is room for improvment";
+
+      }
+      else if(total <= 20)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: C";
+        document.getElementById("sentanceHeader").innerHTML = "Some small changes can really reduce your carbon footprint";
+      }
+      else if( total <= 24)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: D";
+        document.getElementById("sentanceHeader").innerHTML = "It's time to consider making some lifestyle changes if you want to reduce your carbon footprint";
+      }
+      else {
+        document.getElementById("gradeHeader").innerHTML = "Grade: F";
+        document.getElementById("sentanceHeader").innerHTML = "Consider taking signifigant changes to your lifestyle to help reduce your carbon footprint";
+      }
     }
 
     function drawChart()
@@ -251,18 +329,18 @@ class RollCounterRange {
       series.data.setAll(
         [
         {
-        category: "C1",
+        category: "Fossile Fuels",
         value: c1},
         {
-        category: "C2",
+        category: "Trash",
         value: c2
       },
       {
-        category: "C3",
+        category: "Methane",
         value: c3
       },
       {
-        category: "C4",
+        category: "Electricity",
         value: c4
 
       }
@@ -270,6 +348,17 @@ class RollCounterRange {
     ]);
 
       series.appear(1000, 100);
+series.labels.template.set("visible", false);
+series.ticks.template.set("visible", false);
+      var legend = chart.children.push(
+  am5.Legend.new(root, {
+    centerY: am5.percent(50),
+    y: am5.percent(150),
+    layout: root.horizontalLayout
+  })
+);
+
+legend.data.setAll(series.dataItems)
 
       }; // end am5.ready()
 
@@ -318,6 +407,9 @@ window.onload = function exampleFunction() {
     <title></title>
   </head>
   <body onload="currentSlide(1)">
+<div id = "container">
+
+
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
@@ -331,17 +423,17 @@ window.onload = function exampleFunction() {
       </h2>
     </div>
 
-    <img src="Assets/imgs/quiz_home.JPG" style="width:100%">
+    <img src="Assets/imgs/quiz_home.JPG" class = "sliderImg">
   </div>
 
   <div class="mySlides fade">
-    <img src="Assets/imgs/quiz1.JPG" style="width:100%" id = "img2">
+    <img src="Assets/imgs/quiz1.JPG" class = "sliderImg" id = "img2">
       <h1 class = "questionText">On average, how many miles do you drive per week?</h1>
     <div class="text">
           <div id="sliderContainer">
             <form>
-              <label for="range1">More Digits</label>
-              <input id="range1" name="range1" type="range" min="0" max="300" value="150" step = "5">
+              <label for="range1">Miles</label>
+              <input id="range1" name="range1" type="range" min="0" max="500" value="250" step = "50">
             </form>
           </div>
     </div>
@@ -350,13 +442,13 @@ window.onload = function exampleFunction() {
 
   <div class="mySlides fade">
     <h1 class="questionText">How many bags of garbage do you throw away weekly?</h1>
-    <img src="Assets/imgs/quiz2.JPG" style="width:100%">
+    <img src="Assets/imgs/quiz2.JPG" class = "sliderImg">
     <div class="text">
       <div id="wrapper">
           <div id="sliderContainer">
             <form>
-              <label for="range2">More Digits</label>
-              <input id="range2" name="range2" type="range" min="0" max="300" value="150" step = "5">
+              <label for="range2">Bags</label>
+              <input id="range2" name="range2" type="range" min="0" max="20" value="10" step = "2">
             </form>
           </div>
       </div>
@@ -364,14 +456,14 @@ window.onload = function exampleFunction() {
   </div>
 
   <div class="mySlides fade">
-    <h1 class="questionText">How often do you consume animal products?</h1>
-    <img src="Assets/imgs/quiz3.JPG" style="width:100%">
+    <h1 class="questionText">How many animal products do you consume daily?</h1>
+    <img src="Assets/imgs/quiz3.JPG" class = "sliderImg">
     <div class="text">
       <div id="wrapper">
           <div id="sliderContainer">
             <form>
-              <label for="range3">More Digits</label>
-              <input id="range3" name="range3" type="range" min="0" max="300" value="150" step = "5">
+              <label for="range3">Animal Products</label>
+              <input id="range3" name="range3" type="range" min="0" max="20" value="10" step = "2">
             </form>
           </div>
       </div>
@@ -380,13 +472,13 @@ window.onload = function exampleFunction() {
 
   <div class="mySlides fade">
     <h1 class = "questionText">How often do you fly in a year?</h1>
-    <img src="Assets/imgs/quiz4.JPG" style="width:100%">
+    <img src="Assets/imgs/quiz4.JPG" class = "sliderImg">
     <div class="text">
       <div id="wrapper">
           <div id="sliderContainer">
             <form>
-              <label for="range4">More Digits</label>
-              <input id="range4" name="range4" type="range" min="0" max="300" value="150" step = "5">
+              <label for="range4">Round Flights</label>
+              <input id="range4" name="range4" type="range" min="0" max="10" value="3" step = "1">
             </form>
           </div>
       </div>
@@ -395,23 +487,25 @@ window.onload = function exampleFunction() {
 
   <div class="mySlides fade">
     <h1 class="questionText">How much is your household energy bill each month, on average?</h1>
-    <img src="Assets/imgs/quiz5.JPG" style="width:100%">
+    <img src="Assets/imgs/quiz5.JPG" class = "sliderImg">
       <div class="text">
         <div id="wrapper">
             <div id="sliderContainer">
               <form>
-                <label for="range5">More Digits</label>
-                <input id="range5" name="range5" type="range" min="0" max="300" value="150" step = "5">
+                <label for="range5">Dollars</label>
+                <input id="range5" name="range5" type="range" min="0" max="300" value="150" step = "50">
               </form>
             </div>
         </div>
         </div>
 </div>
 <div class="mySlides fade">
-  <img src="Assets/imgs/results.JPG" style="width:100%" id = "img7">
-  <div class="text">
-    <div id = "chart"></div>
-    <div id="chartdiv" style="height: 300px; width: 50%;"></div>
+  <img src="Assets/imgs/results.JPG" class = "sliderImg" id = "img7">
+  <div id = "grade"><h1 id = "gradeHeader">Grade: A</h1></div>
+  <div id="sentance"><h2 id = "sentanceHeader">You’re doing fantastic!</h2></div>
+  <div class="graphWrapper">
+<div id = "chart" style = "height: 50%; width: 50%; "  ></div>
+    <div id="chartdiv" style="height: 60%; width: 10%%; "></div>
   </div>
 
 </div>
@@ -431,5 +525,7 @@ window.onload = function exampleFunction() {
   <span class="dot" onclick="currentSlide(6)"></span>
   <span class="dot" onclick="currentSlide(7)"></span>
 </div>
+</div>
   </body>
+
 </html>
