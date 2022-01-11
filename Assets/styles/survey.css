@@ -5,6 +5,14 @@
   padding: 0;
 
 }
+
+#container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 #slide1 h1{
   text-align: center;
   width: 100%;
@@ -311,4 +319,15 @@ label {
 }
 .range__counter-column--pause {
 	transition: none;
+}
+
+.sliderImg{
+  height: 100vh;
+  width: auto;
+}
+@media (min-width: 1000px){
+.sliderImg{
+  width:100%;
+  height: auto;
+}
 }
