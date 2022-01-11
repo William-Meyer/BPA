@@ -188,7 +188,7 @@ class RollCounterRange {
 	}
 }
 
-/*quiz js */
+/*quizjs */
     var c1 = 0;
     var c2 = 0;
     var c3 = 0;
@@ -258,7 +258,36 @@ class RollCounterRange {
 
     function changeResultText()
     {
-      document.getElementById("grade").innerHTML = "New text!"
+      if(total <= 5)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: A+";
+        document.getElementById("sentanceHeader").innerHTML = "You're doing fantastic!";
+      }
+      else if( total <= 10)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: A";
+        document.getElementById("sentanceHeader").innerHTML = "Looking good!";
+      }
+      else if(total <= 15)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: B";
+        document.getElementById("sentanceHeader").innerHTML = "On the right track...but there is room for improvment";
+
+      }
+      else if(total <= 20)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: C";
+        document.getElementById("sentanceHeader").innerHTML = "Some small changes can really reduce your carbon footprint";
+      }
+      else if( total <= 24)
+      {
+        document.getElementById("gradeHeader").innerHTML = "Grade: D";
+        document.getElementById("sentanceHeader").innerHTML = "It's time to consider making some lifestyle changes if you want to reduce your carbon footprint";
+      }
+      else {
+        document.getElementById("gradeHeader").innerHTML = "Grade: F";
+        document.getElementById("sentanceHeader").innerHTML = "Consider taking signifigant changes to your lifestyle to hlep reduce your carbon footprint";
+      }
     }
 
     function drawChart()
@@ -469,8 +498,8 @@ window.onload = function exampleFunction() {
 </div>
 <div class="mySlides fade">
   <img src="Assets/imgs/results.JPG" style="width:100%" id = "img7">
-  <div id = "grade"><h1>Grade: A</h1></div>
-  <div id="sentance"><h2>You’re doing fantastic!</h2></div>
+  <div id = "grade"><h1 id = "gradeHeader">Grade: A</h1></div>
+  <div id="sentance"><h2 id = "sentanceHeader">You’re doing fantastic!</h2></div>
   <div class="graphWrapper">
 <div id = "chart" style = "height: 50%; width: 50%; "  ></div>
     <div id="chartdiv" style="height: 60%; width: 10%%; "></div>

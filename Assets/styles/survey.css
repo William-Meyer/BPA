@@ -27,7 +27,7 @@
   transform: translate(-50%, -50%);
 }
 
-.grade h1{
+#grade h1{
   text-align: center;
   width: 100%;
   color:white;
@@ -43,7 +43,7 @@
   width: 100%;
   color:white;
   position: absolute;
-  top: 25%;
+  top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size:6vw;
