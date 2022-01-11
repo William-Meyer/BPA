@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <script>
+function btn_clicked(){
+  window.open("survey.html", "_self");
+}
+    </script>
 
     <title></title>
   </head>
@@ -17,21 +22,20 @@
   <nav>
     <div class="navbar">
         <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
-      <input class="menu-btn"
-      type="checkbox" id= "menu-btn"/>
+      <input class="menu-btn" type="checkbox" id= "menu-btn"/>
       <label class="menu-icon" for="menu-btn">
       <span class="navicon"></span></label>
     <ul class="menu">
-      <li><a href="#home">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#news">Learn</a></li>
       <li><a href="#resources">Resources</a></li>
       <li><a href="#About us">About Us</a></li>
       <div class="dropdown">
       <li>  <button class="dropbtn">Help Out
-      </button>
+      </button></li>
         <div class="dropdown-content">
-          <a href="survey.html">Quiz</a>
-          <a href="#">Reduce your Footprint</a></li>
+          <li><a href="survey.html">Quiz</a></li>
+        <li><a href="#">Reduce your Footprint</a></li>
           </ul>
         </div>
       </div>
@@ -49,12 +53,13 @@
 greenhouse gases emitted from an individual or group. Greenhouse gases include methane, nitrous oxide, water vapor, and most prominently,
 carbon dioxide.<img src="assets/imgs/carbon.jpg" alt="picture of factories" id="factory"/> Greenhouse gases cause the sun’s heat to get trapped inside the earth’s
 atmosphere, causing the global temperature to rise.</p>
-    <br></br><div id="p2"><h1><div id="headerstart">Our</div> <div id="headerend">Goal</div></h1><p>Our goal is to educate the community about greenhouse gas emissions and provide resources for individuals
+    <br></br><img src="assets/imgs/feet.png" alt="picture of feet filled in with the earth" id="feet"/><div id="second header"><div id="p2"><h1><div id="headerstart">Our</div> <div id="headerend">Goal</div></h1><p>Our goal is to educate the community about greenhouse gas emissions and provide resources for individuals
 reduce their own carbon footprint. The damage done to the earth is nearing irreversible but with everyones’ help and a little bit of collective effort, change can be made. Reducing carbon footprint is a global effort but it starts with just one step.
 </p></div>
 
   <br></br><br></br><h1><div id="headerstart">Want To Learn</div> <div id="headerend">How You Can Help?</div></h1><p>Want to see your carbon footprint?
-Take our free survey to calculate your carbon emissions.</p><br></br>
+Take our free survey to calculate your carbon emissions.<button class="btn" onclick="btn_clicked();"><div id="button_text">Take The Quiz</div>
+</button></p><br></br>
 </main>
 <footer>
   <img src="assets/imgs/footer_tree.png" alt="picture of woods" id="footer_tree"/>
@@ -100,6 +105,9 @@ $(window).scroll(function(){
   else{
     $("nav").removeClass("black");
   }
-})
+
+});
+
+
 </script>
 </html>
