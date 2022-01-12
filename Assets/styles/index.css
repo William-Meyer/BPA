@@ -42,7 +42,7 @@ font-weight: 600;
 color:white;
 font-style: normal;
 background-color: #91a28c;
-text-align: justify;
+
 font-size: 205;
 -webkit-border-radius: 8px;
 -moz-border-radius:8px;
@@ -55,6 +55,7 @@ padding-right: 20px;
 
 #p2{
   margin-top:50px;
+  text-align:left;
 }
 
 #headerstart{
@@ -62,7 +63,6 @@ padding-right: 20px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-style: normal;
-
 }
 
 #headerend{
@@ -81,6 +81,13 @@ font-size: 135%;
   border-radius:8px;
   padding-top: 5px;
   padding-left: 5px;
+}
+
+#feet{
+  float:left;
+  width:35%;
+  height:auto;
+  clear:right;
 }
 
 nav{
@@ -151,6 +158,19 @@ nav{
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
+  float:left;
+}
+.btn{
+  font-size:300%;
+  border-radius: 8px;
+  background-color: #39698d;
+  color:white;
+  cursor:pointer;
+}
+#button_text{
+  margin-left: 5%;
+  margin-right: 5%;
+  text-shadow: 3px 3px #034174;
 }
 
 /* Add a red background color to navbar links on hover */
@@ -233,7 +253,7 @@ nav{
 }
 
 .menu .black ul{
-  background:#000;
+  background:black;
 }
 
 .menu{
@@ -307,7 +327,7 @@ nav{
 }
 
 .navbar img{
-  margin-left:-550px;
+  margin-left: -90%;
 }
 
 
@@ -315,17 +335,18 @@ nav{
 .zoom2{max-width: 100%; overflow: hidden;}
 /* 48em = 768px */
 
-@media (min-width: 810px) {
+@media (min-width: 860px) {
   .navbar li {
     float: right;
   }
   .navbar li a {
-    padding: 16px 26px;
+    padding: 16px 20px;
   }
   .navbar .menu {
     clear: none;
     float: right;
     max-height: none;
+    margin-left: -50%;
   }
   .navbar .menu-icon {
     display: none;
@@ -334,9 +355,8 @@ nav{
     width:53%;
     height:auto;
   }
-  nav img{
-    margin-left:-550px;
-  }
+
+
 }
 
 @media (min-width: 1000px)
@@ -352,7 +372,7 @@ nav{
     height:50%;
   }
   main p{
-    font-size:
+    font-size:110%;
   }
 }
 @media(max-width: 1320px)
@@ -378,6 +398,9 @@ nav{
   width:35%;
   height:35%;
 }
+main p{
+  font-size:145%;
+}
 }
 
 @media (min-width: 2100px)
@@ -388,5 +411,8 @@ nav{
   #factory{
     width:30%;
     height:30%;
+  }
+  main p{
+    font-size:165%;
   }
   }
