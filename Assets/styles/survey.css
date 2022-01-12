@@ -91,7 +91,11 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
-
+    margin-left: 0px;
+    margin-bottom: -1%;
+    padding: 0;
+    margin-right: 0px;
+    margin-top: 0px;
 }
 
 /* Next & previous buttons */
