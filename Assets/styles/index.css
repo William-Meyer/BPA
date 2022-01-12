@@ -97,7 +97,7 @@ nav{
 }
 
 /*sticky navbar*/
-.navbar{
+nav{
   background-color:transparent;
 	position: fixed;
 	top: 0;
@@ -106,6 +106,13 @@ nav{
   z-index: 3;
 }
 
+.logo{
+  float:left;
+  text-decoration: none;
+  overflow: hidden;
+  width:700px;
+  height:250px;
+}
 /*list for hamburger menu*/
 .navbar ul{
   margin: 0;
@@ -222,12 +229,6 @@ nav{
   display: block;
 }
 
-.navbar .logo{
-  float: left;
-  margin-left: 70px;
-  text-decoration: none;
-  overflow: hidden;
-}
 
 #netzero{
     width:20%;
@@ -326,9 +327,6 @@ nav{
 
 }
 
-.navbar img{
-  margin-left: -90%;
-}
 
 
 .zoom1{max-width: 100%; overflow: hidden;}
@@ -351,12 +349,6 @@ nav{
   .navbar .menu-icon {
     display: none;
   }
-  .logo{
-    width:53%;
-    height:auto;
-  }
-
-
 }
 
 @media (min-width: 1000px)
@@ -390,6 +382,11 @@ nav{
   #factory{
     width:40%;
     height:40%;
+  }
+  #netzero{
+    width:20%;
+    height:auto;
+    margin-left: -65%;
   }
 }
 @media(min-width:1500px)
