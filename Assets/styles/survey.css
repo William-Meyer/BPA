@@ -213,7 +213,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
 }
 
@@ -343,6 +343,21 @@ label {
   height: 100vh;
   width: auto;
 }
+
+.btn{
+  margin-top: 3%;
+  font-size:150%;
+  border-radius: 8px;
+  background-color: #39698d;
+  color:white;
+  cursor:pointer;
+}
+#button_text{
+  margin-left: 5%;
+  margin-right: 5%;
+  text-shadow: 3px 3px #034174;
+}
+
 #results h1{
   text-align: center;
   width: 100%;
@@ -363,8 +378,10 @@ label {
   text-align: center;
   font-size: 4vw;
   margin:15%;
+  margin-top: 3%;
 }
 #contents{
+  text-align: center;
   margin-top: -10%;
   background: #3a5841;
 }
@@ -399,5 +416,11 @@ label {
   font-size:5vw;
   margin-bottom:3%;
 }
-
+#contentHeader{
+  font-size: 4vw;
+}
+#content{
+  font-size: 3vw;
+  font-weight: 300;
+}
 }
