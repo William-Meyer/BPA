@@ -40,10 +40,10 @@
   width: 100%;
   color:white;
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size:8vw;
+  font-size:10vw;
 }
 
 #sentance h2{
@@ -51,10 +51,11 @@
   width: 100%;
   color:white;
   position: absolute;
-  top: 37%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size:6vw;
+  transform: translate(-50%, -100%);
+  font-size:8vw;
+  padding: 4%;
 }
 
 .questionText{
@@ -206,7 +207,8 @@
 }
 
 #sliderContainer {
-    width: 100%;
+  transform: translate(-10%,0%);
+    width: 120%;
 
     padding: 56px 40px;
 
@@ -325,22 +327,47 @@ label {
 .range__counter-column--pause {
 	transition: none;
 }
-<<<<<<< HEAD
-.slideImg{
-  height:120vh;
-  width: auto;
-  position: relative;
-  overflow:hidden;
-=======
 
 .sliderImg{
   height: 100vh;
   width: auto;
+}
+#results h1{
+  text-align: center;
+  width: 100%;
+  color:white;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:8vw;
 }
 @media (min-width: 1000px){
 .sliderImg{
   width:100%;
   height: auto;
 }
->>>>>>> b4e95793487578584d777679e4e7cceac3a20889
+#sentance h2{
+  text-align: center;
+  width: 100%;
+  color:white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:3vw;
+  padding: 4%;
+}
+#grade h1{
+  text-align: center;
+  width: 100%;
+  color:white;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:5vw;
+  margin-bottom:3%;
+}
+
 }
