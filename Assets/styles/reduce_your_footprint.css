@@ -8,7 +8,6 @@ body{
 
 }
 main{
-  margin-top: 60%;
   background-color: #3a5841;
   padding-top:50%;
   max-width: 100%;
@@ -30,17 +29,14 @@ position: relative;
 display: flex;
 }
 
-#background{
-  background-color:#034174;
-  
-}
-
-#text_box{
-  text-align: center;
-}
-
 h1{
   background-color: white;
+  height:300px;
+  box-shadow: 10px 10px 10px 0px;
+  color:black;
+  margin-top:200px;
+  margin-left: 15%;
+  margin-right:15%;
 }
 
 footer p{
@@ -55,8 +51,6 @@ font-weight: 600;
 color:white;
 font-style: normal;
 background-color: #91a28c;
-
-font-size: 205;
 -webkit-border-radius: 8px;
 -moz-border-radius:8px;
 border-radius: 8px;
@@ -66,29 +60,17 @@ padding-left: 20px;
 padding-right: 20px;
 }
 
-#p2{
-  margin-top:50px;
-  text-align:left;
+.cards {
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 8rem;
+  background-color: #1d3335;
+  Height:450px;
 }
-
-#headerstart{
-  color:white;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-#headerend{
-font-family: 'Work Sans',sans-serif;
-font-weight: 600;
-font-style: normal;
-color:white;
-font-size: 135%;
-}
-
 /*sticky navbar*/
 nav{
-  background-color:green;
+  background-color:#243c2b;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -297,20 +279,6 @@ nav{
 .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after{
   top: 0;
 }
-
-
-.zoom1{
-
-}
-
-.zoom2{
-
-}
-
-
-
-.zoom1{max-width: 100%; overflow: hidden;}
-.zoom2{max-width: 100%; overflow: hidden;}
 /* 48em = 768px */
 
 @media (min-width: 860px) {
@@ -349,15 +317,6 @@ nav{
 }
 @media(max-width: 1320px)
 {
-  .zoom1
-  {
-    visibility: hidden;
-    object-fit: cover;
-  }
-  .zoom2
-  {
-    visibility: hidden;
-    object-fit: cover;
   }
   #factory{
     width:40%;
