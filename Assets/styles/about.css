@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
 body {
 background-color: #3a5841;
 margin: 0;
@@ -23,18 +23,23 @@ padding: 0;
  }
 
 #contactHead{
+  margin-top: 30%;
+  font-family: 'Work Sans', sans-serif;
   text-align: center;
   width:100%;
   height:auto;
-  font-size: 4vw;
-  color: black;
-  background-color: white;
+  font-size: 10vw;
+  color: white;
+  background-color: #243C2B;
 }
 .contactContents{
+  margin-top: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   text-align: center;
   width:100%;
   height:auto;
-  font-size: 2vw;
+  font-size: 5vw;
   color: white;
 }
 
@@ -46,6 +51,8 @@ padding: 0;
   height: auto;
 }
 .card {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   text-align: center;
   /*background-color: dodgerblue;*/
   color: white;
@@ -75,18 +82,39 @@ padding: 0;
 }
 /* Screen larger than 600px? 2 column */
 @media (min-width: 900px) {
+
+  #contactHead{
+    margin-top:10%;
+  }
+  .contactContents{
+    margin-top: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    width:100%;
+    height:auto;
+    font-size: 4vw;
+    color: white;
+  }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .name{
     margin-top: -0.8vh;
     font-size: 3.7vw;
   }
   .title{
-    margin-top: -4vh;
+    font-weight: 300;
+    margin-top: -2vh;
     font-size: 3vw;
   }
 }
 @media(min-width: 1240px)
 {
+  #contactHead{
+    font-size: 124px;
+  }
+  .contactContents{
+    font-size: 49.6px;
+  }
   .name{
     font-size: 45.88px;
   }
