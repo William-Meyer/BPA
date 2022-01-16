@@ -9,16 +9,32 @@ body{
 }
 main{
   background-color: #3a5841;
-  padding-top:50%;
+  padding-top:250px;
   max-width: 100%;
   padding-left: 17%;
   padding-right: 17%;
 }
 
-#home-background img{
-  width: 50%;
-  max-width: 50%;
-  height:auto;
+main a{
+  text-decoration: none;
+  color:white;
+}
+
+#header{
+  color:white;
+  padding-left: 315px;
+}
+
+#car{
+  width: 300px;
+  height: auto;
+}
+.con{
+  display:flex;
+  align-items: center;
+}
+main a:hover{
+  color:green;
 }
 
 footer{
@@ -29,14 +45,16 @@ position: relative;
 display: flex;
 }
 
-h1{
+#main_header{
   background-color: white;
   height:300px;
   box-shadow: 10px 10px 10px 0px;
   color:black;
+  padding-top:150px;
   margin-top:200px;
   margin-left: 15%;
   margin-right:15%;
+  font-size: 350%;
 }
 
 footer p{
@@ -50,7 +68,6 @@ font-family: 'Work Sans',sans-serif;
 font-weight: 600;
 color:white;
 font-style: normal;
-background-color: #91a28c;
 -webkit-border-radius: 8px;
 -moz-border-radius:8px;
 border-radius: 8px;
@@ -297,6 +314,7 @@ nav{
   .navbar .menu-icon {
     display: none;
   }
+
 }
 
 @media (min-width: 1000px)
@@ -304,12 +322,6 @@ nav{
   nav{
     margin-bottom: -50px;
   }
-  #p2{
-    margin-top:120px;
-  }
-  #factory{
-    width:50%;
-    height:50%;
   }
   main p{
     font-size:110%;
@@ -317,10 +329,6 @@ nav{
 }
 @media(max-width: 1320px)
 {
-  }
-  #factory{
-    width:40%;
-    height:40%;
   }
   #netzero{
     width:20%;
@@ -330,10 +338,7 @@ nav{
 }
 @media(min-width:1500px)
 {
-#factory{
-  width:35%;
-  height:35%;
-}
+
 main p{
   font-size:145%;
 }
@@ -343,10 +348,6 @@ main p{
 {
   nav{
     margin-bottom: -300px;
-  }
-  #factory{
-    width:30%;
-    height:30%;
   }
   main p{
     font-size:165%;
