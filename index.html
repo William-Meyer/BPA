@@ -20,7 +20,7 @@ function btn_clicked(){
     <title></title>
   </head>
   <body>
-  <nav>
+  <nav class = 'black'>
       <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
     <div class="navbar">
       <input class="menu-btn" type="checkbox" id= "menu-btn"/>
@@ -78,6 +78,15 @@ Take our free survey to calculate your carbon emissions.<br></br><button class="
 
     var scroll=$(window).scrollTop();
     $('.zoom2').css("opacity", 1- scroll/900)
+    if(scroll > 0){
+
+        $("nav").css("background","#00000066");
+
+      }
+    if(scroll == 0)
+    {
+      $("nav").css("background","transparent");
+    }
     if((1+scroll/200 < 4))
   {
     $(".zoom1").css
@@ -97,17 +106,6 @@ Take our free survey to calculate your carbon emissions.<br></br><button class="
   else{
     $('.zoom2').css("opacity", 0)
   }
-  }
-);
-
-$(window).scroll(function(){
-  if($(window).scrollTop()){
-    $("nav").addClass("black");
-  }
-  else{
-    $("nav").removeClass("black");
-  }
-
 });
 
 
