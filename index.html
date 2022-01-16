@@ -78,14 +78,18 @@ Take our free survey to calculate your carbon emissions.<br></br><button class="
 
     var scroll=$(window).scrollTop();
     $('.zoom2').css("opacity", 1- scroll/900)
-    if(scroll > 0){
-
-        $("nav").css("background","#00000066");
-
-      }
     if(scroll == 0)
     {
       $("nav").css("background","transparent");
+    }
+    else if (1+scroll/200 < 9)
+    {
+      $("nav").css("background","#00000066");
+    }
+    else{
+
+        $("nav").css("background","#00000099");
+
     }
     if((1+scroll/200 < 4))
   {
