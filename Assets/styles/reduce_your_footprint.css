@@ -25,10 +25,43 @@ main a{
   padding-left: 315px;
 }
 
+#header2{
+  color:white;
+  padding-left: 20px;
+  font-size: 35px;
+}
+
+#header3{
+  color:white;
+  padding-left: 315px;
+}
+
+#header4{
+  color:white;
+  padding-left: 20px;
+  font-size: 35px;
+}
+
 #car{
   width: 300px;
-  height: auto;
+  height:auto;
 }
+#trash{
+  width: 400px;
+  height:auto;
+  margin-left: -40px;
+}
+
+#energy{
+  width:300px;
+  height:auto;
+}
+
+#food{
+  width:400px;
+  height:auto;
+}
+
 .con{
   display:flex;
   align-items: center;
