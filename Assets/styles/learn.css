@@ -25,16 +25,7 @@ main a{
   font-family: 'Work Sans',sans-serif;
   font-weight: 600;
   color:white;
-  padding-left: 315px
-}
-
-#header2{
-  text-shadow: 0 2px 5px #243C2B;
-  font-family: 'Work Sans',sans-serif;
-  font-weight: 600;
-  color:white;
-  padding-left: 20px;
-  font-size: 35px;
+  margin-left: 15px;
 }
 
 #header3{
@@ -42,36 +33,30 @@ main a{
   font-family: 'Work Sans',sans-serif;
   font-weight: 600;
   color:white;
-  padding-left: 315px;
 }
 
-#header4{
-  text-shadow: 0 2px 5px #243C2B;
-  font-family: 'Work Sans',sans-serif;
-  font-weight: 600;
-  color:white;
-  padding-left: 20px;
-  font-size: 35px;
-}
-
-#car{
-  width: 300px;
-  height:auto;
-}
-#trash{
-  width: 400px;
-  height:auto;
-  margin-left: -40px;
-}
-
-#energy{
+#earth{
   width:300px;
   height:auto;
 }
 
-#food{
+ #carbon{
   width:400px;
   height:auto;
+  margin-top: -10px;
+}
+
+#recycle{
+  width:300px;
+  height: auto;
+}
+
+#bold{
+  color:blue;
+}
+
+#bold:hover{
+  color:green;
 }
 
 .con{
@@ -93,6 +78,7 @@ display: flex;
 #main_header{
   font-family: sans-serif;
   font-weight: 600;
+  font-size: 550%;
   background-color: white;
   height:300px;
   box-shadow: 10px 10px 10px 0px;
@@ -101,7 +87,6 @@ display: flex;
   margin-top:200px;
   margin-left: 15%;
   margin-right:15%;
-  font-size: 350%;
 }
 
 footer p{
