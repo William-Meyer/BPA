@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
+
+body {
+background-color: #3a5841;
+margin: 0;
+padding: 0;
+text-shadow: 0 2px 5px #243C2B;
+ }
+
+ footer{
+ font-size:150%;
+ color:white;
+ background-color: #3a5841;
+ position: relative;
+ display: flex;
+ }
+
+ #copy{
+   font-size: 1.5vw;
+   text-align: center;
+   font-family: 'works-sans', sans-serif;
+   position:absolute;
+   bottom: 44px;
+   left:20%;
+   right:20%;
+ }
+ #link{
+   font-size: 1.5vw;
+   color: white;
+   font-family: 'works-sans', sans-serif;
+   position:absolute;
+   bottom: 10px;
+   left:20%;
+   right:20%;
+   text-align: center;
+ }
+ #footer_tree{
+   width:100%;
+   height:auto;
+ }
+
+#main_header{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 600;
+  background-color: white;
+  height:200px;
+  box-shadow: 10px 10px 10px 0px;
+  color:black;
+  padding-top:110px;
+  margin-top:200px;
+  margin-left: 15%;
+  margin-right:15%;
+  font-size: 400%;
+  text-shadow: none;
+}
+
+#p2{
+  font-family: 'work sans',sans-serif;
+  font-weight: 600;
+  color:black;
+  font-size:25px;
+  text-shadow: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.car {
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 8rem;
+  background-color: #1d3335;
+  Height: 450px;
+  width: 100%;
+}
+
+main{
+  margin-top: 225px;
+  margin-right: 20%;
+  margin-left:20%;
+  font-size: 4vw;
+  color:white;
+  font-family: 'work sans',sans-serif;
+}
+main a{
+  color:white;
+}
+@media(min-width:1000px){
+  main{
+    font-size: 1.7vw;
+  }
+}
