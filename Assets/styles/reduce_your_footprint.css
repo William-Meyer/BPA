@@ -1,3 +1,4 @@
+
 *
 {
   margin:0;
@@ -21,22 +22,34 @@ main a{
 }
 
 #header{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
-  padding-left: 315px;
+  padding-left: 315px
 }
 
 #header2{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
   padding-left: 20px;
   font-size: 35px;
 }
 
 #header3{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
   padding-left: 315px;
 }
 
 #header4{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
   padding-left: 20px;
   font-size: 35px;
@@ -79,6 +92,8 @@ display: flex;
 }
 
 #main_header{
+  font-family: sans-serif;
+  font-weight: 600;
   background-color: white;
   height:300px;
   box-shadow: 10px 10px 10px 0px;
@@ -98,7 +113,7 @@ footer p{
 
 main p{
 font-family: 'Work Sans',sans-serif;
-font-weight: 600;
+font-weight: 300;
 color:white;
 font-style: normal;
 -webkit-border-radius: 8px;
@@ -108,6 +123,7 @@ padding-top: 3px;
 padding-bottom: 3px;
 padding-left: 20px;
 padding-right: 20px;
+text-shadow: 0 2px 5px #243C2B;
 }
 
 .cards {

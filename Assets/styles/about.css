@@ -23,6 +23,29 @@ text-shadow: 0 2px 5px #243C2B;
    height:auto;
  }
 
+ #main_header{
+   font-family: sans-serif;
+   font-weight: 600;
+   background-color: white;
+   height:300px;
+   box-shadow: 10px 10px 10px 0px;
+   color:black;
+   padding-top:150px;
+   margin-top:200px;
+   margin-left: 15%;
+   margin-right:15%;
+   font-size: 350%;
+ }
+
+ .car {
+   text-align: center;
+   margin: 0 auto;
+   display: grid;
+   grid-gap: 8rem;
+   background-color: #1d3335;
+   Height:450px;
+ }
+
 #contactHead{
   margin-top: 30%;
   font-family: 'Work Sans', sans-serif;
