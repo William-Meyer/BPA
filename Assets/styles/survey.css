@@ -362,6 +362,10 @@ label {
   text-shadow: 3px 3px #034174;
 }
 
+#prompt{
+  text-shadow: 0 4px 2px #000;
+}
+
 #results h1{
   text-align: center;
   width: 100%;
@@ -376,6 +380,7 @@ label {
   color:white;
   text-align: center;
   font-size: 7vw;
+  text-shadow: 0 2px 5px #243C2B;
 }
 #content{
   color:white;
@@ -383,6 +388,7 @@ label {
   font-size: 4vw;
   margin:15%;
   margin-top: 3%;
+  text-shadow: 0 2px 5px #243C2B;
 }
 #contents{
   text-align: center;
