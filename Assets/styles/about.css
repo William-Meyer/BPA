@@ -34,15 +34,15 @@ text-shadow: 0 2px 5px #243C2B;
    margin-top:200px;
    margin-left: 15%;
    margin-right:15%;
-   font-size: 550%;
+   font-size: 250%;
    text-shadow: none;
  }
 
  #p2{
    font-family: 'work sans',sans-serif;
-   font-weight: 600
+   font-weight: 600;
    color:black;
-   font-size:30px;
+   font-size:25px;
    text-shadow: none;
    margin-left: 10px;
    margin-right: 10px;
@@ -157,6 +157,12 @@ text-shadow: 0 2px 5px #243C2B;
   }
   .title{
     font-size: 37.2px;
+  }
+  #main_header{
+    font-size: 550%;
+  }
+  #p2{
+    font-size:30px;
   }
 }
 
