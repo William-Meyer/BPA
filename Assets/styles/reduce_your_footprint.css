@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
 
 *
 {
@@ -23,22 +22,30 @@ main a{
 }
 
 #header{
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
-  padding-left: 315px;
+  padding-left: 315px
 }
 
 #header2{
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
   padding-left: 20px;
   font-size: 35px;
 }
 
 #header3{
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
   padding-left: 315px;
 }
 
 #header4{
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
   color:white;
   padding-left: 20px;
   font-size: 35px;
@@ -100,7 +107,7 @@ footer p{
 
 main p{
 font-family: 'Work Sans',sans-serif;
-font-weight: 600;
+font-weight: 300;
 color:white;
 font-style: normal;
 -webkit-border-radius: 8px;
