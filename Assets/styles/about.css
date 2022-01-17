@@ -191,6 +191,8 @@ text-shadow: 0 2px 5px #243C2B;
 
 /* Screen larger than 900px? 3 columns */
 nav{
+  font-family: 'work sans', sans-serif;
+  font-weight: 600;
 	height: 50px;
 	text-align: center;
   margin-bottom: -200px;
