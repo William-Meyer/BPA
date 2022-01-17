@@ -60,7 +60,7 @@ main a{
 }
 
 .con{
-  display:flex;
+  display:normal;/*change flex*/
   align-items: center;
 }
 main a:hover{
@@ -349,15 +349,22 @@ nav{
   }
 
 }
+main p{
+  font-size: 20px;
+}
+
 
 @media (min-width: 1000px)
 {
+  .con{
+    display:flex;
+  }
   nav{
     margin-bottom: -50px;
   }
   }
   main p{
-    font-size:110%;
+    font-size:160%;
   }
 }
 @media(max-width: 1320px)
@@ -369,6 +376,7 @@ nav{
     margin-left: -65%;
   }
 }
+
 @media(min-width:1500px)
 {
 
@@ -385,4 +393,4 @@ main p{
   main p{
     font-size:165%;
   }
-  }
+}
