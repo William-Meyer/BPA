@@ -35,12 +35,25 @@ position: relative;
 display: flex;
 }
 
-footer p{
+#copy{
+  font-size: .6em;
+  text-align: center;
+  font-family: 'works-sans', sans-serif;
   position:absolute;
-  bottom: 8px;
-  left: 16px;
+  bottom: 44px;
+  left:20%;
+  right:20%;
 }
-
+#link{
+  font-size: .6em;
+  color: white;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 10px;
+  left:20%;
+  right:20%;
+  text-align: center;
+}
 #footer_tree{
   width:100%;
   height:auto;
