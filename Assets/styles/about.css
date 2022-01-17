@@ -75,6 +75,7 @@ text-shadow: 0 2px 5px #243C2B;
 }
 
 .cardsContainer{
+  margin-top: 15%;
   text-align: center;
 }
 .card img{
