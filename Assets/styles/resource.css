@@ -5,36 +5,81 @@
 
 }
 body{
-
+  overflow-x: hidden;
 }
 main{
-  margin-top: -90%;
   background-color: #3a5841;
-  padding-top:50%;
+  padding-top:250px;
   max-width: 100%;
   padding-left: 17%;
   padding-right: 17%;
 }
-#homeImagesContainer{
-  position: relative;
-  width:100%;
-  height: 150vw;
-  overflow-x: hidden
+
+main a{
+  text-decoration: none;
+  color:white;
 }
-#home-background img{
-  width: 50%;
-  max-width: 50%;
+
+#header{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
+  color:white;
+  padding-left: 20px;/*315 for desktop*/
+}
+
+#header2{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
+  color:white;
+  padding-left: 20px;
+  font-size: 35px;
+}
+
+#header3{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
+  color:white;
+  padding-left: 20px;/*315*/
+}
+
+#header4{
+  text-shadow: 0 2px 5px #243C2B;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 600;
+  color:white;
+  padding-left: 20px;
+  font-size: 35px;
+}
+
+#car{
+  width: 300px;
+  height:auto;
+}
+#trash{
+  width: 400px;
+  height:auto;
+  margin-left: -40px;
+}
+
+#energy{
+  width:300px;
   height:auto;
 }
 
-#netzero{
-  width:150px;
+#food{
+  width:400px;
   height:auto;
-  margin-top: 10px;
-  margin-left: 40px;
-  float:left;
-  text-decoration: none;
-  overflow: hidden;
+}
+
+.con{
+  display:normal;
+  align-items: center;
+}
+main a:hover{
+  color:green;
 }
 
 footer{
@@ -45,38 +90,41 @@ position: relative;
 display: flex;
 }
 
-#copy{
-  font-size: 1.5vw;
-  text-align: center;
-  font-family: 'works-sans', sans-serif;
-  position:absolute;
-  bottom: 44px;
-  left:20%;
-  right:20%;
+#main_header{
+  font-family: sans-serif;
+  font-weight: 600;
+  background-color: white;
+  height:300px;
+  box-shadow: 10px 10px 10px 0px;
+  color:black;
+  padding-top:150px;
+  margin-top:200px;
+  margin-left: 15%;
+  margin-right:15%;
+  font-size: 300%;
 }
-#link{
-  font-size: 1.5vw;
-  color: white;
-  font-family: 'works-sans', sans-serif;
-  position:absolute;
-  bottom: 10px;
-  left:20%;
-  right:20%;
-  text-align: center;
+
+#p2{
+  font-family: 'work sans',sans-serif;
+  font-weight: 600;
+  color:black;
+  font-size:25px;
+  text-shadow: none;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-#footer_tree{
-  width:100%;
-  height:auto;
+
+footer p{
+  position:absolute;
+  bottom: 8px;
+  left: 16px;
 }
 
 main p{
 font-family: 'Work Sans',sans-serif;
-font-weight: 600;
+font-weight: 300;
 color:white;
 font-style: normal;
-background-color: #91a28c;
-
-font-size: 205;
 -webkit-border-radius: 8px;
 -moz-border-radius:8px;
 border-radius: 8px;
@@ -84,59 +132,28 @@ padding-top: 3px;
 padding-bottom: 3px;
 padding-left: 20px;
 padding-right: 20px;
+text-shadow: 0 2px 5px #243C2B;
 }
 
-#p2{
-  margin-top:50px;
-  text-align:left;
+.car {
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 8rem;
+  background-color: #1d3335;
+  Height:450px;
 }
-
-#headerstart{
-  color:white;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-#headerend{
-font-family: 'Work Sans',sans-serif;
-font-weight: 600;
-font-style: normal;
-color:white;
-font-size: 135%;
-}
-/*text wrapping images*/
-#factory{
-  float: right;
-  clear: right;
-  height:50%;
-  width:50%;
-  border-radius:8px;
-  padding-top: 5px;
-  padding-left: 5px;
-}
-
-#feet{
-  float:left;
-  width:35%;
-  height:auto;
-  clear:right;
-}
-
-nav{
-	height: 50px;
-	text-align: center;
-  margin-bottom: -200px;
-}
-
 /*sticky navbar*/
 nav{
-  background-color:transparent;
+  background-color:#243c2b;
 	position: fixed;
 	top: 0;
 	width: 100%;
   float:right;
   z-index: 3;
+  height: 50px;
+	text-align: center;
+  margin-bottom: -200px;
 }
 
 /*list for hamburger menu*/
@@ -161,16 +178,14 @@ nav{
 
 /* The dropdown container */
 .dropdown {
-  position: relative;
   overflow: hidden;
-}
-#homeImages
-{
-  width: 50%;
-  height: auto;
-  overflow: hidden;
+  float:right;
 }
 
+#footer_tree{
+  width:100%;
+  height:auto;
+}
 .responsive {
   position: absolute;
   width: 100%;
@@ -188,6 +203,7 @@ nav{
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
+  float:left;
 }
 .btn{
   font-size:300%;
@@ -218,12 +234,22 @@ nav{
   z-index: 1;
 }
 
+#container{
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+
+}
 /* Links inside the dropdown */
 .dropdown-content a {
+  float: none;
   color: black;
   padding: 12px 14px;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  text-align: left;
+  background:transparent;
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -238,6 +264,12 @@ nav{
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+
+#netzero{
+    width:20%;
+    height:auto;
 }
 
 /* menu */
@@ -322,28 +354,11 @@ nav{
 .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after{
   top: 0;
 }
-.zoom1{
-
-}
-
-.zoom2{
-
-}
-.black{
-
-}
-.zoom1{max-width: 100%; overflow: hidden;}
-.zoom2{max-width: 100%; overflow: hidden;}
 /* 48em = 768px */
 
 @media (min-width: 860px) {
   .navbar li {
     float: right;
-  }
-  #netzero{
-    width:200px;
-    height:auto;
-    margin-top: 10px;
   }
   .navbar li a {
     padding: 16px 20px;
@@ -357,48 +372,63 @@ nav{
   .navbar .menu-icon {
     display: none;
   }
+
 }
 
 @media (min-width: 1000px)
 {
+
+  .con{
+    display: flex;
+  }
+  #header, #header3{
+    margin-left: 300px;
+  }
+
   nav{
     margin-bottom: -50px;
   }
-  #p2{
-    margin-top:120px;
-  }
-  #factory{
-    width:50%;
-    height:50%;
   }
   main p{
     font-size:110%;
   }
 }
+
+@media(min-width: 1240px)
+{
+  #contactHead{
+    font-size: 124px;
+  }
+  .contactContents{
+    font-size: 49.6px;
+  }
+  .name{
+    font-size: 45.88px;
+  }
+  .title{
+    font-size: 37.2px;
+  }
+  #main_header{
+    font-size: 550%;
+  }
+  #p2{
+    font-size:500px;
+  }
+}
+
 @media(max-width: 1320px)
 {
-  .zoom1
-  {
-    visibility: hidden;
-    object-fit: cover;
   }
-  .zoom2
-  {
-    visibility: hidden;
-    object-fit: cover;
+  #netzero{
+    width:20%;
+    height:auto;
+    margin-left: -65%;
   }
-  #factory{
-    width:40%;
-    height:40%;
-  }
-
+  \
 }
 @media(min-width:1500px)
 {
-#factory{
-  width:35%;
-  height:35%;
-}
+
 main p{
   font-size:145%;
 }
@@ -408,10 +438,6 @@ main p{
 {
   nav{
     margin-bottom: -300px;
-  }
-  #factory{
-    width:30%;
-    height:30%;
   }
   main p{
     font-size:165%;
