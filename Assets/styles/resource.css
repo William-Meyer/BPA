@@ -129,13 +129,7 @@ main a:hover{
   color:green;
 }
 
-footer{
-font-size:150%;
-color:white;
-background-color: #3a5841;
-position: relative;
-display: flex;
-}
+
 
 #main_header{
   font-family: sans-serif;
@@ -151,11 +145,7 @@ display: flex;
   font-size: 300%;
 }
 
-footer p{
-  position:absolute;
-  bottom: 8px;
-  left: 16px;
-}
+
 
 main p{
 font-family: 'Work Sans',sans-serif;
@@ -221,11 +211,45 @@ nav{
   position: relative;
   overflow: hidden;
 }
+<<<<<<< HEAD
 #homeImages
 {
   width: 50%;
   height: auto;
   overflow: hidden;
+=======
+
+footer{
+font-size:150%;
+color:white;
+background-color: #3a5841;
+position: relative;
+display: flex;
+}
+
+#copy{
+  font-size: 1.5vw;
+  text-align: center;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 44px;
+  left:20%;
+  right:20%;
+}
+#link{
+  font-size: 1.5vw;
+  color: white;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 10px;
+  left:20%;
+  right:20%;
+  text-align: center;
+}
+#footer_tree{
+  width:100%;
+  height:auto;
+>>>>>>> e31cecfcf4c40725c6a8c812c7e7a424fc6be994
 }
 
 .responsive {
