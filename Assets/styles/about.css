@@ -30,11 +30,22 @@ text-shadow: 0 2px 5px #243C2B;
    height:300px;
    box-shadow: 10px 10px 10px 0px;
    color:black;
-   padding-top:150px;
+   padding-top:110px;
    margin-top:200px;
    margin-left: 15%;
    margin-right:15%;
-   font-size: 350%;
+   font-size: 250%;
+   text-shadow: none;
+ }
+
+ #p2{
+   font-family: 'work sans',sans-serif;
+   font-weight: 600;
+   color:black;
+   font-size:25px;
+   text-shadow: none;
+   margin-left: 10px;
+   margin-right: 10px;
  }
 
  .car {
@@ -146,6 +157,12 @@ text-shadow: 0 2px 5px #243C2B;
   }
   .title{
     font-size: 37.2px;
+  }
+  #main_header{
+    font-size: 550%;
+  }
+  #p2{
+    font-size:30px;
   }
 }
 
