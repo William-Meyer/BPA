@@ -19,32 +19,28 @@ function btn_clicked(){
   </head>
   <body>
   <div id = "container">
-    <nav>
-      <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
-    <div class="navbar">
-      <input class="menu-btn" type="checkbox" id= "menu-btn"/>
-      <label class="menu-icon" for="menu-btn">
-      <span class="navicon"></span></label>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#news">Learn</a></li>
-      <li><a href="#resources">Resources</a></li>
-      <li><a href="#About us">About Us</a></li>
-      <div class="dropdown">
-      <li>  <button class="dropbtn">Help Out
-      </button></li>
-        <div class="dropdown-content">
-          <li><a href="survey.html">Quiz</a></li>
-        <li><a href="reduce_your_footprint.html">Reduce your Footprint</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
     <div class="car">
     <h1 id="main_header">Resources<br></br><p id="p2">Want to help us save the environment? Here are some useful
     resources to get you started! </p></h1>
     </div>
-
+    <nav class = 'black'>
+        <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+      <div class="navbar">
+        <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+        <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reduce_your_footprint.html">Reduce</a></li>
+        <li><a href="survey.html"><p>Quiz</p></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
         <main>
 <h1 id="header">PRODUCTS</h1>
 <p id="p1">Sometimes, simple changes to the products that a person uses can create a large change in the size of their carbon footprint.
@@ -145,5 +141,48 @@ target="_blank"><img src="Assets/imgs/energy.png" alt= "light bulb" id="energy"/
   <img src="Assets/imgs/footer_tree.png" alt="picture of woods" id="footer_tree"/>
     <p>&copy; 2021 BPA Site. All rights reserved. Site design by Dreadhead Filmz<br></p>
 </footer>
-  </body>
+</body>
+<script>
+
+$(window).scroll
+(
+  function()
+{
+
+  var scroll=$(window).scrollTop();
+  $('.zoom2').css("opacity", 1- scroll/900)
+  if(scroll == 0)
+  {
+    $("nav").css("background","transparent");
+  }
+  else if (1+scroll/200 < 9)
+  {
+    $("nav").css("background","#00000066");
+  }
+  else{
+
+      $("nav").css("background","#00000099");
+
+  }
+  if((1+scroll/200 < 4))
+{
+  $(".zoom1").css
+  (
+    {
+     transform : 'scale(' + (1 + scroll/600) + ')'
+    }
+  )
+  $(".zoom2").css
+  (
+    {
+     transform : 'scale(' + (1 + scroll/400) + ')'
+    }
+  )
+
+}
+else{
+  $('.zoom2').css("opacity", 0)
+}
+});
+</script>
 </html>

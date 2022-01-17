@@ -340,7 +340,7 @@ nav{
 .zoom2{max-width: 100%; overflow: hidden;}
 /* 48em = 768px */
 
-@media (min-width: 860px) {
+@media (min-width: 950px) {
   .navbar li {
     float: right;
   }

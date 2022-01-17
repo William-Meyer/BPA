@@ -20,6 +20,16 @@ main a{
   color:white;
 }
 
+#netzero{
+  width:150px;
+  height:auto;
+  margin-top: 10px;
+  margin-left: 40px;
+  float:left;
+  text-decoration: none;
+  overflow: hidden;
+}
+
 #header{
   text-shadow: 0 2px 5px #243C2B;
   font-family: 'Work Sans',sans-serif;
@@ -170,17 +180,20 @@ text-shadow: 0 2px 5px #243C2B;
   background-color: #1d3335;
   Height:450px;
 }
+nav{
+	height: 50px;
+	text-align: center;
+  margin-bottom: -200px;
+}
+
 /*sticky navbar*/
 nav{
-  background-color:#243c2b;
+  background-color:transparent;
 	position: fixed;
 	top: 0;
 	width: 100%;
   float:right;
   z-index: 3;
-  height: 50px;
-	text-align: center;
-  margin-bottom: -200px;
 }
 
 /*list for hamburger menu*/
@@ -205,14 +218,16 @@ nav{
 
 /* The dropdown container */
 .dropdown {
+  position: relative;
   overflow: hidden;
-  float:right;
+}
+#homeImages
+{
+  width: 50%;
+  height: auto;
+  overflow: hidden;
 }
 
-#footer_tree{
-  width:100%;
-  height:auto;
-}
 .responsive {
   position: absolute;
   width: 100%;
@@ -230,7 +245,6 @@ nav{
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
-  float:left;
 }
 .btn{
   font-size:300%;
@@ -261,22 +275,12 @@ nav{
   z-index: 1;
 }
 
-#container{
-  margin:0;
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-
-}
 /* Links inside the dropdown */
 .dropdown-content a {
-  float: none;
   color: black;
   padding: 12px 14px;
   text-decoration: none;
-  display: block;
-  text-align: left;
-  background:transparent;
+  display: inline-block;
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -291,12 +295,6 @@ nav{
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-
-#netzero{
-    width:20%;
-    height:auto;
 }
 
 /* menu */
@@ -322,6 +320,7 @@ nav{
 }
 
 .menu{
+  align-items: left;
   float:left;
   display:block;
   border-right: 1px;
@@ -362,7 +361,7 @@ nav{
 }
 
 .navbar .menu-btn:checked ~ .menu{
-  max-height: 240px;
+  max-height: 100vh;
 }
 
 .navbar .menu-btn:checked ~ .menu-icon .navicon{
@@ -381,11 +380,31 @@ nav{
 .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after{
   top: 0;
 }
+.menu ul{
+  align-items: left !important;
+}
+.zoom1{
+
+}
+
+.zoom2{
+
+}
+.black{
+
+}
+.zoom1{max-width: 100%; overflow: hidden;}
+.zoom2{max-width: 100%; overflow: hidden;}
 /* 48em = 768px */
 
-@media (min-width: 860px) {
+@media (min-width: 950px) {
   .navbar li {
     float: right;
+  }
+  #netzero{
+    width:200px;
+    height:auto;
+    margin-top: 10px;
   }
   .navbar li a {
     padding: 16px 20px;
@@ -399,64 +418,48 @@ nav{
   .navbar .menu-icon {
     display: none;
   }
-
 }
 
 @media (min-width: 1000px)
 {
-
-  .con{
-    display: flex;
-  }
-#header{
-  font-size: 250%;
-}
-#p1{
-  font-size: 125%;
-}
   nav{
     margin-bottom: -50px;
   }
+  #p2{
+    margin-top:120px;
+  }
+  #factory{
+    width:50%;
+    height:50%;
   }
   main p{
     font-size:110%;
   }
 }
-
-@media(min-width: 1240px)
-{
-  #contactHead{
-    font-size: 124px;
-  }
-  .contactContents{
-    font-size: 49.6px;
-  }
-  .name{
-    font-size: 45.88px;
-  }
-  .title{
-    font-size: 37.2px;
-  }
-  #main_header{
-    font-size: 550%;
-  }
-  #p2{
-    font-size:500px;
-  }
-}
-
 @media(max-width: 1320px)
 {
+  .zoom1
+  {
+    visibility: hidden;
+    object-fit: cover;
   }
-  #netzero{
-    width:20%;
-    height:auto;
-    margin-left: -65%;
+  .zoom2
+  {
+    visibility: hidden;
+    object-fit: cover;
   }
+  #factory{
+    width:40%;
+    height:40%;
+  }
+
 }
 @media(min-width:1500px)
 {
-
+#factory{
+  width:35%;
+  height:35%;
+}
 main p{
   font-size:145%;
 }
@@ -466,6 +469,10 @@ main p{
 {
   nav{
     margin-bottom: -300px;
+  }
+  #factory{
+    width:30%;
+    height:30%;
   }
   main p{
     font-size:165%;
