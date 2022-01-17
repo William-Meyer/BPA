@@ -41,6 +41,11 @@ footer p{
   left: 16px;
 }
 
+#footer_tree{
+  width:100%;
+  height:auto;
+}
+
 main p{
 font-family: 'Work Sans',sans-serif;
 font-weight: 600;
@@ -149,10 +154,7 @@ nav{
   height: auto;
   overflow: hidden;
 }
-#footer_tree{
-  width:100%;
-  height:auto;
-}
+
 .responsive {
   position: absolute;
   width: 100%;
@@ -324,7 +326,7 @@ nav{
 
 }
 .black{
-  
+
 }
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
