@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
+
 body {
 background-color: #3a5841;
 margin: 0;
@@ -11,6 +11,30 @@ text-shadow: 0 2px 5px #243C2B;
  background-color: #3a5841;
  position: relative;
  display: flex;
+ }
+
+ #copy{
+   font-size: 1.5vw;
+   text-align: center;
+   font-family: 'works-sans', sans-serif;
+   position:absolute;
+   bottom: 44px;
+   left:20%;
+   right:20%;
+ }
+ #link{
+   font-size: 1.5vw;
+   color: white;
+   font-family: 'works-sans', sans-serif;
+   position:absolute;
+   bottom: 10px;
+   left:20%;
+   right:20%;
+   text-align: center;
+ }
+ #footer_tree{
+   width:100%;
+   height:auto;
  }
  #netzero{
    width:150px;
@@ -191,6 +215,8 @@ text-shadow: 0 2px 5px #243C2B;
 
 /* Screen larger than 900px? 3 columns */
 nav{
+  font-family: 'work sans', sans-serif;
+  font-weight: 600;
 	height: 50px;
 	text-align: center;
   margin-bottom: -200px;
@@ -328,8 +354,11 @@ nav{
 .menu .black ul{
   background:black;
 }
-
 .menu{
+  background:#00000099;
+}
+.menu{
+
   align-items: left;
   float:left;
   display:block;
@@ -408,6 +437,9 @@ nav{
 /* 48em = 768px */
 
 @media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
   .navbar li {
     float: right;
   }

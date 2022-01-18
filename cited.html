@@ -5,8 +5,29 @@
     <title>Netzero|Works Cited</title>
     <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Assets/styles/cited.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <script  src = "Assets/scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
   </head>
   <body>
+    <nav class = 'black'>
+        <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+      <div class="navbar">
+        <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+        <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reduce_your_footprint.html">Reduce</a></li>
+        <li><a href="survey.html">Quiz</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="car">
     <h1 id="main_header">Works Cited</h1>
 
@@ -81,7 +102,28 @@
         <a id = "link" href="cited.html"><p>Works Cited</p></a>
 </footer>
   </body>
-</html>
+  <script>
 
-  </body>
+  $(window).scroll
+(
+    function()
+  {
+
+    var scroll=$(window).scrollTop();
+    $('.zoom2').css("opacity", 1- scroll/900)
+    if(scroll == 0)
+    {
+      $("nav").css("background","transparent");
+    }
+    else if (1+scroll/200 < 9)
+    {
+      $("nav").css("background","#00000066");
+    }
+    else{
+
+        $("nav").css("background","#00000099");
+
+    }
+  });
+  </script>
 </html>

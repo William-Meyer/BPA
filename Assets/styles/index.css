@@ -15,6 +15,9 @@ main{
   padding-left: 17%;
   padding-right: 17%;
 }
+.menu{
+  background:#00000099;
+}
 #homeImagesContainer{
   position: relative;
   width:100%;
@@ -97,7 +100,9 @@ padding-right: 20px;
   font-weight: 300;
   font-style: normal;
 }
-
+footer{
+  width:100%;
+}
 #headerend{
 font-family: 'Work Sans',sans-serif;
 font-weight: 600;
@@ -118,12 +123,14 @@ font-size: 135%;
 
 #feet{
   float:left;
-  width:35%;
+  width:20%;
   height:auto;
   clear:right;
 }
 
 nav{
+  font-family: 'work sans', sans-serif;
+  font-weight: 600;
 	height: 50px;
 	text-align: center;
   margin-bottom: -200px;
@@ -341,6 +348,9 @@ nav{
 /* 48em = 768px */
 
 @media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
   .navbar li {
     float: right;
   }

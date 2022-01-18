@@ -14,10 +14,44 @@ main{
   padding-left: 15%;
   padding-right: 15%;
 }
-
+.menu-btn{
+  display:none;
+}
 main a{
   text-decoration: none;
   color:white;
+}
+
+footer{
+font-size:150%;
+color:white;
+background-color: #3a5841;
+position: relative;
+display: flex;
+}
+
+#copy{
+  font-size: 1.5vw;
+  text-align: center;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 44px;
+  left:20%;
+  right:20%;
+}
+#link{
+  font-size: 1.5vw;
+  color: white;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 10px;
+  left:20%;
+  right:20%;
+  text-align: center;
+}
+#footer_tree{
+  width:100%;
+  height:auto;
 }
 
 #netzero{
@@ -145,7 +179,9 @@ main a:hover{
   font-size: 300%;
 }
 
-
+.menu{
+  background:#00000099;
+}
 
 main p{
 font-family: 'Work Sans',sans-serif;
@@ -171,6 +207,8 @@ text-shadow: 0 2px 5px #243C2B;
   Height:450px;
 }
 nav{
+  font-family: 'work sans', sans-serif;
+  font-weight: 600;
 	height: 50px;
 	text-align: center;
   margin-bottom: -200px;
@@ -212,13 +250,6 @@ nav{
   overflow: hidden;
 }
 
-footer{
-font-size:150%;
-color:white;
-background-color: #3a5841;
-position: relative;
-display: flex;
-}
 
 #copy{
   font-size: 1.5vw;
@@ -414,6 +445,9 @@ display: flex;
 /* 48em = 768px */
 
 @media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
   .navbar li {
     float: right;
   }
