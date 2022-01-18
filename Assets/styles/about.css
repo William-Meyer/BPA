@@ -437,6 +437,9 @@ nav{
 /* 48em = 768px */
 
 @media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
   .navbar li {
     float: right;
   }
