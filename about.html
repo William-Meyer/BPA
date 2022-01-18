@@ -2,9 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script  src = "Assets/scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="Assets/styles/about.css">
     <title>Netzero|About</title>
     <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <nav class = 'black'>
@@ -19,7 +23,7 @@
       <li><a href="resource.html">Resources</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="reduce_your_footprint.html">Reduce</a></li>
-      <li><a href="survey.html"><p>Quiz</p></a></li>
+      <li><a href="survey.html">Quiz</a></li>
           </ul>
         </div>
       </div>
@@ -70,25 +74,6 @@
         $("nav").css("background","#00000099");
 
     }
-    if((1+scroll/200 < 4))
-  {
-    $(".zoom1").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/600) + ')'
-      }
-    )
-    $(".zoom2").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/400) + ')'
-      }
-    )
-
-  }
-  else{
-    $('.zoom2').css("opacity", 0)
-  }
 });
 
 
