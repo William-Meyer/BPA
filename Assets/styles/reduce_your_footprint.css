@@ -36,6 +36,9 @@ display: flex;
   left:20%;
   right:20%;
 }
+.menu{
+  background:#00000099;
+}
 #link{
   font-size: 1.5vw;
   color: white;
@@ -386,6 +389,9 @@ nav{
 /* 48em = 768px */
 
 @media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
   .navbar li {
     float: right;
   }

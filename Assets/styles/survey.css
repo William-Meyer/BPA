@@ -16,7 +16,9 @@
   overflow: hidden;
   font-family: 'Work Sans', sans-serif;
 }
-
+.menu{
+  background:#00000099;
+}
 #slide1 h1{
   font-family: 'Work Sans', sans-serif;
   text-align: center;
@@ -643,6 +645,9 @@ nav{
 }
 
 @media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
   .navbar li {
     float: right;
   }

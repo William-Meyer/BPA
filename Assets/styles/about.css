@@ -354,8 +354,11 @@ nav{
 .menu .black ul{
   background:black;
 }
-
 .menu{
+  background:#00000099;
+}
+.menu{
+
   align-items: left;
   float:left;
   display:block;

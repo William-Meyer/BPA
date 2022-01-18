@@ -179,7 +179,9 @@ main a:hover{
   font-size: 300%;
 }
 
-
+.menu{
+  background:#00000099;
+}
 
 main p{
 font-family: 'Work Sans',sans-serif;
@@ -421,6 +423,9 @@ nav{
 /* 48em = 768px */
 
 @media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
   .navbar li {
     float: right;
   }
