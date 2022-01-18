@@ -157,7 +157,7 @@ display: flex;
 
 .con{
   display:normal;
-  align-items:center ;
+  align-items:l center ;
 }
 main a:hover{
   color:green;
@@ -445,9 +445,6 @@ nav{
 /* 48em = 768px */
 
 @media (min-width: 950px) {
-  .con{
-    display:flex;
-  }
   .menu{
     background:transparent;
   }
