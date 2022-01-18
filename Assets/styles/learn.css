@@ -158,13 +158,6 @@ nav{
   position: relative;
   overflow: hidden;
 }
-<<<<<<< HEAD
-#homeImages
-{
-  width: 50%;
-  height: auto;
-  overflow: hidden;
-=======
 
 footer{
 font-size:150%;
@@ -196,7 +189,6 @@ display: flex;
 #footer_tree{
   width:100%;
   height:auto;
->>>>>>> e31cecfcf4c40725c6a8c812c7e7a424fc6be994
 }
 
 .responsive {
