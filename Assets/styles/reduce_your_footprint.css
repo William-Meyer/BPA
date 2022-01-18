@@ -389,6 +389,9 @@ nav{
 /* 48em = 768px */
 
 @media (min-width: 950px) {
+  .con{
+    display: flex;
+  }
   .menu{
     background:transparent;
   }
