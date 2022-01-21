@@ -1,10 +1,9 @@
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-       <link rel="stylesheet" href="Assets/styles/reduce_your_footprint.css">
-    <script  src = "Assets/scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Assets/styles/reduce_your_footprint.css">
+    <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
@@ -15,10 +14,32 @@ function btn_clicked(){
   window.open("survey.html", "_self");
 }
     </script>
-    <title></title>
+    <script>
+
+    $(window).scroll
+  (
+      function()
+    {
+
+      var scroll=$(window).scrollTop();
+      $('.zoom2').css("opacity", 1- scroll/900)
+      if(scroll == 0)
+      {
+        $("nav").css("background","transparent");
+      }
+      else if (1+scroll/200 < 9)
+      {
+        $("nav").css("background","#00000066");
+      }
+      else{
+
+          $("nav").css("background","#00000099");
+
+      }
+  });
+  </script>
   </head>
   <body>
-  <div id = "container">
     <nav class = 'black'>
         <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
       <div class="navbar">
@@ -33,10 +54,9 @@ function btn_clicked(){
         <li><a href="learn.html">Learn</a></li>
             </ul>
           </div>
-        </div>
       </nav>
     <div class="cards">
-    <h1 id="main_header">Reduce Your Footprint</h1>
+      <h1 id="main_header">Reduce Your Footprint</h1>
     </div>
         <main>  <p>Every person on the planet contributes to the growing, worldwide carbon footprint. However, some people’s habits are more
 detrimental to the environment than others. Nevertheless, every person is able to make small lifestyle changes to aid us in lowering our
@@ -44,7 +64,7 @@ carbon footprint as a planet. The places of possible improvement can be divided 
 <a href= "#header">Transportation</a>
 <a href="#header2">Trash Production</a>
 <a href="#header3">Energy Use</a>
-<a href="#header4">Food Consumption</a></p><br></br><br></br>
+<a href="#header4">Food Consumption</a></p><br> <br>
 
   <h1 id="header">Transportation</h1>
   <div class="con">
@@ -58,7 +78,7 @@ situations. Choosing to carpool with friends and family and opting for public tr
 decrease the amount of vehicles on the road at a time. If the destination is in close enough proximity to allow it, choosing to ride a
 bicycle or walk promotes a healthier lifestyle and decreases the use of fossil fuels. Flying via airplane also takes up 3% of the world's
 carbon emissions. By decreasing the number of flights you take in a year, you could greatly reduce your personal carbon footprint.</p>
-<br></br><br></br>
+<br> <br>
 
 <h1 id="header2">Trash</h1>
 <div class="con">
@@ -74,7 +94,7 @@ end up in landfills. Try making a list of exactly what you need and buy only tho
 where participants would create no waste in their day-to-day life by buying whole foods, using reusable products, and letting nothing go without a purpose.
 By making small lifestyle changes, such as switching from common throw-away plastic bags to reusable containers, glass bottles, jars, or cloth bags, there would
 be a large decrease in the amount of slow-to-decompose plastic ending up in landfills worldwide.</p>
-<br></br><br></br>
+<br> <br>
 
 <h1 id="header3">Energy Use</h1>
 <div class="con">
@@ -91,7 +111,7 @@ On top of appliances, heating and cooling a home uses multiple power sources to 
 greenhouse gas emission to keep working. By insulating your home, it can cut down on the amount of heating needed to keep the house
 warm and reduce carbon emissions.
 </p>
-<br></br><br></br>
+<br> <br>
 
 <h1 id="header4">Food Consumption</h1>
 <div class="con">
@@ -109,7 +129,7 @@ and pesticides on farms to maintain freshness. Organic farming offers a more nat
 chemically altered produce made otherwise. Furthermore, eating less meat can also have a gigantic impact on the environment,
 specifically red meats. For example, replacing one red meat with poultry reduces emissions by nearly half. As surprising as it may sound,
 eating one vegetarian meal a week can save the carbon emission equivalent of driving 22 miles.</p>
-<br></br><br></br>
+<br> <br>
 
         </main>
 <footer>
@@ -118,49 +138,5 @@ eating one vegetarian meal a week can save the carbon emission equivalent of dri
     <a id = "link" href="cited.html"><p>Works Cited</p></a>
 </footer>
   </body>
-  <script>
 
-  $(window).scroll
-(
-    function()
-  {
-
-    var scroll=$(window).scrollTop();
-    $('.zoom2').css("opacity", 1- scroll/900)
-    if(scroll == 0)
-    {
-      $("nav").css("background","transparent");
-    }
-    else if (1+scroll/200 < 9)
-    {
-      $("nav").css("background","#00000066");
-    }
-    else{
-
-        $("nav").css("background","#00000099");
-
-    }
-    if((1+scroll/200 < 4))
-  {
-    $(".zoom1").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/600) + ')'
-      }
-    )
-    $(".zoom2").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/400) + ')'
-      }
-    )
-
-  }
-  else{
-    $('.zoom2').css("opacity", 0)
-  }
-});
-
-
-</script>
 </html>
