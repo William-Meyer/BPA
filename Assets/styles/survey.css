@@ -95,7 +95,17 @@ display: flex;
   font-size:8vw;
   padding: 4%;
 }
-
+#scrollPrompt{
+  text-align: center;
+  width: 100%;
+  color:white;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-size:2vw;
+  padding: 4%;
+}
 .questionText{
   font-family: 'Work Sans', sans-serif;
   width:100%;
@@ -435,7 +445,7 @@ label {
 nav{
   font-family: 'work sans', sans-serif;
   font-weight: 600;
-	height: 50px;
+	height: 60px;
 	text-align: center;
   margin-bottom: -200px;
 }
@@ -645,6 +655,9 @@ nav{
 }
 
 @media (min-width: 950px) {
+  #sentance h2 {
+    font-size: 5vw;
+  }
   .menu{
     background:transparent;
   }
