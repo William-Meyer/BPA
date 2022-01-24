@@ -337,9 +337,7 @@ nav{
 .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after{
   top: 0;
 }
-.menu ul{
-  align-items: left !important;
-}
+
 .zoom1{
 
 }
