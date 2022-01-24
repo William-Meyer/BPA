@@ -241,19 +241,19 @@ display: flex;
 	--handleTrackBg: #3a5841;
 	font-size: calc(16px + (32 - 16)*(100vw - 320px)/(2560 - 320));
 }
-#sliderContainer, input {
+.sliderContainer, input {
 	color: var(--fg);
 	font: 1em/1.5 "Hind", sans-serif;
 }
-#sliderContainer, .range, .range__counter {
+.sliderContainer, .range, .range__counter {
 	display: flex;
 }
-#sliderContainer {
+.sliderContainer {
 	background-color: var(--bg);
 }
 
 
-#sliderContainer {
+.sliderContainer {
     position: absolute;
 
     display: flex;
@@ -263,7 +263,7 @@ display: flex;
 
 }
 
-#sliderContainer {
+.sliderContainer {
   transform: translate(-10%,0%);
     width: 120%;
 

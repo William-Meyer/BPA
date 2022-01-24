@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <link rel="stylesheet" href="Assets/styles/survey.css">
-      <script  src = "Assets/scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="Assets/styles/survey.css">
+    <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
     <title>Netzero|Survey</title>
     <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
-    <script type="text/javascript">
+    <script>
     var resultsShown = false;
     function btn_clicked(){
       if(resultsShown == false)
@@ -457,7 +457,29 @@ window.onload = function exampleFunction() {
 
 
     </script>
-    <title></title>
+    <script>
+    $(window).scroll
+    (
+      function()
+    {
+
+      var scroll=$(window).scrollTop();
+      $('.zoom2').css("opacity", 1- scroll/900)
+      if(scroll == 0)
+      {
+        $("nav").css("background","transparent");
+      }
+      else if (1+scroll/200 < 9)
+      {
+        $("nav").css("background","#00000066");
+      }
+      else{
+
+          $("nav").css("background","#00000099");
+
+      }
+      });
+    </script>
   </head>
   <body onload="currentSlide(1)">
     <nav class = 'black'>
@@ -474,7 +496,6 @@ window.onload = function exampleFunction() {
           <li><a href="learn.html">Learn</a></li>
             </ul>
           </div>
-        </div>
       </nav>
 <div id = "container">
 
@@ -499,7 +520,7 @@ window.onload = function exampleFunction() {
     <img src="Assets/imgs/quiz1.JPG" class = "sliderImg" id = "img2" alt = "Drawing if car driving with a city in the background">
       <h1 class = "questionText">On average, how many miles do you drive per week?</h1>
     <div class="text">
-          <div id="sliderContainer">
+          <div class="sliderContainer">
             <form>
               <label for="range1">Miles</label>
               <input id="range1" name="range1" type="range" min="0" max="500" value="250" step = "50">
@@ -513,8 +534,8 @@ window.onload = function exampleFunction() {
     <h1 class="questionText">How many bags of garbage do you throw away weekly?</h1>
     <img src="Assets/imgs/quiz2.JPG" class = "sliderImg" alt = "drawing of a home with a garbage can">
     <div class="text">
-      <div id="wrapper">
-          <div id="sliderContainer">
+      <div class="wrapper">
+          <div class="sliderContainer">
             <form>
               <label for="range2">Bags</label>
               <input id="range2" name="range2" type="range" min="0" max="20" value="10" step = "1">
@@ -528,8 +549,8 @@ window.onload = function exampleFunction() {
     <h1 class="questionText">How many animal products do you consume daily?</h1>
     <img src="Assets/imgs/quiz3.JPG" class = "sliderImg" alt = "drawing of a barn with a farm animals in the front">
     <div class="text">
-      <div id="wrapper">
-          <div id="sliderContainer">
+      <div class="wrapper">
+          <div class="sliderContainer">
             <form>
               <label for="range3">Animal Products</label>
               <input id="range3" name="range3" type="range" min="0" max="20" value="10" step = "1">
@@ -543,8 +564,8 @@ window.onload = function exampleFunction() {
     <h1 class = "questionText">How often do you fly in a year?</h1>
     <img src="Assets/imgs/quiz4.JPG" class = "sliderImg" alt = "drawing of an airplane flying in the sky">
     <div class="text">
-      <div id="wrapper">
-          <div id="sliderContainer">
+      <div class="wrapper">
+          <div class="sliderContainer">
             <form>
               <label for="range4">Round Flights</label>
               <input id="range4" name="range4" type="range" min="0" max="10" value="3" step = "1">
@@ -558,8 +579,8 @@ window.onload = function exampleFunction() {
     <h1 class="questionText">How much is your household energy bill each month, on average?</h1>
     <img src="Assets/imgs/quiz5.JPG" class = "sliderImg" alt = "drawing of a house with a car charging outside">
       <div class="text">
-        <div id="wrapper">
-            <div id="sliderContainer">
+        <div class="wrapper">
+            <div class="sliderContainer">
               <form>
                 <label for="range5">Dollars</label>
                 <input id="range5" name="range5" type="range" min="0" max="300" value="150" step = "20">
@@ -569,7 +590,7 @@ window.onload = function exampleFunction() {
         </div>
 </div>
 <div class="mySlides fade">
-  <img src="Assets/imgs/results.JPG" class = "sliderImg" id = "img7">
+  <img src="Assets/imgs/results.JPG" class = "sliderImg" id = "img7" alt = "background of sky with clouds">
   <div id = "results"><h1>Results</h1></div>
   <div id = resultContents>
   <div id = "grade"><h1 id = "gradeHeader">Grade: A</h1></div>
@@ -582,8 +603,8 @@ window.onload = function exampleFunction() {
   </div>
 </div>
   <!-- Next and previous buttons -->
-  <a class="prev" style="position:absolute;"onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" style="position:absolute;"onclick="plusSlides(1)">&#10095;</a>
+  <a class="prev" style="position:absolute;" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" style="position:absolute;" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
 <br>
@@ -601,36 +622,13 @@ window.onload = function exampleFunction() {
 
 <div id = "contents" style="margin-top:-1%">
   <h1 id = "contentHeader">Why We Do a Quiz</h1>
-  <p id = "content">The purpose of our quiz is to help the user to easliy gauge their carbon footprint and easily identify what parts of their lives are creating the most carbon.  The results also allow us to easliy connect you to personalized resources that may help you reduce you carbon footprint in the areas you are struggling.<br></br>Click the button below for your personalized resources. <br></br> <button class="btnn" onclick="btn_clicked();"><div id="button_text">Personalize Resources</div></button></p>
+  <p id = "content">The purpose of our quiz is to help the user to easliy gauge their carbon footprint and easily identify what parts of their lives are creating the most carbon.  The results also allow us to easliy connect you to personalized resources that may help you reduce you carbon footprint in the areas you are struggling.<br>Click the button below for your personalized resources. <br> <button class="btnn" onclick="btn_clicked();"><span id="button_text">Personalize Resources</span></button></p>
 </div>
 </div>
 <footer>
   <img src="Assets/imgs/footer_tree.png" alt="picture of woods" id="footer_tree"/>
-    <p id = "copy">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO</p>
+    <p id = "copy" style="margin-bottom:1%;">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO Chapter #58-0136, Pickerington High School North, Pickerington, Ohio, 2022 </p>
     <a id = "link" href="cited.html"><p>Works Cited</p></a>
 </footer>
   </body>
-<script>
-$(window).scroll
-(
-  function()
-{
-
-  var scroll=$(window).scrollTop();
-  $('.zoom2').css("opacity", 1- scroll/900)
-  if(scroll == 0)
-  {
-    $("nav").css("background","transparent");
-  }
-  else if (1+scroll/200 < 9)
-  {
-    $("nav").css("background","#00000066");
-  }
-  else{
-
-      $("nav").css("background","#00000099");
-
-  }
-  });
-</script>
 </html>

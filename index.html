@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="Assets/styles/index.css">
-    <script  src = "Assets/scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +16,52 @@ function btn_clicked(){
 }
     </script>
 
-    <title></title>
+    <script>
+
+    $(window).scroll
+    (
+      function()
+    {
+
+      var scroll=$(window).scrollTop();
+      $('.zoom2').css("opacity", 1- scroll/900)
+      if(scroll == 0)
+      {
+        $("nav").css("background","transparent");
+      }
+      else if (1+scroll/200 < 9)
+      {
+        $("nav").css("background","#00000066");
+      }
+      else{
+
+          $("nav").css("background","#00000099");
+
+      }
+      if((1+scroll/200 < 4))
+    {
+      $(".zoom1").css
+      (
+        {
+         transform : 'scale(' + (1 + scroll/600) + ')'
+        }
+      )
+      $(".zoom2").css
+      (
+        {
+         transform : 'scale(' + (1 + scroll/400) + ')'
+        }
+      )
+
+    }
+    else{
+      $('.zoom2').css("opacity", 0)
+    }
+    });
+
+
+    </script>
+
   </head>
   <body>
   <nav class = 'black'>
@@ -34,80 +78,35 @@ function btn_clicked(){
       <li><a href="learn.html">Learn</a></li>
           </ul>
         </div>
-      </div>
     </nav>
-    </div>
     <div id="homeImagesContainer">
     <div id = "homeImages">
-      <img src="Assets/imgs/home.JPG" alt="Nature" class="responsive" width = "100%" height ="auto">
-      <img src="Assets/imgs/home.JPG" alt="Nature" class="responsive zoom1" width = "100%" height = "auto">
+      <img src="Assets/imgs/home.JPG" alt="Nature" class="responsive">
+      <img src="Assets/imgs/home.JPG" alt="Nature" class="responsive zoom1" >
       <img src="Assets/imgs/home_overlay.PNG" alt="Nature" id= "overlay" class="responsive zoom2" >
     </div>
   </div>
     <main>
-      <h1><div id="headerstart">What is a</div> <div id="headerend">Carbon Footprint?</div></h1><p>A carbon footprint is the total amount of
+      <h1><span class="headstartt">What is a</span> <span class = "headerend">Carbon Footprint?</span></h1><p>A carbon footprint is the total amount of
 greenhouse gases emitted from an individual or group. Greenhouse gases include methane, nitrous oxide, water vapor, and most prominently,
-carbon dioxide.<img src="Assets/imgs/carbon.JPG" alt="picture of factories" id="factory"/> Greenhouse gases cause the sun’s heat to get trapped inside the earth’s
+carbon dioxide.<img src="Assets/imgs/carbon.JPG" alt="picture of factories" id="factory"/> Greenhouse gases cause the sun’s heat to get trapped inside of the earth’s
 atmosphere, causing the global temperature to rise.</p>
-    <br></br><img src="Assets/imgs/feet.PNG" alt="picture of feet filled in with the earth" id="feet"/>
-<h1><div id="headerstart">Our</div> <div id="headerend">Goal</div></h1><p>Our goal is to educate the community about greenhouse gas emissions and provide resources for individuals
-reduce their own carbon footprint. The damage done to the earth is nearing irreversible but with everyones’ help and a little bit of collective effort, change can be made. Reducing carbon footprint is a global effort but it starts with just one step.
-</p></div>
+    <br><img src="Assets/imgs/feet.PNG" alt="picture of feet filled in with the earth" id="feet"/>
+<h1><span class="headstartt">Our</span> <span class = "headerend">Goal</span></h1><p>Our goal is to educate the community about greenhouse gas emissions, and provide resources for individuals
+to reduce their carbon footprints. The damage done to the earth is nearing an irreversible state, but with everyone's help, change can be made. Reducing the carbon footprint is a global effort,
+but all it takes is a little bit of change from each individual to make a huge difference.
+</p>
 
-  <br></br><br></br><h1><div id="headerstart">Want To Learn</div> <div id="headerend">How You Can Help?</div></h1><p>Want to see your carbon footprint?
-Take our free survey to calculate your carbon emissions.<br></br><button class="btn" onclick="btn_clicked();"><div id="button_text">Take The Quiz</div>
-</button></p><br></br>
+  <br><br><h1><span class="headstartt">Want To Learn</span> <span class = "headerend">How You Can Help?</span></h1><p>Want to see your carbon footprint?
+Take our free survey to calculate your carbon emissions.<br><button class="btn" onclick="btn_clicked();"><span id="button_text">Take The Quiz</span>
+</button></p><br>
 </main>
 <footer>
   <img src="Assets/imgs/footer_tree.png" alt="picture of woods" id="footer_tree"/>
-    <p id = "copy">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO</p>
+    <p id = "copy" style="margin-bottom:1%;">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO Chapter #58-0136, Pickerington High School North, Pickerington, Ohio, 2022 </p>
     <a id = "link" href="cited.html"><p>Works Cited</p></a>
 </footer>
 
   </body>
-  <script>
 
-  $(window).scroll
-(
-    function()
-  {
-
-    var scroll=$(window).scrollTop();
-    $('.zoom2').css("opacity", 1- scroll/900)
-    if(scroll == 0)
-    {
-      $("nav").css("background","transparent");
-    }
-    else if (1+scroll/200 < 9)
-    {
-      $("nav").css("background","#00000066");
-    }
-    else{
-
-        $("nav").css("background","#00000099");
-
-    }
-    if((1+scroll/200 < 4))
-  {
-    $(".zoom1").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/600) + ')'
-      }
-    )
-    $(".zoom2").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/400) + ')'
-      }
-    )
-
-  }
-  else{
-    $('.zoom2').css("opacity", 0)
-  }
-});
-
-
-</script>
 </html>

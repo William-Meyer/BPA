@@ -100,10 +100,16 @@ padding-right: 20px;
   font-weight: 300;
   font-style: normal;
 }
+.headstartt {
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
 footer{
   width:100%;
 }
-#headerend{
+.headerend{
 font-family: 'Work Sans',sans-serif;
 font-weight: 600;
 font-style: normal;
