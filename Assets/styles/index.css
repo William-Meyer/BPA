@@ -209,6 +209,7 @@ nav{
   background-color: #39698d;
   color:white;
   cursor:pointer;
+  z-index: 9999999999;
 }
 #button_text{
   margin-left: 5%;
