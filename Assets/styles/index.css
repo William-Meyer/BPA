@@ -8,13 +8,16 @@ body{
 
 }
 main{
-  margin-top: -90%;
+  margin-top: -80%;
   background-color: #3a5841;
   padding-top:50%;
   max-width: 100%;
   padding-left: 17%;
   padding-right: 17%;
   background-color: #3a5841;
+}
+main h1{
+  padding-top: 20%;
 }
 .menu{
   background:#00000099;
