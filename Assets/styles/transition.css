@@ -6,6 +6,7 @@
 .fadeInClass{
   animation-duration: 1s;
   animation-name: fadeIn;
+  opacity: 1;
 }
 @keyframes fadeIn {
   from {

@@ -40,33 +40,8 @@ function btn_clicked(){
 
       }
     });
-
-
-
-    //scrolljs
-    function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
-    );
-    }
-
-    var options = document.getElementsByClassName('fadeInID');
-    document.addEventListener('scroll', function(e) {
-      for (let i = 0; i < options.length; i++) {
-        var el = document.getElementById("test");
-        var isIn = isInViewport(el);
-        if isIn == true{
-          element.classList.add("fadeIn");
-        }
-      }
-    });
-
     </script>
+     <script src="Assets/scripts/fadeIn.js"></script>
   </head>
   <body>
   <div id = "container">
@@ -96,9 +71,9 @@ Here are some examples of substitutions to everyday products that can be used to
 greenhouse gasses and waste being produced.</p>
 <br> <br>
 
-
+<div class="fadeInID">
 <h1  class = "header2">Water Filter Pitcher & Reusable Water Bottle</h1><br>
-<div class="gridContainer fadeInID" id = "test">
+<div class="gridContainer" id = "test">
   <div class="grid">
     <a href="https://www.amazon.com/Hydro-Flask-Standard-Mouth-Bottle/dp/B083GBTPSY/ref=sr_1_4?crid=PTOKCRQJ4XAL&keywords=reusable+water+bottles&qid=1641308505&s=home-garden&sprefix=reusable+waterbottles%2Cgarden%2C58&sr=1-4" target="_blank"><img src="Assets/imgs/water.png" alt= "Water bottle crossed off" id="water"/></a>
     <p  class = "p3 left">Why? It is estimated that 500 billion plastic water bottles are used and discarded every year worldwide,
@@ -108,9 +83,10 @@ greenhouse gasses and waste being produced.</p>
      ocean.</p>
   </div>
 </div>
+</div>
 <br><br><br>
 
-
+<div class = "fadeInID">
 <h1  class = "header2">Biodegradable bento boxes</h1><br>
 <div class="gridContainer fadeInID">
   <div class="grid">
@@ -122,9 +98,10 @@ greenhouse gasses and waste being produced.</p>
     <a href="https://www.amazon.com/dp/B07F7WV876?tag=bfalexandra-20&ascsubtag=5044674%2C4%2C33%2Cd%2C0%2C0%2Cgoogle%2C776%3A1%3B962%3A1%3B901%3A2%3B900%3A2%3B974%3A3%3B994%3A3%3B1064%3A2%2C252760" target="_blank"><img src="Assets/imgs/lunch.png" alt= "biodegradable lunch box" id="lunch"/></a>
   </div>
 </div>
+</div>
 <br><br><br>
 
-
+<div class = "fadeInID">
 <h1  class = "header2">Wool dryer balls</h1><br>
 <div class="gridContainer fadeInID">
   <div class="grid">
@@ -136,8 +113,9 @@ can significantly reduce the time it takes for the clothing to dry. This results
 and the environment at the same time.</p>
   </div>
 </div>
+</div>
 <br><br><br>
-
+<div class = "fadeInID">
 <h1  class = "header2">Reusable shopping bags</h1><br>
 <div class="gridContainer fadeInID">
   <div class="grid">
@@ -147,8 +125,9 @@ and the environment at the same time.</p>
     <a href="https://www.amazon.com/Shopping-Reusable-Geometric-Waterproof-Eco-Friendly/dp/B07TT5VH1V/ref=sr_1_2_sspa?crid=2OM24WSMUPXEQ&keywords=reusable+shopping+bags&qid=1641308769&s=home-garden&sprefix=reusable+shopping+bags%2Cgarden%2C64&sr=1-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExN1k2UlJMMTJPSjJFJmVuY3J5cHRlZElkPUEwNTAwMTc1M0RVS1ZTUzRRMUNWJmVuY3J5cHRlZEFkSWQ9QTA3NjI5MTgzOUIyVkNRREkwUEs3JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==" target="_blank"><img src="Assets/imgs/shoppingbag.png" alt= "reusable shopping bag" id="bag"/></a>
   </div>
 </div>
+</div>
 <br><br><br>
-
+<div class = "fadeInID">
 <h1  class = "header2">Reusable silicone straws</h1><br>
 <div class="gridContainer fadeInID">
   <div class="grid">
@@ -160,8 +139,9 @@ and the environment at the same time.</p>
     cost effective.</p>
     </div>
 </div>
+</div>
 <br><br><br>
-
+<div class = "fadeInID">
 <h1  class = "header2">Rechargeable batteries</h1><br>
 <div class="gridContainer fadeInID">
   <div class="grid">
@@ -173,9 +153,10 @@ and the environment at the same time.</p>
     " target=_blank><img src="Assets/imgs/batteries.png" alt= "Rechargeable batteries" id="batteries"/></a>
     </div>
 </div>
+</div>
 <br><br><br>
 
-
+<div class = "fadeInID">
 <h1 class="header2">Bidet</h1><br>
 <div class="gridContainer fadeInID">
   <div class="grid">
@@ -187,8 +168,9 @@ and the environment at the same time.</p>
       By using water to clean up, you can help save the environment with every trip to the bathroom. </p>
     </div>
 </div>
+</div>
 <br><br><br>
-
+<div class = "fadeInID">
 <h1  class = "header2">Energy efficient light bulbs</h1><br>
 <div class="gridContainer fadeInID">
   <div class="grid">
@@ -198,6 +180,7 @@ and the environment at the same time.</p>
     <a href="https://www.amazon.com/d/LED-Light-Bulbs/TriGlow-Equivalent-White-Non-Dimmable-3-PACK/B07BK9P5VM?tag=bfalexandra-20&ascsubtag=5044674%252C22%252C33%252Cmobile_web%252C1%252C0%252C252811%2C%2C%2Cd%2C%2C%2Cgoogle%2C776%3A1%3B962%3A1%3B901%3A2%3B900%3A2%3B974%3A3%3B994%3A3%3B1064%3A2%2C252811"
       target="_blank"><img src="Assets/imgs/energy.png" alt= "light bulb" id="energy"/></a>
     </div>
+</div>
 </div>
 <br><br>
 
