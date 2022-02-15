@@ -15,7 +15,8 @@ document.addEventListener('scroll', function() {
     var el = options[i];
     var isIn = isInViewport(el);
     const rect = el.getBoundingClientRect();
-    if(el.classList.contains("fadeInClass")  &&  (rect.bottom >= window.innerHeight || rect.top <= 0)){
+    if(el.classList.contains("fadeInClass")  && (rect.bottom >= window.innerHeight){
+      alert("test: " + rect.bottom + "   " + window.innerHeight);
       el.classList.remove("fadeInClass");
     }
     else if (!(el.classList.contains("fadeInClass"))){
