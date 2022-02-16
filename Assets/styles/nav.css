@@ -1,0 +1,352 @@
+body{
+  background: blue;
+}
+/*Add fonts and take out background blue*/
+
+#netzero{
+  width:150px;
+  height:auto;
+  margin-top: 10px;
+  margin-left: 40px;
+  float:left;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+footer{
+font-size:150%;
+color:white;
+background-color: #3a5841;
+position: relative;
+display: flex;
+}
+
+#copy{
+  font-size: 1.5vw;
+  text-align: center;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 44px;
+  left:20%;
+  right:20%;
+}
+#link{
+  font-size: 1.5vw;
+  color: white;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 10px;
+  left:20%;
+  right:20%;
+  text-align: center;
+}
+#footer_tree{
+  width:100%;
+  height:auto;
+}
+
+main p{
+font-family: 'Work Sans',sans-serif;
+font-weight: 600;
+color:white;
+font-style: normal;
+background-color: #91a28c;
+
+font-size: 205;
+-webkit-border-radius: 8px;
+-moz-border-radius:8px;
+border-radius: 8px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+#p2{
+  margin-top:50px;
+  text-align:left;
+}
+
+#headerstart{
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.headstartt {
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+footer{
+  width:100%;
+}
+.headerend{
+font-family: 'Work Sans',sans-serif;
+font-weight: 600;
+font-style: normal;
+color:white;
+font-size: 135%;
+}
+/*text wrapping images*/
+#factory{
+  float: right;
+  clear: right;
+  height:50%;
+  width:50%;
+  border-radius:8px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+#feet{
+  float:left;
+  width:18.5%;
+  height:auto;
+  clear:right;
+}
+
+nav{
+  font-family: 'work sans', sans-serif;
+  font-weight: 600;
+	height: 60px;
+	text-align: center;
+  margin-bottom: -200px;
+}
+
+/*sticky navbar*/
+nav{
+  background-color:transparent;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  float:right;
+  z-index: 3;
+}
+
+/*list for hamburger menu*/
+.navbar ul{
+  margin: 0;
+  padding:0;
+  list-style:none;
+  overflow: hidden;
+}
+
+
+/* Links inside the navbar */
+.navbar a {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding: 16px 26px;
+  text-decoration: none;
+  float:right;
+  display: block;
+}
+
+/* The dropdown container */
+.dropdown {
+  position: relative;
+  overflow: hidden;
+}
+#homeImages
+{
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+}
+
+.responsive {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 16px 26px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.btn{
+  font-size:300%;
+  border-radius: 8px;
+  background-color: #39698d;
+  color:white;
+  cursor:pointer;
+  z-index: 9999999999;
+}
+#button_text{
+  margin-left: 5%;
+  margin-right: 5%;
+  text-shadow: 3px 3px #034174;
+}
+
+/* Add a red background color to navbar links on hover */
+.menu a:hover, .dropdown:hover .dropbtn
+.menu-btn:hover {
+  background-color: #728e9c;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #728e9c;
+}
+
+.dropdown:hover{
+  background-color: #728e9c;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* menu */
+.navbar .menu{
+  clear: both;
+  max-height:0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.navbar .menu-icon{
+  cursor: pointer;
+  display:block;
+  float: right;
+  padding: 20px 20px;
+  position:relative;
+  user-select:none;
+}
+
+.menu .black ul{
+  background:black;
+}
+
+.menu{
+  align-items: left;
+  float:left;
+  display:block;
+  border-right: 1px;
+  transition: 1s;
+}
+.navbar  .navicon{
+  background: #FFF;
+  display: block;
+  height: 3px;
+  position:relative;
+  transition: 0.2s ease-out;
+  width: 25px;
+}
+
+.navbar .menu-icon .navicon:before,
+.navbar .menu-icon .navicon:after{
+  background:#FFF;
+  content:'';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width:100%;
+}
+
+.navbar .menu-icon .navicon:before{
+  top: 6px;
+}
+
+.navbar .menu-icon .navicon:after{
+  top:-6px;
+}
+
+/* hamburger */
+
+ .menu-btn{
+  display:none;
+}
+
+.navbar .menu-btn:checked ~ .menu{
+  max-height: 100vh;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navicon{
+  background:transparent;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navicon:before{
+  transform: rotate(-45deg);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navicon:after{
+  transform: rotate(45deg);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after{
+  top: 0;
+}
+
+.zoom1{
+
+}
+
+.zoom2{
+
+}
+.black{
+
+}
+.zoom1{max-width: 100%; overflow: hidden;}
+.zoom2{max-width: 100%; overflow: hidden;}
+/* 48em = 768px */
+
+@media (min-width: 950px) {
+  .menu{
+    background:transparent;
+  }
+  .navbar li {
+    float: right;
+  }
+  #netzero{
+    width:200px;
+    height:auto;
+    margin-top: 10px;
+  }
+  .navbar li a {
+    padding: 16px 20px;
+  }
+  .navbar .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    margin-left: -50%;
+  }
+  .navbar .menu-icon {
+    display: none;
+  }
+}
