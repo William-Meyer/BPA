@@ -8,7 +8,6 @@ body{
 
 }
 main{
-  margin-top: -80%;
   background-color: #3a5841;
   padding-top:50%;
   max-width: 100%;
@@ -21,12 +20,6 @@ main h1{
 }
 .menu{
   background:#00000099;
-}
-#homeImagesContainer{
-  position: relative;
-  width:100%;
-  height: 150vw;
-  overflow-x: hidden
 }
 #home-background img{
   width: 50%;
@@ -179,12 +172,6 @@ nav{
 /* The dropdown container */
 .dropdown {
   position: relative;
-  overflow: hidden;
-}
-#homeImages
-{
-  width: 50%;
-  height: auto;
   overflow: hidden;
 }
 
@@ -400,16 +387,6 @@ nav{
 }
 @media(max-width: 1320px)
 {
-  .zoom1
-  {
-    visibility: hidden;
-    object-fit: cover;
-  }
-  .zoom2
-  {
-    visibility: hidden;
-    object-fit: cover;
-  }
   #factory{
     width:40%;
     height:40%;

@@ -1,0 +1,13 @@
+#landScape{
+  margin-top: -10%;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background-image: url("../imgs/home2.JPG");
+  background-size:100%;
+}
+#overlay{
+  margin-top: -5%;
+  width:100%;
+  height: auto;
+}
