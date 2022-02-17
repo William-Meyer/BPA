@@ -3,21 +3,45 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="Assets/styles/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
     <title></title>
+    <script>
+    function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
   </head>
   <body>
     <nav class = 'black'>
         <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
       <div class="navbar">
         <input class="menu-btn" type="checkbox" id= "menu-btn"/>
-        <label class="menu-icon" for="menu-btn">
+        <label class="menu-icon" for="menu-btn" onclick="myFunction()">
         <span class="navicon"></span></label>
       <ul class="menu">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="survey.html">Quiz</a></li>
-        <li><a href="resource.html">Resources</a></li>
-        <li><a href="reduce_your_footprint.html">Reduce</a></li>
-        <li><a href="learn.html">Learn</a></li>
+        <div class="topnav" id="myTopnav">
+          <a href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <a href="#about">About</a>
+        </div>
             </ul>
           </div>
       </nav>
