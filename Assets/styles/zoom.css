@@ -1,13 +1,18 @@
 #landScape{
   margin-top: -10%;
   overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
   height: auto;
-  background-image: url("../imgs/home2.JPG");
+  background-image: url("../imgs/home1.JPG");
   background-size:100%;
 }
 #overlay{
-  margin-top: -5%;
+  margin-top: -200%;
+  width:100%;
+  height: auto;
+}
+#plants{
   width:100%;
   height: auto;
 }

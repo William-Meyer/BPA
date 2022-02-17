@@ -46,13 +46,19 @@ function btn_clicked(){
       $("#landScape").css
       (
         {
-         transform : 'scale(' + (1 + scroll/600) + ')'
+         transform : 'scale(' + (1 + scroll/1000) + ')'
         }
       )
       $("#overlay").css
       (
         {
          transform : 'scale(' + (1 + scroll/400) + ')'
+        }
+      )
+      $("#plants").css
+      (
+        {
+         transform : 'scale(' + (1 + scroll/990) + ')'
         }
       )
 
@@ -96,6 +102,7 @@ function btn_clicked(){
   </div>
 -->
 <div id = "landScape">
+  <img src="Assets/imgs/home2.PNG" alt="nature" id = "plants">
   <img src="Assets/imgs/home_overlay.PNG" alt="nature" id = "overlay">
 </div>
 
