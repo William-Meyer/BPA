@@ -55,18 +55,6 @@ nav{
 }
 
 
-/* Links inside the navbar */
-.navbar a {
-  font-size: 25px;
-  color: white;
-  text-align: center;
-  padding: 16px 26px;
-  text-decoration: none;
-  float:right;
-  display: block;
-}
-
-
 
 /* Add a red background color to navbar links on hover */
 .menu a:hover, .dropdown:hover .dropbtn
@@ -99,11 +87,8 @@ nav{
 }
 
 .menu{
-  align-items: left;
-  float:left;
   display:block;
   border-right: 1px;
-  transition: 1s;
 }
 .navbar  .navicon{
   background: #FFF;
@@ -167,7 +152,7 @@ nav{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 /* Add an active class to highlight the current page */
@@ -189,7 +174,7 @@ nav{
 
 /* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
-  font-size: 17px;
+  font-size: 22px;
   border: none;
   outline: none;
   color: white;
@@ -282,7 +267,7 @@ nav{
     margin-top: 10px;
   }
   .navbar li a {
-    padding: 16px 20px;
+    padding: 16px 24px;
   }
   .navbar .menu {
     clear: none;
