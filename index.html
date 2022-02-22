@@ -27,7 +27,7 @@ function btn_clicked(){
     {
 
       var scroll=$(window).scrollTop();
-      $('#overlay').css("opacity", 1- scroll/900)
+      $('#overlay').css("opacity", 1- scroll/800)
       if(scroll == 0)
       {
         $("nav").css("background","transparent");
@@ -43,16 +43,28 @@ function btn_clicked(){
       }
       if((1+scroll/200 < 4))
     {
-      $("#landScape").css
+      $("#bg").css
       (
         {
-         transform : 'scale(' + (1 + scroll/600) + ')'
+         transform : 'scale(' + (1 + scroll/1100) + ')'
         }
       )
       $("#overlay").css
       (
         {
          transform : 'scale(' + (1 + scroll/400) + ')'
+        }
+      )
+      $("#plants").css
+      (
+        {
+         transform : 'scale(' + (1 + scroll/800) + ')'
+        }
+      )
+      $("#flowers").css
+      (
+        {
+         transform : 'scale(' + (1 + scroll/800) + ')'
         }
       )
 
@@ -82,21 +94,24 @@ function btn_clicked(){
           </ul>
         </div>
     </nav>
-    <!--
-    <div class="mouse_scroll">
 
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
-      <div>
-        <span class="m_scroll_arrows unu"></span>
-        <span class="m_scroll_arrows doi"></span>
-        <span class="m_scroll_arrows trei"></span>
-      </div>
-  </div>
--->
 <div id = "landScape">
-  <img src="Assets/imgs/home_overlay.PNG" alt="nature" id = "overlay">
+  <div class="mouse_scroll">
+
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div>
+      <span class="m_scroll_arrows unu"></span>
+      <span class="m_scroll_arrows doi"></span>
+      <span class="m_scroll_arrows trei"></span>
+    </div>
+</div>
+  <img src="Assets/imgs/home1.JPG" alt="nature" id = "bg">
+  <img src="Assets/imgs/home2.PNG" alt="nature" id = "plants">
+  <img src="Assets/imgs/home3.PNG" alt="flowers" id = "flowers">
+  <img src="Assets/imgs/home_overlay2.PNG" alt="nature" id = "overlay">
+
 </div>
 
 
