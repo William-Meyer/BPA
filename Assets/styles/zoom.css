@@ -4,7 +4,6 @@
   overflow: hidden;
   overflow-x: hidden;
   width: 100%;
-<<<<<<< HEAD
   hieght: auto;
   margin-bottom: -30%;
   /*background-image: url("../imgs/home1.JPG");
@@ -31,14 +30,6 @@
 #bg{
   z-index: 1px;
   margin-top:0;
-=======
-  height: auto;
-  background-image: url("../imgs/home1.JPG");
-  background-size:100%;
-}
-#overlay{
-  margin-top: -200%;
->>>>>>> 1bf038af7ca3adb700a4a95955c5be7bf878b01f
   width:100%;
   height: auto;
 }
