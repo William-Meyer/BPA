@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="Assets/styles/index.css">
     <link rel="stylesheet" href="Assets/styles/mouse.css">
+  <link rel="stylesheet" href="Assets/styles/nav.css">
     <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,21 +66,50 @@ function btn_clicked(){
 
   </head>
   <body>
-  <nav class = 'black'>
-      <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
-    <div class="navbar">
-      <input class="menu-btn" type="checkbox" id= "menu-btn"/>
-      <label class="menu-icon" for="menu-btn">
-      <span class="navicon"></span></label>
-    <ul class="menu">
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="survey.html">Quiz</a></li>
-      <li><a href="resource.html">Resources</a></li>
-      <li><a href="reduce_your_footprint.html">Reduce</a></li>
-      <li><a href="learn.html">Learn</a></li>
-          </ul>
+    <nav class = 'black'>
+        <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+      <div class="navbar">
+        <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+        <label class="menu-icon" for="menu-btn" onclick="myFunction()">
+        <span class="navicon"></span></label>
+      <ul class="menu">
+        <div class="topnav" id="myTopnav">
+          <div class="dropdown">
+            <button class="dropbtn">Learn
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Greenhouse Gases</a>
+              <a href="#">Carbon Footptint</a>
+              <a href="#">The Impact</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Reduce Your Footprint
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Transportation</a>
+              <a href="#">Energy</a>
+              <a href="#">Trash Production</a>
+              <a href="#">Food Consumption</a>
+            </div>
+          </div>
+          <a href="survey.html">Quiz</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <i class="fa fa-caret-down">Resources</i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Products</a>
+              <a href="#">Organizations</a>
+            </div>
+          </div>
+          <a href="#about">About</a>
         </div>
-    </nav>
+            </ul>
+          </div>
+      </nav>
     <div id="homeImagesContainer">
     <div id = "homeImages">
       <img src="Assets/imgs/home.JPG" alt="Nature" class="responsive">
