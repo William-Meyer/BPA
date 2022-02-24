@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Assets/styles/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <title></title>
+    <script>
+    function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+  </head>
+  <body>
+    <nav class = 'black'>
+        <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+      <div class="navbar">
+        <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+        <label class="menu-icon" for="menu-btn" onclick="myFunction()">
+        <span class="navicon"></span></label>
+      <ul class="menu">
+        <div class="topnav" id="myTopnav">
+          <div class="dropdown">
+            <button class="dropbtn">Learn
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Greenhouse Gases</a>
+              <a href="#">Carbon Footptint</a>
+              <a href="#">The Impact</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Reduce Your Footprint
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Transportation</a>
+              <a href="#">Energy</a>
+              <a href="#">Trash Production</a>
+              <a href="#">Food Consumption</a>
+            </div>
+          </div>
+          <a href="survey.html">Quiz</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <i class="fa fa-caret-down">Resources</i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Products</a>
+              <a href="#">Organizations</a>
+            </div>
+          </div>
+          <a href="#about">About</a>
+        </div>
+            </ul>
+          </div>
+      </nav>
+  </body>
+</html>
