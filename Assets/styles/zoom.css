@@ -1,14 +1,48 @@
 #landScape{
+<<<<<<< HEAD
+=======
+  align-items: center;
+>>>>>>> updatedZoom
   margin-top: -10%;
   overflow: hidden;
   overflow-x: hidden;
   width: 100%;
+<<<<<<< HEAD
   height: auto;
   background-image: url("../imgs/home1.JPG");
   background-size:100%;
 }
 #overlay{
   margin-top: -200%;
+=======
+  hieght: auto;
+  margin-bottom: -30%;
+  /*background-image: url("../imgs/home1.JPG");
+  background-size:100%;*/
+}
+#overlay{
+  z-index: 10px;
+  margin-top:-70%;
+  width:100%;
+  height: auto;
+}
+
+#plants{
+  z-index: 3px;
+  margin-top: -100%;
+  width:100%;
+  height: auto;
+}
+#flowers{
+  z-index: 1000000000px;
+  width:100%;
+  height: auto;
+  margin-top: -65%;
+}
+#bg{
+  z-index: 1px;
+  margin-top:0;
+>>>>>>> updatedZoom
   width:100%;
   height: auto;
 }
