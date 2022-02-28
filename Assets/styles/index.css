@@ -151,48 +151,7 @@ font-size: 135%;
 .zoom2{max-width: 100%; overflow: hidden;}
 /* 48em = 768px */
 
-@media (min-width: 950px) {
-  .menu{
-    background:transparent;
-  }
-  .navbar li {
-    float: right;
-  }
-  #netzero{
-    width:200px;
-    height:auto;
-    margin-top: 10px;
-  }
-  .navbar li a {
-    padding: 16px 20px;
-  }
-  .navbar .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-    margin-left: -50%;
-  }
-  .navbar .menu-icon {
-    display: none;
-  }
-}
 
-@media (min-width: 1000px)
-{
-  nav{
-    margin-bottom: -50px;
-  }
-  #p2{
-    margin-top:120px;
-  }
-  #factory{
-    width:50%;
-    height:50%;
-  }
-  main p{
-    font-size:110%;
-  }
-}
 @media(max-width: 1320px)
 {
   .zoom1
