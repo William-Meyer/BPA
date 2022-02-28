@@ -1,20 +1,9 @@
 #landScape{
-<<<<<<< HEAD
-=======
   align-items: center;
->>>>>>> updatedZoom
   margin-top: -10%;
   overflow: hidden;
   overflow-x: hidden;
   width: 100%;
-<<<<<<< HEAD
-  height: auto;
-  background-image: url("../imgs/home1.JPG");
-  background-size:100%;
-}
-#overlay{
-  margin-top: -200%;
-=======
   hieght: auto;
   margin-bottom: -30%;
   /*background-image: url("../imgs/home1.JPG");
@@ -42,7 +31,6 @@
 #bg{
   z-index: 1px;
   margin-top:0;
->>>>>>> updatedZoom
   width:100%;
   height: auto;
 }
