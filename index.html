@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="Assets/styles/index.css">
     <link rel="stylesheet" href="Assets/styles/mouse.css">
     <link rel="stylesheet" href="Assets/styles/zoom.css">
+      <link rel="stylesheet" href="Assets/styles/card.css">
     <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,17 +117,53 @@ function btn_clicked(){
 
 
     <main>
-      <h1><span class="headstartt">What is a</span> <span class = "headerend">Carbon Footprint?</span></h1><p>A carbon footprint is the total amount of
-greenhouse gases emitted from an individual or group. Greenhouse gases include methane, nitrous oxide, water vapor, and most prominently,
-carbon dioxide.<img src="Assets/imgs/carbon.JPG" alt="picture of factories" id="factory"/> Greenhouse gases cause the sun’s heat to get trapped inside of the earth’s
-atmosphere, causing the global temperature to rise.</p>
+      <h1> <span class = "headerend">Learn About Carbon Footprint</span></h1>
+      <div class="flip-card">
+      <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="Assets/imgs/greenhousecard.jpg" alt="model of greenhouse gases" style="width:300px;height:300px;"/>
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <img src="assets/imgs/carbonframe.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>John Doe</h1>
+    <p>Architect & Engineer</p>
+    <p>We love that guy</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <img src="assets/imgs/earthgraphic.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>John Doe</h1>
+    <p>Architect & Engineer</p>
+    <p>We love that guy</p>
+    </div>
+    </div>
+  </div>
+</div>
     <br><img src="Assets/imgs/feet.PNG" alt="picture of feet filled in with the earth" id="feet"/>
-<h1><span class="headstartt">Our</span> <span class = "headerend">Goal</span></h1><p>Our goal is to educate the community about greenhouse gas emissions, and provide resources for individuals
+<h1><span class="headstart">Our</span> <span class = "headerend">Goal</span></h1><p>Our goal is to educate the community about greenhouse gas emissions, and provide resources for individuals
 to reduce their carbon footprints. The damage done to the earth is nearing an irreversible state, but with everyone's help, change can be made. Reducing the carbon footprint is a global effort,
 but all it takes is a little bit of change from each individual to make a huge difference.
 </p>
 
-  <br><br><h1><span class="headstartt">Want To Learn</span> <span class = "headerend">How You Can Help?</span></h1><p>Want to see your carbon footprint?
+  <br><br><h1><span class="headstart">Want To Learn</span> <span class = "headerend">How You Can Help?</span></h1><p>Want to see your carbon footprint?
 Take our free survey to calculate your carbon emissions.<br><button class="btn" onclick="btn_clicked();"><span id="button_text">Take The Quiz</span>
 </button></p><br>
 </main>
