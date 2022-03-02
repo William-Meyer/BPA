@@ -1,0 +1,41 @@
+body{
+  background-color: #95c1a2;
+}
+.floatRight{
+  margin-right: 5%
+}
+.bannerText{
+  color: #243B29;
+}
+footer{
+  margin-top: 10%;
+font-size:150%;
+color:white;
+background-color: #95c1a2;
+position: relative;
+display: flex;
+}
+
+#copy{
+  font-size: 1.5vw;
+  text-align: center;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 44px;
+  left:20%;
+  right:20%;
+}
+#link{
+  font-size: 1.5vw;
+  color: white;
+  font-family: 'works-sans', sans-serif;
+  position:absolute;
+  bottom: 10px;
+  left:20%;
+  right:20%;
+  text-align: center;
+}
+#footer_tree{
+  width:100%;
+  height:auto;
+}

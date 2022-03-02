@@ -46,6 +46,8 @@ body{
 .basicImgClassLarge{
   width:80%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .centerText{
   text-align: center;
@@ -63,7 +65,9 @@ body{
 .marginUp{
   margin-top: -5%;
 }
-
+.marginDown{
+  margin-bottom: 5%;
+}
 @media (min-width: 1250px){
   .center{
     margin:auto;
