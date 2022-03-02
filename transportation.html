@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<link rel="stylesheet" href="Assets/styles/Transportation.css">
+<link rel="stylesheet" href="Assets/styles/nav.css">
+<link rel="stylesheet" href="Assets/styles/basics.css">
+<link rel="stylesheet" href="Assets/styles/grid.css">
+<link rel="stylesheet" href="Assets/styles/transition.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="Assets/scripts/fadeIn.js"></script>
+  <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+  <title>Netzero | THE IMPACT</title>
+  <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
+
+  <script>
+
+  $(window).scroll
+  (
+    function()
+  {
+
+    var scroll=$(window).scrollTop();
+    $('.zoom2').css("opacity", 1- scroll/900)
+    if(scroll == 0)
+    {
+      $("nav").css("background","transparent");
+    }
+    else if (1+scroll/200 < 9)
+    {
+      $("nav").css("background","#00000066");
+    }
+    else{
+
+        $("nav").css("background","#00000099");
+
+    }
+    if((1+scroll/200 < 4))
+  {
+    $(".zoom1").css
+    (
+      {
+       transform : 'scale(' + (1 + scroll/600) + ')'
+      }
+    )
+    $(".zoom2").css
+    (
+      {
+       transform : 'scale(' + (1 + scroll/400) + ')'
+      }
+    )
+
+  }
+  else{
+    $('.zoom2').css("opacity", 0)
+  }
+  });
+
+
+  </script>
+</head>
+<body>
+  <nav class = 'black'>
+      <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+    <div class="navbar">
+      <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+      <label class="menu-icon" for="menu-btn" onclick="myFunction()">
+      <span class="navicon"></span></label>
+    <ul class="menu">
+      <div class="topnav" id="myTopnav">
+        <div class="dropdown">
+          <button class="dropbtn">Learn</button>
+          <div class="dropdown-content">
+            <a href="#">Greenhouse Gases</a>
+            <a href="#">Carbon Footptint</a>
+            <a href="#">The Impact</a>
+          </div>
+        </div>
+        <a href="survey.html">Quiz</a>
+        <div class="dropdown">
+          <button class="dropbtn">Reduce Your Footprint</button>
+          <div class="dropdown-content">
+            <a href="#">Transportation</a>
+            <a href="#">Energy</a>
+            <a href="#">Trash Production</a>
+            <a href="#">Food Consumption</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"> Resources </button>
+          <div class="dropdown-content">
+            <a href="#">Products</a>
+            <a href="#">Organizations</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+      </div>
+          </ul>
+        </div>
+    </nav>
+    <h1 class = "bannerText">TRANSPORTATION</h1>
+    <img src="Assets/imgs/transportationbanner.PNG" alt="people hiking across a bridge with a mountain range in the background" class ="banner">
+    <div class="textBlock center giveMax floatUp">
+      <h1 class="title">WHAT IS THE ISSUE?</h1>
+      <p class="centerText">Personal transportation makes up a huge part of the total amount of carbon emitted into the environment. Whether it’s driving your personal car to work or the store or flying long distances across the world for summer vacation, this massive amount of carbon adds up. The buildup of carbon dioxide and other greenhouse gases like methane, nitrous oxide, and hydrofluorocarbons is causing the Earth's atmosphere to warm, resulting in changes to the climate we are already starting to see today.</p>
+    </div>
+    <h1 class="pageTitle">HOW YOU CAN HELP</h1>
+    <div class="underline"></div>
+    <div class="fadeInID marginUp">
+    <div class="gridContainer">
+    <div class="grid">
+      <div class="textBlock right">
+        <h1 class = "title">PUBLIC TRANSPORTATION</h1>
+        <p>&emsp;While using your personal car may be more convenient day-to-day, there are many more eco-friendly alternatives. For example, using public transportation is a great alternative. Buses emit 20% less carbon monoxide, 10% as much hydrocarbons, and 75% as much nitrogen oxides per passenger mile than an automobile with a single occupant. (8)</p>
+        <br>
+        <p>&emsp;Although it may not seem like that big of a deal, those gases add up and are very detrimental to the environment. When going into the city or traveling far, public transportation is a great option. Buses cover lots of areas in urban areas and give a great alternative to driving your own car. Plus, infrequently paying for a bus pass is much cheaper than paying to fill up your tank.</p>
+      </div>
+      <img src="Assets/imgs/bus.PNG" alt="bus" class = "basicImgClassLarge">
+    </div>
+  </div>
+</div>
+
+<div class="fadeInID marginUp">
+<div class="gridContainer">
+<div class="grid">
+  <img src="Assets/imgs/transportation.png" alt="car" class="basicImgClassLarge">
+  <div class="textBlock">
+    <h1 class = "title">CARPOOLING</h1>
+    <p> If you and a friend or family member are going somewhere at the same time, try to coordinate your schedules and ride together. Not only does this reduce carbon emissions but it also decreases the amount of gas used. Since gas is a nonrenewable resource, this is a very important thing to be conscientious about. Riding together also decreases the number of cars on the road at a time and reduces the amount of traffic. Not only does carpooling help the environment but it increases the amount of quality time you get to spend with loved ones.</p>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="fadeInID marginUp">
+<div class="gridContainer">
+<div class="grid">
+  <div class="textBlock right">
+    <h1 class = "title">PLANNING YOUR TRIPS</h1>
+    <p>&emsp;If your errands have been getting ahead of you and you have a bunch of places you need or want to go to, try making a list of them all and making a plan to go to the places in close proximity to each other at one time. Not only does this save your time but it also reduces the amount of time you spend in the car. Less driving results in less greenhouse gas emissions and less gasoline used. Making a strategic plan as to where you want to go when and planning out your trips beforehand to make sure you don’t forget an errand or forget to pick something up at the store is a great way to help the environment!
+</p>
+  </div>
+  <img src="Assets/imgs/map.png" alt="map" class = "basicImgClassLarge">
+</div>
+</div>
+</div>
+
+<footer>
+  <img src="Assets/imgs/blueTrees.png" alt="picture of woods" id="footer_tree"/>
+    <p id = "copy" style="margin-bottom:1%;">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO Chapter #58-0136, Pickerington High School North, Pickerington, Ohio, 2022 </p>
+    <a id = "link" href="cited.html"><p>Works Cited</p></a>
+</footer>
+</body>
