@@ -10,8 +10,7 @@
   margin-top: 15%;
   text-align: center;
 }
-.left{  margin-left: 0;}
-.right{margin-right: 0;order: 1}
+.right{order: 1;}
 
 @media (min-width: 1000px) {
     .left{margin-left: -5rem;}
