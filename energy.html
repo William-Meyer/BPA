@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<link rel="stylesheet" href="Assets/styles/trash.css">
+<link rel="stylesheet" href="Assets/styles/nav.css">
+<link rel="stylesheet" href="Assets/styles/basics.css">
+<link rel="stylesheet" href="Assets/styles/grid.css">
+<link rel="stylesheet" href="Assets/styles/transition.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="Assets/scripts/fadeIn.js"></script>
+  <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+  <title>Netzero | ENERGY USE</title>
+  <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
+
+  <script>
+
+  $(window).scroll
+  (
+    function()
+  {
+
+    var scroll=$(window).scrollTop();
+    $('.zoom2').css("opacity", 1- scroll/900)
+    if(scroll == 0)
+    {
+      $("nav").css("background","transparent");
+    }
+    else if (1+scroll/200 < 9)
+    {
+      $("nav").css("background","#00000066");
+    }
+    else{
+
+        $("nav").css("background","#00000099");
+
+    }
+    if((1+scroll/200 < 4))
+  {
+    $(".zoom1").css
+    (
+      {
+       transform : 'scale(' + (1 + scroll/600) + ')'
+      }
+    )
+    $(".zoom2").css
+    (
+      {
+       transform : 'scale(' + (1 + scroll/400) + ')'
+      }
+    )
+
+  }
+  else{
+    $('.zoom2').css("opacity", 0)
+  }
+  });
+
+
+  </script>
+</head>
+<body>
+  <nav class = 'black'>
+      <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+    <div class="navbar">
+      <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+      <label class="menu-icon" for="menu-btn" onclick="myFunction()">
+      <span class="navicon"></span></label>
+    <ul class="menu">
+      <div class="topnav" id="myTopnav">
+        <div class="dropdown">
+          <button class="dropbtn">Learn</button>
+          <div class="dropdown-content">
+            <a href="#">Greenhouse Gases</a>
+            <a href="#">Carbon Footptint</a>
+            <a href="#">The Impact</a>
+          </div>
+        </div>
+        <a href="survey.html">Quiz</a>
+        <div class="dropdown">
+          <button class="dropbtn">Reduce Your Footprint</button>
+          <div class="dropdown-content">
+            <a href="#">Transportation</a>
+            <a href="#">Energy</a>
+            <a href="#">Trash Production</a>
+            <a href="#">Food Consumption</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"> Resources </button>
+          <div class="dropdown-content">
+            <a href="#">Products</a>
+            <a href="#">Organizations</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+      </div>
+          </ul>
+        </div>
+    </nav>
+    <h1 class = "bannerText">ENERGY USE</h1>
+    <img src="Assets/imgs/trashbanner.PNG" alt="people hiking across a bridge with a mountain range in the background" class ="banner">
+    <div class="textBlock center giveMax floatUp">
+      <h1 class="title">WHAT IS THE ISSUE?</h1>
+      <p class="centerText">Energy efficiency is good for you and so many other things - the air you breathe, the water you drink, and the community in which you live. Saving energy reduces air and water pollution and conserves natural resources, which in turn creates a healthier living environment for people everywhere. By making small changes to your lifestyle, you can reduce your personal carbon footprint and help save the planet.</p>
+    </div>
+    <h1 class="pageTitle">HOW YOU CAN HELP</h1>
+    <div class="underline"></div>
+    <div class="fadeInID marginUp">
+    <div class="gridContainer">
+    <div class="grid">
+      <div class="textBlock right">
+        <h1 class = "title">LIGHTING</h1>
+        <p>&emsp;Many homes have not made the easy switch to LED lightbulbs. Traditional fluorescent lighting can contain toxic elements, such as mercury, which ends up in landfills and can damage the local environment by contamination. These lightbulbs cannot be recycled.</p>
+        <br>
+        <p>&emsp;he significantly better alternative to traditional lightbulbs is the LED (light-emitting diode) bulbs. These bulbs use roughly 75% less energy than the traditional and last longer as well. These bulbs will not need to be replaced nearly as frequently and will decrease the number of bulbs that need to be produced. LED bulbs also do not release toxic elements and release much less heat than traditional lights do.</p>
+      </div>
+      <img src="Assets/imgs/energy.PNG" alt="light bulb" class = "basicImgClassLarge">
+    </div>
+  </div>
+</div>
+
+<div class="fadeInID marginUp">
+<div class="gridContainer">
+<div class="grid">
+  <img src="Assets/imgs/shower.PNG" alt="shower head" class="basicImgClassLarge">
+  <div class="textBlock">
+    <h1 class = "title">WATER USE</h1>
+    <p>&emsp;The average American household can waste roughly 180 gallons of water each week. This water can be wasted from leaky faucets, unnecessary loads of laundry, and idly letting the water run. Simply turning off the faucet while brushing your teeth can be a great step to lowering the amount of water wasted.</p>
+    <br>
+    <p>&emsp;Other ways to reduce your water waste is by checking for leaky pipes, taking shorter showers, running larger loads of laundry (rather than smaller, more frequent loads), and handwashing dishes. It is uncommon knowledge that handwashing dishes actually uses significantly more water than running the same dishes through a dishwasher. Being conscientious about where your water is going and what you are using it for is crucial to improving your personal performance towards bettering the environment.</p>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="fadeInID marginUp">
+<div class="gridContainer">
+<div class="grid">
+  <div class="textBlock right">
+    <h1 class = "title">LAUNDRY</h1>
+    <p>&emsp;Did you know that every time you run the washing machine, you release over 700,000 plastic microfibers into the atmosphere? Well, it’s true. These fibers are coming off of the synthetic fibers in the clothing being washed. If these fibers are ingested by wildlife, they can be deadly. (5)</p>
+    <br>
+    <p>&emsp;Running the washing machine also uses up to forty gallons of water per load and also requires a decent amount of energy to keep running. A much more eco-friendly way to wash clothing is to handwash clothes when dirty and even, in some cases, get multiple wears out of a piece of clothing before washing. Oftentimes, it is recommended not to wash clothing after every wear since the washing machine can increase the rate that a piece wears out. Besides undergarments and socks, as long as the clothing is not visibly dirty, it is better for the clothing and the environment to wait for a few wears to wash them.</p>
+  </div>
+  <img src="Assets/imgs/washingmachine.PNG" alt="washing machine" class = "basicImgClassLarge">
+</div>
+</div>
+</div>
+
+<div class="fadeInID marginUp">
+<div class="gridContainer">
+<div class="grid">
+  <img src="Assets/imgs/temperature.PNG" alt="thermometer" class="basicImgClassLarge">
+  <div class="textBlock">
+    <h1 class = "title">TEMPERATURE</h1>
+    <p>&emsp;While it depends on the person, oftentimes, when you begin to feel noticeably cold or hot, your first instinct is to reach for the thermostat. In some cases, that is the best option. Oftentimes, though, there are better, more energy-efficient ways to go about it. </p>
+    <br>
+    <p>&emsp;Whether it’s grabbing a blanket, turning on a ceiling fan, or opening a window, there are endless ways to maintain comfortable homeostasis. Almost all of these options are better than using the thermostat in your house.</p>
+    <br>
+    <p>&emsp;The Environmental Protection Agency recommends setting your thermostat around 70 degrees when you are home and awake and turning it down to 62 degrees when you are out or asleep. (6) Especially at times when you are not consciously aware of your temperature or are not even around to feel it, keeping the thermostat turned down uses less energy and helps the environment in the long run.</p>
+  </div>
+</div>
+</div>
+</div>
+
+<footer>
+  <img src="Assets/imgs/blueTrees.png" alt="picture of woods" id="footer_tree"/>
+    <p id = "copy" style="margin-bottom:1%;">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO Chapter #58-0136, Pickerington High School North, Pickerington, Ohio, 2022 </p>
+    <a id = "link" href="cited.html"><p>Works Cited</p></a>
+</footer>
+</body>
