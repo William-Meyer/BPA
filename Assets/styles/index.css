@@ -120,8 +120,6 @@ font-size: 135%;
   clear:right;
 }
 
-<<<<<<< HEAD
-=======
 nav{
   font-family: 'work sans', sans-serif;
   font-weight: 600;
@@ -186,19 +184,24 @@ nav{
 }
 .btn{
   font-size:300%;
-  border-radius: 8px;
-  background-color: #39698d;
-  color:white;
+  border-radius: 12px;
   cursor:pointer;
-  z-index: 9999999999;
->>>>>>> updatedZoom
+  background-color: #39698d;
 }
 #button_text{
   margin-left: 5%;
   margin-right: 5%;
   text-shadow: 3px 3px #034174;
+  color:white;
+
 }
 
+#button_text2{
+  color:green;
+  background-color: white;
+  text-decoration: none;
+  font-size: 60%;
+}
 
 .zoom1{
 
