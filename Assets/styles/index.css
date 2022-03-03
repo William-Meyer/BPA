@@ -80,12 +80,6 @@ padding-right: 20px;
   text-align:left;
 }
 
-#headerstart{
-  color:white;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
 .headstart {
   color:white;
   font-family: 'Work Sans', sans-serif;
@@ -120,87 +114,17 @@ font-size: 135%;
   clear:right;
 }
 
-nav{
-  font-family: 'work sans', sans-serif;
-  font-weight: 600;
-	height: 60px;
-	text-align: center;
-  margin-bottom: -200px;
-}
-
-/*sticky navbar*/
-nav{
-  background-color:transparent;
-	position: fixed;
-	top: 0;
-	width: 100%;
-  float:right;
-  z-index: 3;
-}
-
-/*list for hamburger menu*/
-.navbar ul{
-  margin: 0;
-  padding:0;
-  list-style:none;
-  overflow: hidden;
-}
-
-
-/* Links inside the navbar */
-.navbar a {
-  font-size: 25px;
-  color: white;
-  text-align: center;
-  padding: 16px 26px;
-  text-decoration: none;
-  float:right;
-  display: block;
-}
-
-/* The dropdown container */
-.dropdown {
-  position: relative;
-  overflow: hidden;
-}
-
-.responsive {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 25px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 16px 26px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
 .btn{
-  font-size:300%;
-  border-radius: 12px;
-  cursor:pointer;
-  background-color: #39698d;
-}
-#button_text{
-  margin-left: 5%;
-  margin-right: 5%;
-  text-shadow: 3px 3px #034174;
-  color:white;
+  color:green;
+  border-radius: 6px;
+  margin-top: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
 
 }
 
 #button_text2{
-  color:green;
-  background-color: white;
-  text-decoration: none;
-  font-size: 60%;
+  font-size: 18px;
 }
 
 .zoom1{
@@ -238,9 +162,7 @@ nav{
   width:35%;
   height:35%;
 }
-main p{
-  font-size:145%;
-}
+
 }
 
 @media (min-width: 2100px)
@@ -253,7 +175,5 @@ main p{
     width:30%;
     height:30%;
   }
-  main p{
-    font-size:165%;
-  }
+
   }

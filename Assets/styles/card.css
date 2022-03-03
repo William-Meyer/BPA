@@ -29,6 +29,7 @@
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+    border-radius: 40px;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -43,7 +44,6 @@
   color: white;
   transform: rotateY(180deg);
   font-family: 'Work Sans',sans-serif;
-  color:white;
   font-style: normal;
 }
 
@@ -61,4 +61,9 @@ p{
   font-weight: 300px;
   text-align: left;
   margin-left: 5px;
+}
+
+
+.round_img{
+  border-radius: 40px;
 }
