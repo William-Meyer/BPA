@@ -5,6 +5,9 @@
   height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   display:inline-block;
+  margin-left: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 /* This container is needed to position the front and back side */
@@ -65,7 +68,7 @@ p{
 
 
 .bottom_cards{
-  margin-left: 175px;
+  padding-bottom: 100px;
 }
 
 .round_img{
