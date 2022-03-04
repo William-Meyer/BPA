@@ -429,6 +429,7 @@ label {
   cursor:pointer;
 }
 #button_text{
+  text-align: center;
   margin-left: 5%;
   margin-right: 5%;
   text-shadow: 3px 3px #034174;
@@ -455,6 +456,7 @@ label {
   text-shadow: 0 2px 5px #243C2B;
 }
 #contents p{
+  margin-left: auto;
   color:white;
   text-align: center;
   font-size: 1.8em;
