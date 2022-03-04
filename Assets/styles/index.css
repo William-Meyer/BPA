@@ -15,8 +15,10 @@ main{
   padding-right: 17%;
   background-color: #3a5841;
 }
-main h1{
-  padding-top: 20%;
+.header{
+  color:white;
+  font-family: 'works-sans', sans-serif;
+  font-size: 50px;
 }
 .menu{
   background:#00000099;
@@ -75,44 +77,37 @@ padding-left: 20px;
 padding-right: 20px;
 }
 
-#p2{
-  margin-top:50px;
-  text-align:left;
+.pp{
+font-family: 'Work Sans',sans-serif;
+font-weight: 600;
+color:white;
+font-style: normal;
+font-size: 22px;
+-webkit-border-radius: 8px;
+-moz-border-radius:8px;
+border-radius: 8px;
+text-align: left;
 }
 
-.headstart {
-  color:white;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  font-style: normal;
+
+.p{
+font-family: 'Work Sans',sans-serif;
+font-weight: 600;
+color:white;
+font-style: normal;
+font-size: 22px;
+-webkit-border-radius: 8px;
+-moz-border-radius:8px;
+border-radius: 8px;
+text-align: center;
+margin-left: 45px;
 }
 footer{
   width:100%;
 }
-.headerend{
-font-family: 'Work Sans',sans-serif;
-font-weight: 600;
-font-style: normal;
-color:white;
-font-size: 135%;
-}
-/*text wrapping images*/
-#factory{
-  float: right;
-  clear: right;
-  height:50%;
-  width:50%;
-  border-radius:8px;
-  padding-top: 5px;
-  padding-left: 5px;
-}
 
-#feet{
-  float:left;
-  width:18.5%;
-  height:auto;
-  clear:right;
-}
+/*text wrapping images*/
+
 
 .btn{
   color:green;
@@ -120,7 +115,22 @@ font-size: 135%;
   margin-top: 10px;
   padding-left: 4px;
   padding-right: 4px;
+}
 
+.btn2{
+  color:black;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 17px;
+  margin-left: 405px;
+}
+
+.btn:hover, .btn2:hover{
+  cursor: pointer;
 }
 
 #button_text2{
@@ -142,38 +152,12 @@ font-size: 135%;
 /* 48em = 768px */
 
 
-@media(max-width: 1320px)
-{
-  #factory{
-    width:40%;
-    height:40%;
-  }
-
-}
-@media(min-width:1500px)
-{
-  #feet{
-    float:left;
-    width:15%;
-    height:auto;
-    clear:right;
-  }
-#factory{
-  width:35%;
-  height:35%;
-}
-
-}
-
 @media (min-width: 2100px)
 {
 
   nav{
     margin-bottom: -300px;
   }
-  #factory{
-    width:30%;
-    height:30%;
-  }
+
 
   }
