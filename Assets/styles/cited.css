@@ -1,6 +1,8 @@
 
 
 body {
+word-break: break-all;
+overflow-x: hidden;
 background-color: #3a5841;
 margin: 0;
 padding: 0;
