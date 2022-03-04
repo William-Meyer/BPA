@@ -153,7 +153,6 @@ text-shadow: 0 2px 5px #243C2B;
 
 .cards {
   align-items: center;
-  margin-left:10;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -363,8 +362,6 @@ nav{
   background:#00000099;
 }
 .menu{
-
-  align-items: left;
   float:left;
   display:block;
   border-right: 1px;
@@ -423,9 +420,6 @@ nav{
 .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after{
   top: 0;
-}
-.menu ul{
-  align-items: left !important;
 }
 .zoom1{
 
