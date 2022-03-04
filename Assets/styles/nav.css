@@ -1,7 +1,7 @@
 body{
 
 }
-/*Add fonts and take out background blue*/
+
 
 #netzero{
   width:150px;
@@ -42,7 +42,6 @@ nav{
 	position: fixed;
 	top: 0;
 	width: 100%;
-  float:right;
   z-index: 3;
 }
 
@@ -64,7 +63,7 @@ nav{
 
 
 
-/* menu */
+/* menu*/
 .navbar .menu{
   clear: both;
   max-height:0;
@@ -224,19 +223,11 @@ nav{
   display: block;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 1080px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+.menu ul{
+  align-items: left !important;
 }
-
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 1080px) {
+@media (max-width: 1080px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -244,16 +235,15 @@ nav{
     top: 0;
   }
   .topnav.responsive a {
-    float: none;
+    float: left;
     display: block;
-    text-align: left;
   }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
+  .topnav.responsive .dropdown {float: left;}
+  .menu {
     display: block;
     width: 100%;
-    text-align: left;
+    float: left;
+    background-color: grey;
   }
 }
 
