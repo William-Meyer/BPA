@@ -125,11 +125,15 @@ footer{
 
 
 .btn{
-  color:green;
+  font-family: 'Work Sans',sans-serif;
+    font-weight: 600;
+  background-color: #e1e1e1;
+  color:#719293;
   border-radius: 6px;
   margin-top: 10px;
   padding-left: 4px;
   padding-right: 4px;
+  font-size: 6px;
 }
 
 .btn2{
@@ -144,8 +148,25 @@ footer{
   margin-left: 405px;
 }
 
-.btn:hover, .btn2:hover{
-  cursor: pointer;
+
+
+.btn, .btn2 {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+.btn:hover, .btn2:hover {
+    color: #001F3F;
+    background-color: #fff;
+    cursor: pointer;
 }
 
 #button_text2{
@@ -164,3 +185,10 @@ footer{
 }
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
+
+@media (max-width: 1100px){
+  .btn2{
+    margin-left: 85px;
+  }
+
+}
