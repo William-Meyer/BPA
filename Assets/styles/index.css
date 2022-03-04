@@ -149,15 +149,3 @@ footer{
 }
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
-/* 48em = 768px */
-
-
-@media (min-width: 2100px)
-{
-
-  nav{
-    margin-bottom: -300px;
-  }
-
-
-  }

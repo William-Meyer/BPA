@@ -33,7 +33,6 @@ nav{
   font-weight: 600;
 	height: 60px;
 	text-align: center;
-  margin-bottom: -200px;
 }
 
 /*sticky navbar*/
@@ -226,6 +225,13 @@ nav{
 .menu ul{
   align-items: left !important;
 }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1080px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: block;
+  }
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media (max-width: 1080px) {
   .dropdown{
