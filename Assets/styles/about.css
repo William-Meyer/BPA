@@ -117,6 +117,7 @@ text-shadow: 0 2px 5px #243C2B;
   font-size: 10vw;
   color: #233E2B;
   background-color: #E0E0E0;
+  text-shadow: none;
 }
 .contactContents{
   margin-top: 0;
