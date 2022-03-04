@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="Assets/styles/survey.css">
+    <link rel="stylesheet" href="Assets/styles/basics.css">
     <link rel="stylesheet" href="Assets/styles/nav.css">
     <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -537,15 +538,17 @@ window.onload = function exampleFunction() {
         Find Your Footprint
       </h1>
       <h2 id = "prompt">
-          Click the Arrow to Start
+          Click the Button to Start
+          <br>
       </h2>
+      <button id = "startButton" onclick="plusSlides(1)"><h2 id= "buttonText">START QUIZ</h2></button>
     </div>
 
-    <img src="Assets/imgs/quiz_home.JPG" class = "sliderImg" alt = "Drawing of planet with a tree and moon">
+    <img src="Assets/imgs/quizhome.png" class = "sliderImg" alt = "Drawing of planet with a tree and moon">
   </div>
 
   <div class="mySlides fade">
-    <img src="Assets/imgs/quiz1.JPG" class = "sliderImg" id = "img2" alt = "Drawing if car driving with a city in the background">
+    <img src="Assets/imgs/quiz1.png" class = "sliderImg" id = "img2" alt = "Drawing if car driving with a city in the background">
       <h1 class = "questionText">On average, how many miles do you drive per week?</h1>
     <div class="text">
           <div class="sliderContainer">
@@ -560,7 +563,7 @@ window.onload = function exampleFunction() {
 
   <div class="mySlides fade">
     <h1 class="questionText">How many bags of garbage do you throw away weekly?</h1>
-    <img src="Assets/imgs/quiz2.JPG" class = "sliderImg" alt = "drawing of a home with a garbage can">
+    <img src="Assets/imgs/quiz2.png" class = "sliderImg" alt = "drawing of a home with a garbage can">
     <div class="text">
       <div class="wrapper">
           <div class="sliderContainer">
@@ -575,7 +578,7 @@ window.onload = function exampleFunction() {
 
   <div class="mySlides fade">
     <h1 class="questionText">How many animal products do you consume daily?</h1>
-    <img src="Assets/imgs/quiz3.JPG" class = "sliderImg" alt = "drawing of a barn with a farm animals in the front">
+    <img src="Assets/imgs/quiz3.png" class = "sliderImg" alt = "drawing of a barn with a farm animals in the front">
     <div class="text">
       <div class="wrapper">
           <div class="sliderContainer">
@@ -590,7 +593,7 @@ window.onload = function exampleFunction() {
 
   <div class="mySlides fade">
     <h1 class = "questionText">How often do you fly in a year?</h1>
-    <img src="Assets/imgs/quiz4.JPG" class = "sliderImg" alt = "drawing of an airplane flying in the sky">
+    <img src="Assets/imgs/quiz4.png" class = "sliderImg" alt = "drawing of an airplane flying in the sky">
     <div class="text">
       <div class="wrapper">
           <div class="sliderContainer">
@@ -605,7 +608,7 @@ window.onload = function exampleFunction() {
 
   <div class="mySlides fade">
     <h1 class="questionText">How much is your household energy bill each month, on average?</h1>
-    <img src="Assets/imgs/quiz5.JPG" class = "sliderImg" alt = "drawing of a house with a car charging outside">
+    <img src="Assets/imgs/quiz5.png" class = "sliderImg" alt = "drawing of a house with a car charging outside">
       <div class="text">
         <div class="wrapper">
             <div class="sliderContainer">
@@ -650,8 +653,8 @@ window.onload = function exampleFunction() {
 
 <div id = "contents" style="margin-top:-1%">
   <h1 id = "contentHeader">Why We Do a Quiz</h1>
-  <p id = "content">The purpose of our quiz is to help the user to easliy gauge their carbon footprint and easily identify what parts of their lives are creating the most carbon.  The results also allow us to easliy connect you to personalized resources that may help you reduce you carbon footprint in the areas you are struggling.<br>Click the button below for your personalized resources.
-<br> <button class="btnn" onclick="btn_clicked();"><span id="button_text">Personalize Resources</span></button></p>
+  <p id = "content" class = "giveMax">The purpose of our quiz is to help the user easily gauge their carbon footprint and easily identify what parts of their lives are creating the most carbon.  The results also allow us to easily connect you to personalized resources that may help you reduce your carbon footprint in the areas you are struggling.<br>Click the button below for your personalized resources.</p>
+<button class="btnn" onclick="btn_clicked();"><span id="button_text">Personalize Resources</span></button></p>
 </div>
 </div>
 <footer>
