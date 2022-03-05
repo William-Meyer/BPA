@@ -6,6 +6,7 @@
     <script  src = "Assets/scripts/jquery-3.6.0.min.js" ></script>
     <link rel="stylesheet" href="Assets/styles/about.css">
     <link rel="stylesheet" href="Assets/styles/basics.css">
+    <link rel="stylesheet" href="Assets/styles/nav.css">
     <title>Netzero | About</title>
     <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,21 +54,44 @@
 
   </head>
   <body>
-  <nav class = 'black'>
-      <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
-    <div class="navbar">
-      <input class="menu-btn" type="checkbox" id= "menu-btn"/>
-      <label class="menu-icon" for="menu-btn">
-      <span class="navicon"></span></label>
-    <ul class="menu">
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="survey.html">Quiz</a></li>
-      <li><a href="resource.html">Resources</a></li>
-      <li><a href="reduce_your_footprint.html">Reduce</a></li>
-      <li><a href="learn.html">Learn</a></li>
-          </ul>
+    <nav class = 'black'>
+        <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+      <div class="navbar">
+        <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+        <label class="menu-icon" for="menu-btn" onclick="myFunction()">
+        <span class="navicon"></span></label>
+      <ul class="menu">
+        <div class="topnav" id="myTopnav">
+          <div class="dropdown">
+            <button class="dropbtn">Learn</button>
+            <div class="dropdown-content">
+              <a href="gas.html">Greenhouse Gases</a>
+              <a href="footprint.html">Carbon Footptint</a>
+              <a href="impact.html">The Impact</a>
+            </div>
+          </div>
+          <a href="survey.html">Quiz</a>
+          <div class="dropdown">
+            <button class="dropbtn">Reduce Your Footprint</button>
+            <div class="dropdown-content">
+              <a href="transportation.html">Transportation</a>
+              <a href="energy.html">Energy</a>
+              <a href="trash.html">Trash Production</a>
+              <a href="food.html">Food Consumption</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn"> Resources </button>
+            <div class="dropdown-content">
+              <a href="products.html">Products</a>
+              <a href="org.html">Organizations</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
         </div>
-    </nav>
+            </ul>
+          </div>
+      </nav>
 <h1 class = "bannerText">ABOUT US</h1>
 <img src="Assets/imgs/aboutus.png" alt="picture of people together by mountain range" class="banner">
   <div class="cardsContainer">
