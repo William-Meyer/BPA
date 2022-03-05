@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="Assets/styles/grid.css">
       <link rel="stylesheet" href="Assets/styles/transition.css">
       <link rel="stylesheet" href="Assets/styles/card.css">
-        <link rel="stylesheet" href="Assets/styles/updatedNav.css">
+        <link rel="stylesheet" href="Assets/styles/nav.css">
        <script src="Assets/scripts/fadeIn.js"></script>
     <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
      <script src="Assets/scripts/updatedNav.js"></script>
@@ -114,68 +114,46 @@ function btn_clicked(){
 
     </script>
 
-</head>
+  </head>
   <body onload="plusSlides(0)">
-    <div class="nav-bar">
-    <div class="nav-container">
-    <div class="brand">
-    <a href="index.html"><img src="Assets/imgs/logo2.png"></a>
-    </div>
-  <nav>
-    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-    <ul class="nav-list">
-      <li>
-        <a href="#">Learn</a>
-        <ul class="nav-dropdown">
-          <li>
-            <a href="gas.html">Greenhouse Gases</a>
-          </li>
-          <li>
-            <a href="footprint.html">Carbon Footprint</a>
-          </li>
-          <li>
-            <a href="impact.html">The Impact</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="survey.html">Quiz</a>
-      </li>
-      <li>
-        <a href="#">Reduce Your Footprint</a>
-        <ul class="nav-dropdown">
-          <li>
-            <a href="transportation.html">Transportation</a>
-          </li>
-          <li>
-            <a href="energy.html">Energy</a>
-          </li>
-          <li>
-            <a href="trash.html">Trash Production</a>
-          </li>
-          <li>
-            <a href="food.html">Food Consumption</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Resources</a>
-        <ul class="nav-dropdown">
-          <li>
-            <a href="products.html">Products</a>
-          </li>
-          <li>
-            <a href="org.html">Organizations</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="about.html">About Us</a>
-      </li>
-    </ul>
-  </nav>
-</div>
-</div>
+    <nav class = 'black'>
+        <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
+      <div class="navbar">
+        <input class="menu-btn" type="checkbox" id= "menu-btn"/>
+        <label class="menu-icon" for="menu-btn" onclick="myFunction()">
+        <span class="navicon"></span></label>
+      <ul class="menu">
+        <div class="topnav" id="myTopnav">
+          <div class="dropdown">
+            <button class="dropbtn">Learn</button>
+            <div class="dropdown-content">
+              <a href="#">Greenhouse Gases</a>
+              <a href="#">Carbon Footptint</a>
+              <a href="#">The Impact</a>
+            </div>
+          </div>
+          <a href="survey.html">Quiz</a>
+          <div class="dropdown">
+            <button class="dropbtn">Reduce Your Footprint</button>
+            <div class="dropdown-content">
+              <a href="#">Transportation</a>
+              <a href="#">Energy</a>
+              <a href="#">Trash Production</a>
+              <a href="#">Food Consumption</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn"> Resources </button>
+            <div class="dropdown-content">
+              <a href="#">Products</a>
+              <a href="#">Organizations</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+        </div>
+            </ul>
+          </div>
+      </nav>
 <div id = "landScape">
   <div class="mouse_scroll">
 
