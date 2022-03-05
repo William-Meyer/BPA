@@ -6,6 +6,7 @@
     <title>Netzero|Works Cited</title>
     <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Assets/styles/cited.css">
+    <link rel="stylesheet" href="Assets/styles/nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
@@ -40,14 +41,37 @@
         <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
       <div class="navbar">
         <input class="menu-btn" type="checkbox" id= "menu-btn"/>
-        <label class="menu-icon" for="menu-btn">
+        <label class="menu-icon" for="menu-btn" onclick="myFunction()">
         <span class="navicon"></span></label>
       <ul class="menu">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="survey.html">Quiz</a></li>
-        <li><a href="resource.html">Resources</a></li>
-        <li><a href="reduce_your_footprint.html">Reduce</a></li>
-        <li><a href="learn.html">Learn</a></li>
+        <div class="topnav" id="myTopnav">
+          <div class="dropdown">
+            <button class="dropbtn">Learn</button>
+            <div class="dropdown-content">
+              <a href="gas.html">Greenhouse Gases</a>
+              <a href="footprint.html">Carbon Footptint</a>
+              <a href="impact.html">The Impact</a>
+            </div>
+          </div>
+          <a href="survey.html">Quiz</a>
+          <div class="dropdown">
+            <button class="dropbtn">Reduce Your Footprint</button>
+            <div class="dropdown-content">
+              <a href="transportation.html">Transportation</a>
+              <a href="energy.html">Energy</a>
+              <a href="trash.html">Trash Production</a>
+              <a href="food.html">Food Consumption</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn"> Resources </button>
+            <div class="dropdown-content">
+              <a href="products.html">Products</a>
+              <a href="org.html">Organizations</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+        </div>
             </ul>
           </div>
       </nav>

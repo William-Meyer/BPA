@@ -91,49 +91,7 @@ main a{
   color:white;
 }
 /*nav*/
-nav{
-  font-family: 'work sans', sans-serif;
-  font-weight: 600;
-	height: 60px;
-	text-align: center;
-  margin-bottom: -200px;
-}
 
-/*sticky navbar*/
-nav{
-  background-color:transparent;
-	position: fixed;
-	top: 0;
-	width: 100%;
-  float:right;
-  z-index: 3;
-}
-
-/*list for hamburger menu*/
-.navbar ul{
-  margin: 0;
-  padding:0;
-  list-style:none;
-  overflow: hidden;
-}
-
-
-/* Links inside the navbar */
-.navbar a {
-  font-size: 25px;
-  color: white;
-  text-align: center;
-  padding: 16px 26px;
-  text-decoration: none;
-  float:right;
-  display: block;
-}
-
-/* The dropdown container */
-.dropdown {
-  position: relative;
-  overflow: hidden;
-}
 #homeImages
 {
   width: 50%;
