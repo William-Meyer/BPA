@@ -185,5 +185,27 @@ footer{
 .black{
 
 }
+#mobileNature{
+  display: none;
+  width: 100%;
+  height: auto;
+}
 .zoom1{max-width: 100%; overflow: hidden;}
 .zoom2{max-width: 100%; overflow: hidden;}
+@media(max-width:1400px){
+  #bg{
+    display: none;
+  }
+  #overlay{
+    display: none;
+  }
+  #plants{
+    display: none;
+  }
+  #flowers{
+    display: none;
+  }
+  #mobileNature{
+    display:inline;
+  }
+}
