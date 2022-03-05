@@ -36,9 +36,10 @@ color:white;
 background-color: #3a5841;
 position: relative;
 display: flex;
-margin-top: -5%;
 }
-
+.menu{
+  background:#00000099;
+}
 #copy{
   font-size: 1.5vw;
   text-align: center;
