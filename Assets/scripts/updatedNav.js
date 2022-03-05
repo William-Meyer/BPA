@@ -10,9 +10,6 @@
       $('.nav-dropdown').not($(this).siblings()).hide();
       $(this).show();
     })
-    $('.nav-dropdown').hover(function(e){
-      $(this).show();
-    }
     $('body').hover(function() {
       $('.nav-dropdown').hide();
     });
