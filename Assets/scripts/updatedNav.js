@@ -1,18 +1,38 @@
 (function($) {
   $(function() {
-    $('nav ul li a:not(:only-child)').hover(function(e) {
-      $(this).siblings('.nav-dropdown').show();
-      $(this).show();
-      $('.dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    $('.listElement a').hover(function(e){
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      $(this).show();
-    })
-    $('body').hover(function() {
-      $('.nav-dropdown').hide();
-    });
+    $('#RYF').hover(function(){
+        $('#learnContents').hide();
+        $('#RYFContents').show();
+        $('#resourcesContents').hide();
+    }
+  );
+    $('#resources').hover(function(){
+        $('#learnContents').hide();
+        $('#RYFContents').hide();
+        $('#resourcesContents').show();
+    }
+  );
+    $('#about').hover(function(){
+        $('#learnContents').hide();
+        $('#RYFContents').hide();
+        $('#resourcesContents').hide();
+    }
+  );
+    $('#quiz').hover(function(){
+        $('#learnContents').hide();
+        $('#RYFContents').hide();
+        $('#resourcesContents').hide();
+    }
+  );
+    $('#learn').hover(function(){
+        $('#learnContents').show();
+        $('#RYFContents').hide();
+        $('#resourcesContents').hide();
+    }
+  );
+$('body').hover(function(){
+  $('.nav-dropdown').hide();
+});
     $('#nav-toggle').click(function() {
       $('nav ul').slideToggle();
     });

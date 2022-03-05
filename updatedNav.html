@@ -10,7 +10,7 @@
     <title>Nav Example</title>
   </head>
   <body>
-    <section class="nav-bar">
+    <div class="nav-bar">
 <div class="nav-container">
   <div class="brand">
     <a href="index.html"><img src="Assets/imgs/logo2.png"></a>
@@ -18,9 +18,9 @@
   <nav>
     <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
     <ul class="nav-list">
-      <li class = "listElement">
+      <li class = "listElement" id = "learn">
         <a href="#">Learn</a>
-        <ul class="nav-dropdown">
+        <ul class="nav-dropdown" id = "learnContents">
           <li>
             <a href="gas.html">Greenhouse Gases</a>
           </li>
@@ -32,12 +32,12 @@
           </li>
         </ul>
       </li>
-      <li class = "listElement">
+      <li class = "listElement" id = "quiz">
         <a href="survey.html">Quiz</a>
       </li>
-      <li class = "listElement">
+      <li class = "listElement" id = "RYF">
         <a href="#">Reduce Your Footprint</a>
-        <ul class="nav-dropdown">
+        <ul class="nav-dropdown" id = "RYFContents">
           <li>
             <a href="transportation.html">Transportation</a>
           </li>
@@ -52,9 +52,9 @@
           </li>
         </ul>
       </li>
-      <li class = "listElement">
+      <li class = "listElement" id = "resources">
         <a class = "listElement" href="#">Resources</a>
-        <ul class="nav-dropdown">
+        <ul class="nav-dropdown" id = "resourcesContents">
           <li>
             <a href="products.html">Products</a>
           </li>
@@ -63,12 +63,12 @@
           </li>
         </ul>
       </li>
-      <li class = "listElement">
+      <li class = "listElement" id = "about">
         <a href="about.html">About Us</a>
       </li>
     </ul>
   </nav>
 </div>
-</section>
+</div>
   </body>
 </html>
