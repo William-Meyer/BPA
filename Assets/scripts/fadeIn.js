@@ -20,3 +20,6 @@ document.addEventListener('scroll', function() {
     }
   }
 });
+function myFunction(){
+  return;
+}

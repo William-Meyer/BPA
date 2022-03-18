@@ -181,3 +181,8 @@
   50%  { opacity: .5; }
   100% { opacity: 1; }
 }
+@media(max-width:1000px){
+  .mouse_scroll{
+    opacity: 0;
+  }
+}
