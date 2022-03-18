@@ -39,6 +39,7 @@
   );
     $('#learn').hover(function(){
       if($(window).width() > 1100){
+
         $("#learnContents").css("display", "block");
         $('#learnContents').show();
         $('#RYFContents').hide();
@@ -46,15 +47,18 @@
     }
   );
   $('#learn').click(function(){
-    if($(window).width() <= 1100){
-      $("#learnContents").css("display", "block");
+    if($(window).width() <= 1100 && $('#learnContents').is(":hidden")){
+      $("#learnContents").slideDown();
       $('#learnContents').show();
       $('#RYFContents').hide();
       $('#resourcesContents').hide();
     }
+    else{
+      $('#learnContents').slideUp();
+    }
   });
   $('#quiz').click(function(){
-    if($(window).width() <= 1100){
+    if($(window).width() <= 1100 ){
       $('#learnContents').hide();
       $('#RYFContents').hide();
       $('#resourcesContents').hide();
@@ -68,19 +72,25 @@
     }
   });
   $('#resources').click(function(){
-    if($(window).width() <= 1100){
-      $("#resourcesContents").css("display", "block");
+    if($(window).width() <= 1100 && $('#resourcesContents').is(":hidden")){
+      $("#resourcesContents").slideDown();
       $('#learnContents').hide();
       $('#RYFContents').hide();
       $('#resourcesContents').show();
     }
+    else{
+      $('#resourcesContents').slideUp();
+    }
   });
   $('#RYF').click(function(){
-    if($(window).width() <= 1100){
-      $("#RYFContents").css("display", "block");
+    if($(window).width() <= 1100 && $('#RYFContents').is(":hidden")){
+      $("#RYFContents").slideDown();
       $('#learnContents').hide();
       $('#RYFContents').show();
       $('#resourcesContents').hide();
+    }
+    else{
+      $('#RYFContents').slideUp();
     }
   });
   $('#container').click(function(){
