@@ -5,8 +5,7 @@
   height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   display:inline-block;
-  margin-left: 20px;
-  margin-left: 20px;
+  margin: auto;
   margin-bottom: 20px;
 }
 

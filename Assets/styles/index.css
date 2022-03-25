@@ -4,8 +4,9 @@
   padding: 0;
 
 }
-body{
-
+#container{
+  text-align: center;
+  align-items: center;
 }
 main{
   background-color: #3a5841;
@@ -92,7 +93,6 @@ font-size: 22px;
 border-radius: 8px;
 text-align: left;
 }
-
 
 .p{
 font-family: 'Work Sans',sans-serif;
