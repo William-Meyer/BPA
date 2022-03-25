@@ -10,6 +10,7 @@ body{
   z-index: 0;
   width: 100%;
   height: auto;
+  margin-top: 70px;
 }
 .bannerText{
   text-align: center;
@@ -20,7 +21,7 @@ body{
   z-index: 1;
   text-align: center;
   width: 100%;
-  top: 2em;
+  top: 3em;
   left: 50%;
   transform: translate(-50%, -50%);
 }
