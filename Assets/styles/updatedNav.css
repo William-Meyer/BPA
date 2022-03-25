@@ -8,11 +8,12 @@ body {
 }
 .nav-bar {
   height: 70px;
-  background: #262626;
+  background:#3E3E3E ;
   position: fixed;
 	top: 0;
 	width: 100%;
   z-index: 3;
+  box-shadow: 0px 5px 10px #262A2B;
 }
 
 .brand {
@@ -54,13 +55,13 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
+  background: #3E3E3E;
   color: #ffffff;
   text-decoration: none;
 }
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  background: #2ab1ce;
+  background: #2A2727;
   color: #ffffff;
 }
 nav ul li a:not(:only-child):after,
@@ -78,7 +79,7 @@ nav ul li ul li a {
 }
 
 .nav-dropdown {
-  background-color: #262626;
+  background-color: #686B73;
   position: absolute;
   display: none;
   z-index: 1;
@@ -89,7 +90,7 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: #262626;
+  background: #3E3E3E;
   height: 70px;
   width: 70px;
 }

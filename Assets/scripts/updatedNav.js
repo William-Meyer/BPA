@@ -3,55 +3,53 @@
 
     $('#container').hover(function(){
       if($(window).width() > 1100){
-      $('#learnContents').hide();
-      $('#RYFContents').hide();
-      $('#resourcesContents').hide();
+      $('#learnContents').slideUp();
+      $('#RYFContents').slideUp();
+      $('#resourcesContents').slideUp();
     }
     });
     $('#RYF').hover(function(){
       if($(window).width() > 1100){
-        $('#learnContents').hide();
-        $('#RYFContents').show();
-        $('#resourcesContents').hide();
+        $('#learnContents').slideUp();
+        $('#RYFContents').slideDown();
+        $('#resourcesContents').slideUp();
       }
     }
   );
     $('#resources').hover(function(){
       if($(window).width() > 1100){
-        $('#learnContents').hide();
-        $('#RYFContents').hide();
-        $('#resourcesContents').show();}
+        $('#learnContents').slideUp();
+        $('#RYFContents').slideUp();
+        $('#resourcesContents').slideDown();}
     }
   );
     $('#about').hover(function(){
       if($(window).width() > 1100){
-        $('#learnContents').hide();
-        $('#RYFContents').hide();
-        $('#resourcesContents').hide();}
+        $('#learnContents').slideUp();
+        $('#RYFContents').slideUp();
+        $('#resourcesContents').slideUp();}
     }
   );
     $('#quiz').hover(function(){
       if($(window).width() > 1100){
-        $('#learnContents').hide();
-        $('#RYFContents').hide();
-        $('#resourcesContents').hide();}
+        $('#learnContents').slideUp();
+        $('#RYFContents').slideUp();
+        $('#resourcesContents').slideUp();}
     }
   );
     $('#learn').hover(function(){
       if($(window).width() > 1100){
-
-        $("#learnContents").css("display", "block");
-        $('#learnContents').show();
-        $('#RYFContents').hide();
-        $('#resourcesContents').hide();}
+        $('#learnContents').slideDown();
+        $('#RYFContents').slideUp();
+        $('#resourcesContents').slideUp();}
     }
   );
   $('#learn').click(function(){
     if($(window).width() <= 1100 && $('#learnContents').is(":hidden")){
       $("#learnContents").slideDown();
       $('#learnContents').show();
-      $('#RYFContents').hide();
-      $('#resourcesContents').hide();
+      $('#RYFContents').slideUp();
+      $('#resourcesContents').slideUp();
     }
     else{
       $('#learnContents').slideUp();
@@ -59,23 +57,23 @@
   });
   $('#quiz').click(function(){
     if($(window).width() <= 1100 ){
-      $('#learnContents').hide();
-      $('#RYFContents').hide();
-      $('#resourcesContents').hide();
+      $('#learnContents').slideUp();
+      $('#RYFContents').slideUp();
+      $('#resourcesContents').slideUp();
     }
   });
   $('#about').click(function(){
     if($(window).width() <= 1100){
-      $('#learnContents').hide();
-      $('#RYFContents').hide();
-      $('#resourcesContents').hide();
+      $('#learnContents').slideUp();
+      $('#RYFContents').slideUp();
+      $('#resourcesContents').slideUp();
     }
   });
   $('#resources').click(function(){
     if($(window).width() <= 1100 && $('#resourcesContents').is(":hidden")){
       $("#resourcesContents").slideDown();
-      $('#learnContents').hide();
-      $('#RYFContents').hide();
+      $('#learnContents').slideUp();
+      $('#RYFContents').slideUp();
       $('#resourcesContents').show();
     }
     else{
@@ -85,9 +83,9 @@
   $('#RYF').click(function(){
     if($(window).width() <= 1100 && $('#RYFContents').is(":hidden")){
       $("#RYFContents").slideDown();
-      $('#learnContents').hide();
+      $('#learnContents').slideUp();
       $('#RYFContents').show();
-      $('#resourcesContents').hide();
+      $('#resourcesContents').slideUp();
     }
     else{
       $('#RYFContents').slideUp();
@@ -95,9 +93,9 @@
   });
   $('#container').click(function(){
     if($(window).width() <= 1100){
-    $('#learnContents').hide();
-    $('#RYFContents').hide();
-    $('#resourcesContents').hide();}
+    $('#learnContents').slideUp();
+    $('#RYFContents').slideUp();
+    $('#resourcesContents').slideUp();}
   });
 
 

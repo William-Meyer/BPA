@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <script src="Assets/scripts/fadeIn.js"></script>
   <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
+   <script src="Assets/scripts/updatedNav.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,91 +18,70 @@
   <title>Netzero | Trash production</title>
   <link rel="icon" href="Assets/imgs/favicon.ico" type="image/x-icon">
 
-  <script>
 
-  $(window).scroll
-  (
-    function()
-  {
-
-    var scroll=$(window).scrollTop();
-    $('.zoom2').css("opacity", 1- scroll/900)
-    if(scroll == 0)
-    {
-      $("nav").css("background","transparent");
-    }
-    else if (1+scroll/200 < 9)
-    {
-      $("nav").css("background","#00000066");
-    }
-    else{
-
-        $("nav").css("background","#00000099");
-
-    }
-    if((1+scroll/200 < 4))
-  {
-    $(".zoom1").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/600) + ')'
-      }
-    )
-    $(".zoom2").css
-    (
-      {
-       transform : 'scale(' + (1 + scroll/400) + ')'
-      }
-    )
-
-  }
-  else{
-    $('.zoom2').css("opacity", 0)
-  }
-  });
-
-
-  </script>
 </head>
 <body>
-  <nav class = 'black'>
-      <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
-    <div class="navbar">
-      <input class="menu-btn" type="checkbox" id= "menu-btn"/>
-      <label class="menu-icon" for="menu-btn">
-      <span class="navicon"></span></label>
-    <ul class="menu">
-      <div class="topnav" id="myTopnav">
-        <div class="dropdown">
-          <button class="dropbtn">Learn</button>
-          <div class="dropdown-content">
-            <a href="gas.html">Greenhouse Gases</a>
-            <a href="footprint.html">Carbon Footptint</a>
-            <a href="impact.html">The Impact</a>
-          </div>
-        </div>
-        <a href="survey.html">Quiz</a>
-        <div class="dropdown">
-          <button class="dropbtn">Reduce Your Footprint</button>
-          <div class="dropdown-content">
-            <a href="transportation.html">Transportation</a>
-            <a href="energy.html">Energy</a>
-            <a href="trash.html">Trash Production</a>
-            <a href="food.html">Food Consumption</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn"> Resources </button>
-          <div class="dropdown-content">
-            <a href="products.html">Products</a>
-            <a href="org.html">Organizations</a>
-          </div>
-        </div>
-        <a href="about.html">About</a>
-      </div>
-          </ul>
-        </div>
-    </nav>
+  <div class="nav-bar">
+<div class="nav-container">
+<div class="brand">
+  <a href="index.html"><img src="Assets/imgs/logo2.png"></a>
+</div>
+<nav>
+  <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+    <li class = "listElement" id = "learn">
+      <a href="#">Learn</a>
+      <ul class="nav-dropdown" id = "learnContents">
+        <li>
+          <a href="gas.html">Greenhouse Gases</a>
+        </li>
+        <li>
+          <a href="footprint.html">Carbon Footprint</a>
+        </li>
+        <li>
+          <a href="impact.html">The Impact</a>
+        </li>
+      </ul>
+    </li>
+    <li class = "listElement" id = "quiz">
+      <a href="survey.html">Quiz</a>
+    </li>
+    <li class = "listElement" id = "RYF">
+      <a href="#">Reduce Your Footprint</a>
+      <ul class="nav-dropdown" id = "RYFContents">
+        <li>
+          <a href="transportation.html">Transportation</a>
+        </li>
+        <li>
+          <a href="energy.html">Energy</a>
+        </li>
+        <li>
+          <a href="trash.html">Trash Production</a>
+        </li>
+        <li>
+          <a href="food.html">Food Consumption</a>
+        </li>
+      </ul>
+    </li>
+    <li class = "listElement" id = "resources">
+      <a class = "listElement" href="#">Resources</a>
+      <ul class="nav-dropdown" id = "resourcesContents">
+        <li>
+          <a href="products.html">Products</a>
+        </li>
+        <li>
+          <a href="org.html">Organizations</a>
+        </li>
+      </ul>
+    </li>
+    <li class = "listElement" id = "about">
+      <a href="about.html">About Us</a>
+    </li>
+  </ul>
+</nav>
+</div>
+</div>
+<div id = "container">
     <h1 class = "bannerText">TRASH PRODUCTION</h1>
     <img src="Assets/imgs/trashbanner.PNG" alt="people hiking across a bridge with a mountain range in the background" class ="banner">
     <div class="textBlock center giveMax floatUp">
@@ -172,4 +152,5 @@
     <p id = "copy" style="margin-bottom:1%;">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO Chapter #58-0136, Pickerington High School North, Pickerington, Ohio, 2022 </p>
     <a id = "link" href="cited.html"><p>Works Cited</p></a>
 </footer>
+</div>
 </body>

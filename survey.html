@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="Assets/styles/basics.css">
     <link rel="stylesheet" href="Assets/styles/nav.css">
     <script  src = "Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script  src = "Assets/scripts/updatedNav.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
@@ -459,69 +460,68 @@ window.onload = function exampleFunction() {
 
 
     </script>
-    <script>
-    $(window).scroll
-    (
-      function()
-    {
-
-      var scroll=$(window).scrollTop();
-      $('.zoom2').css("opacity", 1- scroll/900)
-      if(scroll == 0)
-      {
-        $("nav").css("background","transparent");
-      }
-      else if (1+scroll/200 < 9)
-      {
-        $("nav").css("background","#00000066");
-      }
-      else{
-
-          $("nav").css("background","#00000099");
-
-      }
-      });
-    </script>
   </head>
   <body onload="currentSlide(1)">
-    <nav class = 'black'>
-        <a href="index.html" class="logo"><img src="Assets/imgs/logo2.png" alt= "net zero logo" id="netzero"/></a>
-      <div class="navbar">
-        <input class="menu-btn" type="checkbox" id= "menu-btn"/>
-        <label class="menu-icon" for="menu-btn" onclick="myFunction()">
-        <span class="navicon"></span></label>
-      <ul class="menu">
-        <div class="topnav" id="myTopnav">
-          <div class="dropdown">
-            <button class="dropbtn">Learn</button>
-            <div class="dropdown-content">
-              <a href="gas.html">Greenhouse Gases</a>
-              <a href="footprint.html">Carbon Footptint</a>
-              <a href="impact.html">The Impact</a>
-            </div>
-          </div>
-          <a href="survey.html">Quiz</a>
-          <div class="dropdown">
-            <button class="dropbtn">Reduce Your Footprint</button>
-            <div class="dropdown-content">
-              <a href="transportation.html">Transportation</a>
-              <a href="energy.html">Energy</a>
-              <a href="trash.html">Trash Production</a>
-              <a href="food.html">Food Consumption</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn"> Resources </button>
-            <div class="dropdown-content">
-              <a href="products.html">Products</a>
-              <a href="org.html">Organizations</a>
-            </div>
-          </div>
-          <a href="about.html">About</a>
-        </div>
-            </ul>
-          </div>
-      </nav>
+    <div class="nav-bar">
+<div class="nav-container">
+  <div class="brand">
+    <a href="index.html"><img src="Assets/imgs/logo2.png"></a>
+  </div>
+  <nav>
+    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+    <ul class="nav-list">
+      <li class = "listElement" id = "learn">
+        <a href="#">Learn</a>
+        <ul class="nav-dropdown" id = "learnContents">
+          <li>
+            <a href="gas.html">Greenhouse Gases</a>
+          </li>
+          <li>
+            <a href="footprint.html">Carbon Footprint</a>
+          </li>
+          <li>
+            <a href="impact.html">The Impact</a>
+          </li>
+        </ul>
+      </li>
+      <li class = "listElement" id = "quiz">
+        <a href="survey.html">Quiz</a>
+      </li>
+      <li class = "listElement" id = "RYF">
+        <a href="#">Reduce Your Footprint</a>
+        <ul class="nav-dropdown" id = "RYFContents">
+          <li>
+            <a href="transportation.html">Transportation</a>
+          </li>
+          <li>
+            <a href="energy.html">Energy</a>
+          </li>
+          <li>
+            <a href="trash.html">Trash Production</a>
+          </li>
+          <li>
+            <a href="food.html">Food Consumption</a>
+          </li>
+        </ul>
+      </li>
+      <li class = "listElement" id = "resources">
+        <a class = "listElement" href="#">Resources</a>
+        <ul class="nav-dropdown" id = "resourcesContents">
+          <li>
+            <a href="products.html">Products</a>
+          </li>
+          <li>
+            <a href="org.html">Organizations</a>
+          </li>
+        </ul>
+      </li>
+      <li class = "listElement" id = "about">
+        <a href="about.html">About Us</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
 <div id = "container">
 
 
@@ -652,11 +652,12 @@ window.onload = function exampleFunction() {
   <p id = "content" class = "giveMax">The purpose of our quiz is to help the user easily gauge their carbon footprint and easily identify what parts of their lives are creating the most carbon.  The results also allow us to easily connect you to personalized resources that may help you reduce your carbon footprint in the areas you are struggling.<br>Click the button below for your personalized resources.</p>
 <button class="btnn" onclick="btn_clicked();"><span id="button_text">Personalize Resources</span></button>
 </div>
-</div>
+
 <footer>
   <img src="Assets/imgs/footer_tree.png" alt="picture of woods" id="footer_tree"/>
     <p id = "copy" style="margin-bottom:1%;">&copy; 2021 BPA Site. All rights reserved. Site design by NETZERO Chapter #58-0136, Pickerington High School North, Pickerington, Ohio, 2022 </p>
     <a id = "link" href="cited.html"><p>Works Cited</p></a>
 </footer>
+</div>
   </body>
 </html>
