@@ -43,6 +43,13 @@ display: flex;
 .menu{
   background:#00000099;
 }
+#missionHeader{
+  color:black;
+  font-family: 'works-sans', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 300;
+}
 #copy{
   font-size: 1.5vw;
   text-align: center;
@@ -80,6 +87,7 @@ padding-top: 3px;
 padding-bottom: 3px;
 padding-left: 20px;
 padding-right: 20px;
+text-align: center;
 }
 
 .pp{
@@ -92,6 +100,34 @@ font-size: 22px;
 -moz-border-radius:8px;
 border-radius: 8px;
 text-align: left;
+}
+.welcomText{
+  text-align: center;
+  font-family: 'works-sans', sans-serif;
+  text-align: center;
+  position: absolute;
+  font-size: 3vw;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #E0E0E0;
+  animation-duration: 1.5s;
+  animation-name: up;
+  opacity: 1;
+}
+@keyframes up {
+  from {
+      top:190px;
+      opacity: 0;
+  }
+
+  to {
+    top:140px;
+      opacity: 1;
+  }
 }
 
 .p{
@@ -109,15 +145,14 @@ margin-left: 45px;
 
 .bp{
   font-family: 'Work Sans',sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   color:black;
   font-style: normal;
-  font-size: 22px;
+  font-size: 26px;
   -webkit-border-radius: 8px;
   -moz-border-radius:8px;
   border-radius: 8px;
   text-align: center;
-  margin-left: 45px;
 }
 
 

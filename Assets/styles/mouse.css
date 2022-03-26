@@ -10,7 +10,7 @@
 	margin: 0 auto;
 	width: 24px;
 	height: 100px;
-	margin-top: 300px;
+	top: 210px;
   position: absolute;
   position: absolute;
   margin-left: auto;
@@ -18,8 +18,21 @@
   left: 0;
   right: 0;
   text-align: center;
+  animation-duration: 2s;
+  animation-name: mouseUp;
+  opacity: 1;
 }
+@keyframes mouseUp {
+  from {
+      top:320px;
+      opacity: 0;
+  }
 
+  to {
+    top:210px;
+      opacity: 1;
+  }
+}
 
 .m_scroll_arrows
 {
