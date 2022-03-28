@@ -59,7 +59,6 @@ body{
   padding-bottom: 10px;
 }
 .basicImgClassLarge{
-  filter: drop-shadow(5px 5px 5px #222);
   width:80%;
   height: auto;
   margin-left: auto;

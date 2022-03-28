@@ -149,6 +149,7 @@ display: flex;
 }
 /* Slideshow container */
 .slideshow-container {
+  margin-top: 70px;
   background-color: #fff;
   width:100%;
   height: auto;

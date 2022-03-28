@@ -161,7 +161,7 @@ nav ul li ul li a {
   bottom: -10px;
 }
 #nav-toggle.active span {
-  background-color: transparent;
+  background-color: #3E3E3E;
 }
 #nav-toggle.active span:before, #nav-toggle.active span:after {
   top: 0;
@@ -172,7 +172,9 @@ nav ul li ul li a {
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
 }
-
+.active{
+  background-color: #3E3E3E;
+}
 article {
   max-width: 1000px;
   margin: 0 auto;

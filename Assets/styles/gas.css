@@ -1,9 +1,6 @@
 body{
   background-color: #95c1a2;
 }
-#carbonCard{
-  filter: drop-shadow(5px 5px 5px #222);
-}
 .floatRight{
   margin-right: 5%
 }
