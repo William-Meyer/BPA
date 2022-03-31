@@ -48,15 +48,28 @@ footer h3{
   width: 100%;
 }
 .footerCard{
-  height: 5em;
+  height: 6em;
   width: 100%;
   background-color: red;
-  margin-top: 0;
+  margin-top: -1em;
+  margin-bottom: 0;
 }
 .footerLogo{
   float:left;
   height: 3em;
-  margin-top: 1em;
+  margin-top: 1.5em;
   width: auto;
   margin-left: 1em;
+}
+
+#footerText{
+  color: white;
+  margin-top: 1.5em;
+  float: right;
+  line-height: 150%;
+  margin-right: 2em;
+  font-size: 1.4vw;
+}
+#footerText a{
+  text-decoration: underline;
 }

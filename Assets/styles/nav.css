@@ -180,3 +180,81 @@ article {
   margin: 0 auto;
   padding: 10px;
 }
+
+
+/*footer*/
+footer{
+  align-items: center;
+  text-align: center;
+}
+footer img{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: -5px;
+}
+footer ul {
+  margin-top: 0;
+  font-family: 'works-sans', sans-serif;
+  color: white;
+  list-style: none;
+  font-size: 1.3vw;
+  padding-top: 5%;
+}
+footer h3 {
+  font-weight: 500;
+  color: white;
+  text-align: left;
+}
+footer li{
+  color: white;
+  text-align: left;
+  font-size: 1.1vw;
+  margin-top: 2%;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer a h3{
+  font-weight: 600;
+}
+footer h3{
+  font-size: 1.4vw;
+}
+.siteMap{
+  position: absolute;
+  margin-top: -20%;
+  z-index: 100;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+}
+.footerCard{
+  height: 6em;
+  width: 100%;
+  background-color: red;
+  margin-top: -1em;
+  margin-bottom: 0;
+}
+.footerLogo{
+  float:left;
+  height: 3em;
+  margin-top: 1.5em;
+  width: auto;
+  margin-left: 1em;
+}
+
+#footerText{
+  color: white;
+  margin-top: 1.5em;
+  float: right;
+  line-height: 150%;
+  margin-right: 2em;
+  font-size: 1.4vw;
+}
+#footerText a{
+  text-decoration: underline;
+}
