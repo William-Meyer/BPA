@@ -4,32 +4,32 @@
   overflow: hidden;
   overflow-x: hidden;
   width: 100%;
-  hieght: auto;
+  height: auto;/*changed*/
   margin-bottom: -30%;
   /*background-image: url("../imgs/home1.JPG");
   background-size:100%;*/
 }
 #overlay{
-  z-index: 10px;
+  z-index: 10;/*changed*/
   margin-top:-70%;
   width:100%;
   height: auto;
 }
 
 #plants{
-  z-index: 3px;
+  z-index: 3;/*changed*/
   margin-top: -100%;
   width:100%;
   height: auto;
 }
 #flowers{
-  z-index: 1000000000px;
+  z-index: 1000000000;/*changed*/
   width:100%;
   height: auto;
   margin-top: -65%;
 }
 #bg{
-  z-index: 1px;
+  z-index: 1;/*changed*/
   margin-top:0;
   width:100%;
   height: auto;
