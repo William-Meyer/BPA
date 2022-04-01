@@ -10,11 +10,7 @@ text-shadow: 0 2px 5px #243C2B;
  }
 
  footer{
- font-size:150%;
- color:white;
  background-color: #3a5841;
- position: relative;
- display: flex;
  }
  .menu{
    background:#00000099;

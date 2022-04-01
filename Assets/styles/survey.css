@@ -4,7 +4,6 @@
 *
 {
   margin:0;
-  padding: 0;
 
 }
 #buttonText{
@@ -59,11 +58,8 @@
   transform: translate(-50%, -50%);
 }
 footer{
-font-size:150%;
-color:white;
+
 background-color: #3a5841;
-position: relative;
-display: flex;
 }
 
 #copy{

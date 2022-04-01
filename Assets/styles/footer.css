@@ -37,6 +37,7 @@ footer a h3{
 }
 footer h3{
   font-size: 1.4vw;
+  margin-bottom: 2vw;
 }
 .siteMap{
   position: absolute;
@@ -48,23 +49,24 @@ footer h3{
   width: 100%;
 }
 .footerCard{
-  height: 6em;
+  height: 10vw;
   width: 100%;
-  background-color: red;
-  margin-top: -1em;
+  margin-top: 0;
   margin-bottom: 0;
 }
+
 .footerLogo{
   float:left;
-  height: 3em;
-  margin-top: 1.5em;
+  height: 5vw;
+  margin-top: 2vw;
   width: auto;
   margin-left: 1em;
 }
 
 #footerText{
+  font-family: 'works-sans',sans-serif;
   color: white;
-  margin-top: 1.5em;
+  margin-top: 2vw;
   float: right;
   line-height: 150%;
   margin-right: 2em;
