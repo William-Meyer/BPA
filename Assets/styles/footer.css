@@ -1,6 +1,7 @@
 footer{
   align-items: center;
   text-align: center;
+  font-family: 'works-sans', sans-serif;
 }
 footer img{
   position: relative;
@@ -14,7 +15,7 @@ footer ul {
   color: white;
   list-style: none;
   font-size: 1.3vw;
-  padding-top: 5%;
+  padding-top: 5% !important;
 }
 footer h3 {
   font-weight: 500;
@@ -70,7 +71,7 @@ footer h3{
   float: right;
   line-height: 150%;
   margin-right: 2em;
-  font-size: 1.4vw;
+  font-size: 1.5vw;
 }
 #footerText a{
   text-decoration: underline;
