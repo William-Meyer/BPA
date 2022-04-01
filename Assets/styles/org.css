@@ -8,14 +8,11 @@ body{
   color: #21262A;
 }
 footer{
-  margin-top: 10%;
-font-size:150%;
-color:white;
 background-color: #CDAE7F;
-position: relative;
-display: flex;
 }
-
+.footerCard{
+  background-color: #5C451F;
+}
 #copy{
   font-size: 1.5vw;
   text-align: center;

@@ -1,12 +1,17 @@
 *
 {
   margin:0;
-  padding: 0;
 
 }
 #container{
   text-align: center;
   align-items: center;
+}
+body{
+  background-color: #3a5841;
+}
+.footerCard{
+  background-color: #1B2D20;
 }
 main{
   background-color: #3a5841;
@@ -33,12 +38,7 @@ main{
 
 
 footer{
-  margin-top: -10%;
-font-size:150%;
-color:white;
 background-color: #3a5841;
-position: relative;
-display: flex;
 }
 .menu{
   background:#00000099;
