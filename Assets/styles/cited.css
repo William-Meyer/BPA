@@ -12,6 +12,9 @@ text-shadow: 0 2px 5px #243C2B;
  footer{
  background-color: #3a5841;
  }
+ .footerCard{
+   background-color: #1B2D20;
+ }
  .menu{
    background:#00000099;
  }

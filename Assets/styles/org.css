@@ -10,7 +10,9 @@ body{
 footer{
 background-color: #CDAE7F;
 }
-
+.footerCard{
+  background-color: #5C451F;
+}
 #copy{
   font-size: 1.5vw;
   text-align: center;

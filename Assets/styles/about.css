@@ -8,7 +8,9 @@ text-shadow: 0 2px 5px #243C2B;
  footer{
  background-color: #A39DCD;
  }
-
+ .footerCard{
+   background-color: #3a355a;
+ }
  #copy{
    font-size: 1.5vw;
    text-align: center;
