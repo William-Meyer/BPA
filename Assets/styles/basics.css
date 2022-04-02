@@ -67,8 +67,8 @@ body{
   text-align: center;
 }
 .center{
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .giverBorderRad{
   border-radius: 13px;
